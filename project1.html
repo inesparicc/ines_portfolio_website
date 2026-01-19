@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Club Canary Upsell Page Redesign | Ines Paric</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="project-page">
+   <!-- ===== NAVBAR ===== -->
+   <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">
+        <a href="index.html" class="logo-link">
+          <img
+            src="assets/logo.svg"
+            alt="Ines Paric logo"
+            class="logo-icon"
+          />
+          Ines&nbsp;Paric
+        </a>
+      </div>
+  
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html#home" class="nav-link active">Work</a>
+          </li>
+          <li>
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li>
+            <a
+              href="assets/cv/Ines_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav-link"
+            >
+              Resume
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+
+    <!-- ===== HERO ===== -->
+    <section class="case-hero">
+      <div class="container">
+        <h1>Club Canary Upsell Page Redesign</h1>
+        <p class="subtitle">
+          A research-driven UX/UI and performance redesign of Club Canary’s
+          upsell page to improve clarity, mobile usability, and conversions.
+        </p>
+        <img
+          src="assets/images/CLUBCANARY.jpg"
+          alt="Upsell Page Redesign Cover"
+        />
+      </div>
+    </section>
+
+    <!-- ===== PROJECT INFO ===== -->
+    <section class="project-info">
+      <div class="container info-grid">
+        <div>
+          <h4>Client</h4>
+          <p>Club Canary</p>
+        </div>
+        <div>
+          <h4>Role</h4>
+          <p>UX/UI Designer</p>
+        </div>
+        <div>
+          <h4>Duration</h4>
+          <p>20 weeks</p>
+        </div>
+        <div>
+          <h4>Tools</h4>
+          <p>Figma · WordPress · HTML/CSS · JavaScript · .NET API</p>
+        </div>
+        <div>
+          <h4>Team</h4>
+          <p>Solo designer · CEO stakeholder</p>
+        </div>
+        <div>
+          <h4>Focus</h4>
+          <p>Conversion · UX/UI · Performance</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STEP TRACKER ===== -->
+    <section class="process-tracker">
+      <div class="steps">
+        <a href="#research" class="step active"
+          ><span>1</span>
+          <p>Research</p></a
+        >
+        <div class="line"></div>
+        <a href="#empathize" class="step"
+          ><span>2</span>
+          <p>Empathize</p></a
+        >
+        <div class="line"></div>
+        <a href="#ideate" class="step"
+          ><span>3</span>
+          <p>Ideate</p></a
+        >
+        <div class="line"></div>
+        <a href="#design" class="step"
+          ><span>4</span>
+          <p>Design</p></a
+        >
+        <div class="line"></div>
+        <a href="#test" class="step"
+          ><span>5</span>
+          <p>Test</p></a
+        >
+        <div class="line"></div>
+        <a href="#takeaway" class="step"
+          ><span>6</span>
+          <p>Takeaway</p></a
+        >
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!--               RESEARCH                -->
+    <!-- ===================================== -->
+
+    <section id="research" class="case-section">
+      <div class="container">
+        <h2>1. Research</h2>
+
+        <h3>Understanding the Problem</h3>
+        <p>
+          The upsell page appears only after a customer completes a booking, so
+          users are already in a decision-making mindset. The existing page felt
+          overwhelming: long text blocks, inconsistent formatting, unclear
+          hierarchy, and activity cards with very little useful information. On
+          mobile where most customers browse scanning the page was even harder,
+          which led to hesitation and lost opportunities.
+        </p>
+        <img src="assets/images/cc1.jpg" alt="Existing upsell page issues" />
+
+        <h3>Research Methods</h3>
+        <p>
+          With this was a live company project, I needed to balance business
+          goals (CEO) with user needs (travelers). I combined:
+        </p>
+        <ul>
+          <li>Stakeholder interviews</li>
+          <li>Customer survey after booking</li>
+          <li>Direct observations of real users</li>
+          <li>Competitor analysis</li>
+          <li>Early A/B testing of layout options</li>
+        </ul>
+        <p>
+          This mix of methods helped validate pain points from different angles
+          and gave me a clear direction for the redesign.
+        </p>
+        <img src="assets/images/cctestings.jpg" />
+
+        <h3>Stakeholder Interviews</h3>
+        <p>
+          The CEO shared that the upsell page generated revenue but was
+          underperforming. Key issues from a business and technical perspective:
+        </p>
+        <img src="assets/images/ccinterview.jpg" />
+        <p>
+          This set my initial goal: create a page that is faster, clearer, and
+          visually aligned with Club Canary’s identity.
+        </p>
+
+        <h3>User Survey</h3>
+        <p>
+          I sent a short survey to customers right after booking, while their
+          experience was still fresh. The questions focused on clarity,
+          usefulness, and first impressions of the upsell page.
+        </p>
+        <img src="assets/images/ccsurvey.jpg" />
+
+        <h3>Personas &amp; Empathy Mapping</h3>
+        <p>
+          Based on the survey and stakeholder input, I created four personas:
+          the Family Planner, the Adventure Seeker, the Relaxation Lover, and
+          the Spontaneous Traveler. Empathy maps surfaced recurring pain points:
+          unclear pricing, lack of key details (duration, what’s included), and
+          layouts that felt “too busy” right after completing a booking.
+        </p>
+        <img
+          src="assets/images/ccpersona.jpg"
+          alt="Personas for different Club Canary customer types"
+        />
+
+        <h3>Competitor Analysis</h3>
+        <p>
+          Reviewing other travel platforms confirmed a pattern: successful
+          upsell experiences use structured cards, concise text, and strong
+          visuals. This validated the idea of moving away from text-heavy
+          layouts toward a modern, card-based approach.
+        </p>
+        <img
+          src="assets/images/cccompetitor.jpg"
+          alt="Competitor examples of upsell experiences"
+        />
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!--               EMPATHIZE               -->
+    <!-- ===================================== -->
+
+    <section id="empathize" class="case-section alt-bg">
+      <div class="container">
+        <h2>2. Empathize</h2>
+        <p>
+          The personas represented the different ways customers approach
+          excursions: planning for a family, looking for adventure, searching
+          for something relaxing, or deciding spontaneously. Mapping their
+          emotions around the upsell moment helped me focus on:
+        </p>
+        <ul>
+          <li>Reducing stress right after checkout</li>
+          <li>Making information trustworthy at a glance</li>
+          <li>Supporting fast decisions without pressure</li>
+        </ul>
+        <p>
+          These emotional insights guided how much content to show, how to
+          structure cards, and how “loud” the page should feel visually.
+        </p>
+        <img
+          src="assets/images/ccmap.jpg"
+          alt="User personas and empathy mapping"
+        />
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!--               IDEATE                  -->
+    <!-- ===================================== -->
+
+    <section id="ideate" class="case-section">
+      <div class="container">
+        <h2>3. Ideate</h2>
+          Wireframes helped test different card structures, image ratios, and
+          call-to-action placements before committing to visual design.
+        </p>
+        <img
+          src="assets/images/ccwireframe.jpg"
+          alt="Wireframes and layout exploration for upsell page"
+        />
+        <p>
+          During ideation, I translated research findings into concrete design
+          directions. I explored multiple layout variations focusing on:
+        </p>
+        <ul>
+          <li>Clean activity cards with only essential details</li>
+          <li>
+            Clear order of information: image → title → description → details →
+            price → CTA
+          </li>
+          <li>
+            Stronger separation between activities to avoid visual clutter
+          </li>
+          <li>Prominent but not aggressive call-to-action buttons</li>
+        </ul>
+        <p>
+        <img
+          src="assets/images/cciterations.jpg"
+          alt="Design iterations and responsive layouts"
+        />
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!--               DESIGN                  -->
+    <!-- ===================================== -->
+
+    <section id="design" class="case-section alt-bg">
+      <div class="container">
+        <h2>4. Design</h2>
+
+        <p>
+          The design phase focused on turning the chosen direction into a clean,
+          modern, and mobile-first interface. Every visual decision responded to
+          specific pain points: clutter, vague content, and slow, text-heavy
+          layouts.
+        </p>
+
+        <h3>Improving Visual Hierarchy</h3>
+        <p>
+          The original upsell page suffered from inconsistent typography and
+          dense text. I introduced a clear type scale (H1, H2, body, labels) and
+          increased spacing around key elements. This made cards easier to scan
+          and helped users understand each activity in seconds rather than
+          having to read long descriptions.
+        </p>
+
+        <h3>Card Redesign & Content Structure</h3>
+        <p>
+          Activity cards were restructured around what users said they needed
+          most: a clear image, short description, duration, price, and an
+          obvious next step. This removed guesswork, made comparisons easier,
+          and supported faster decision-making.
+        </p>
+        <img
+        src="assets/images/cccards.jpg"
+      />
+
+        <h3>Color Palette & Accent Usage</h3>
+        <p>
+          I kept the overall palette light and minimal, using the brand accent
+          color sparingly for CTAs and key highlights. This helped guide the eye
+          without overwhelming users who had just finished a booking. The result
+          is a modern layout that still feels like Club Canary.
+        </p>
+        <img
+          src="assets/images/cccolor.jpg"
+          alt="Color palette and typography system for the redesign"
+        />
+
+        <h3>Responsive Design Decisions</h3>
+        <p>
+          Since most traffic comes from mobile, the layout was designed
+          mobile-first: larger tap targets, simplified scrolling, and one main
+          action per area of the page. The desktop version mirrors this
+          hierarchy instead of adding unnecessary complexity. I iterated on
+          spacing, card density, and button placement until both users and my
+          stakeholder were satisfied.
+        </p>
+
+        <h3>Technical Considerations for Performance</h3>
+        <p>
+          To support better performance, I reduced heavy WordPress elements,
+          optimized image use, and designed a layout that could later work with
+          an API-based setup. Cleaner HTML and fewer decorative effects help the
+          page load faster and reduce friction at a critical conversion moment.
+        </p>
+
+        <p>
+          The final design combines clarity, brand consistency, and technical
+          awareness to create an upsell experience that feels modern,
+          trustworthy, and easy to navigate.
+        </p>
+        <img
+        src="assets/images/ccfinal.jpg"
+      />
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!--                TESTING                -->
+    <!-- ===================================== -->
+
+    <section id="test" class="case-section">
+      <div class="container">
+        <h2>5. Test</h2>
+
+        <h3>Usability Testing &amp; A/B Comparison</h3>
+        <p>
+          To evaluate the redesign, I ran usability sessions with eight
+          participants familiar with online booking and combined this with
+          feedback from the CEO. Participants were asked to browse the upsell
+          page, compare activities, and choose one to add after receiving a
+          booking confirmation email.
+        </p>
+
+        <p>During the sessions, they were asked to:</p>
+        <ul>
+          <li>Explore the upsell page and identify an additional activity</li>
+          <li>Search for a specific type of activity (e.g. whale watching)</li>
+          <li>Redeem a discount or promotional voucher</li>
+          <li>Compare two activities and decide which one to book</li>
+        </ul>
+
+        <h3>Design A (user-focused) vs. Design B (stakeholder-focused)</h3>
+        <p>
+          I created two versions of the page. <strong>Design A</strong> was
+          based on user feedback: cleaner cards, shorter text, and clearer
+          hierarchy. <strong>Design B</strong> reflected my stakeholder’s
+          preferred approach: more text-heavy and closer to the original layout.
+          The A/B test helped me compare both directions with real users and use
+          data to discuss the final choice with the CEO.
+        </p>
+
+        <img src="assets/images/cccomponent.jpg" />
+
+        <p>
+          Feedback highlighted the importance of clear button labels, logical
+          grouping of information, and visuals that build trust. These insights
+          were key in refining the final design and also helped me demonstrate
+          to my stakeholder why the user-focused layout would perform better
+          than the more text-heavy alternative.
+        </p>
+
+    <!-- ===================================== -->
+    <!--              TAKEAWAY                 -->
+    <!-- ===================================== -->
+
+    <section id="takeaway" class="case-section alt-bg">
+      <div class="container">
+        <h2>6. Takeaway</h2>
+        <p>
+          This project showed me how to connect UX research, visual design, and
+          technical constraints in a real business context. I learned how to:
+        </p>
+        <ul>
+          <li>
+            Turn survey and interview insights into concrete design decisions
+          </li>
+          <li>
+            Balance stakeholder goals (revenue, brand) with user needs (clarity,
+            speed, trust)
+          </li>
+          <li>Design mobile-first layouts that still work well on desktop</li>
+          <li>Think about performance and implementation while designing</li>
+        </ul>
+        <p>
+          Overall, the upsell page redesign strengthened my confidence in
+          running a complete UX/UI process from research and ideation to design,
+          testing, and measurable impact.
+        </p>
+        <img
+        src="assets/images/ccmock.jpg"
+      />
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2025 Ines Paric | Designed & built by me.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

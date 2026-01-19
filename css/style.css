@@ -1,0 +1,1166 @@
+/* ========== GOOGLE FONT ========== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* ========== ROOT & RESET ========== */
+:root {
+  --accent: #d695ba;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  background-color: #ffffff;
+  color: #171717;
+  line-height: 1.6;
+}
+
+/* Simple max-width container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ========== SCROLL FADE-IN ========== */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #ffffff;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.logo {
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  font-size: 1.1rem;
+}
+
+/* Make logo clickable but visually identical */
+.logo-link,
+.logo-link:link,
+.logo-link:visited {
+  text-decoration: none;
+  color: #171717;
+  font-weight: 600;
+}
+
+.logo-link:hover {
+  color: var(--accent);
+}
+
+.logo-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 0.4rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #222222;
+  transition: 0.2s ease;
+}
+
+.nav-link:hover {
+  border-color: rgba(0, 0, 0, 0.12);
+  background-color: #fafafa;
+}
+
+.nav-link.active {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  color: #171717;
+  font-weight: 600;
+}
+
+.logo-icon {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+/* ========== HERO (HOME) ========== */
+.hero {
+  padding: 4.5rem 1.5rem 3.5rem;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); /* text + bubble */
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-orb-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+
+  /* push this whole column more to the right */
+  justify-self: end; /* moves to the right of its grid column */
+  transform: translateX(
+    40px
+  ); /* tweak: try 40–80px depending how far you want */
+}
+
+.orb-hint {
+  font-size: 0.9rem;
+  color: var(--accent);
+  opacity: 0.9;
+  letter-spacing: 0.02em;
+}
+.scroll-blob-btn:hover .scroll-blob,
+.scroll-blob-btn:focus-visible .scroll-blob {
+  animation-duration: 4s;
+  transform: scale(1.1);
+}
+
+/* Text inside the bubble */
+.blob-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  pointer-events: none;
+  letter-spacing: 0.5px;
+
+  /* bubble-style font look */
+  font-family: "Poppins", sans-serif;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Make text scale a bit with breathing animation */
+.scroll-blob {
+  position: relative; /* Needed so text positions inside */
+}
+
+.hero-kicker {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #888;
+  margin-bottom: 0.75rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 3vw + 1.5rem, 3rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero h1 span {
+  color: var(--accent);
+}
+
+.hero-sub {
+  font-size: 1rem;
+  color: #555;
+  max-width: 34rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.8rem;
+}
+
+/* Case hero image override (project pages) */
+.case-hero img {
+  width: 100%;
+  max-width: 1100px;
+  max-height: 520px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  margin: 2rem auto 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.primary-btn,
+.ghost-btn {
+  display: inline-block;
+  padding: 0.7rem 1.7rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.primary-btn {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+.primary-btn:hover {
+  filter: brightness(0.95);
+}
+
+.ghost-btn {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: #222;
+}
+
+.ghost-btn:hover {
+  background-color: #fafafa;
+}
+
+.hero-image-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f5f5f5;
+}
+
+/* ========== PROJECTS GRID (HOME) ========== */
+.projects {
+  padding: 1rem 1.5rem 4rem;
+}
+
+.section-title {
+  max-width: 1100px;
+  margin: 0 auto 2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.project-image img {
+  width: 100%;
+  border-radius: 2px;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 4 / 3;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: translateY(-4px);
+}
+
+.project-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.project-tag {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #999;
+}
+
+.project-meta h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ========== FOOTER ========== */
+.site-footer {
+  border-top: 1px solid #f1f1f1;
+  padding: 1.2rem 1.5rem 1.7rem;
+  font-size: 0.85rem;
+  color: #777;
+  text-align: center;
+}
+
+/* ========== ABOUT PAGE ========== */
+.about-intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  max-width: 1100px;
+}
+
+.about-left {
+  flex: 1 1 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-photo {
+  width: 400px;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.about-right {
+  flex: 1 1 360px;
+}
+
+.about-right h1 {
+  font-size: 2.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.about-right span {
+  color: var(--accent);
+}
+
+.about-right .subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  max-width: 32rem;
+}
+
+/* ===== Creative physical work intro ===== */
+.creative-section {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.creative-title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #111;
+  letter-spacing: -0.5px;
+}
+
+.creative-subtitle {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #444;
+  margin: 0 auto;
+  max-width: 750px;
+}
+
+/* Shared sections on About / case study pages */
+.journey,
+.skills,
+.personality {
+  max-width: 850px;
+  margin: 3.5rem auto;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.journey h2,
+.skills h2,
+.personality h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.journey p,
+.personality p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+  max-width: 44rem;
+  margin: 0 auto;
+}
+
+/* Staggered timing for Skills columns */
+.skills-row .skills-group:nth-child(1) {
+  transition-delay: 0s;
+}
+.skills-row .skills-group:nth-child(2) {
+  transition-delay: 0.12s;
+}
+.skills-row .skills-group:nth-child(3) {
+  transition-delay: 0.24s;
+}
+
+/* ========== SKILLS LAYOUT ========== */
+
+/* Old chip row – if used elsewhere */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem 1rem;
+  margin-top: 6rem;
+}
+
+.skills-list li {
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  background: #fafafa;
+  font-size: 0.9rem;
+  color: #444;
+  transition: background 0.35s ease, color 0.35s ease,
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.skills-list li:hover {
+  background: #ffe4ec;
+  color: #d93f75;
+  transform: translateY(-3px);
+}
+
+/* Skills row layout */
+.skills-row {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 2.5rem;
+  flex-wrap: nowrap;
+}
+
+/* Each skills column */
+.skills-group {
+  text-align: center;
+  min-width: 260px;
+}
+
+/* Category titles */
+.skills-group h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Column chip list */
+.skills-chip-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+/* Hover color for skill items */
+.skills-chip-list li {
+  color: #333;
+  transition: color 0.25s ease, transform 0.25s ease;
+  cursor: default;
+}
+
+.skills-chip-list li:hover {
+  color: var(--accent);
+  transform: translateX(4px);
+}
+
+.skills {
+  margin-top: 5rem;
+}
+
+/* ========== CASE STUDY PAGES ========== */
+.case-hero {
+  padding: 3.5rem 1.5rem 2rem;
+}
+
+.case-hero-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  align-items: center;
+}
+
+.case-hero-text {
+  max-width: 40rem;
+}
+
+.case-hero h1 {
+  font-size: 2.1rem;
+  margin-bottom: 0.6rem;
+}
+
+.case-hero .subtitle {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* HERO IMAGE ON PROJECT PAGES */
+.case-hero-image img {
+  width: 100%;
+  max-width: 1100px;
+  max-height: 520px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Info grid under hero */
+.project-info {
+  background: #fafafa;
+  padding: 2.5rem 1.5rem;
+}
+
+.info-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.8rem;
+}
+
+.info-grid h4 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.info-grid p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Process tracker */
+.process-tracker {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem 0;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.step {
+  text-align: center;
+  text-decoration: none;
+}
+
+.step span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #eeeeee;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.step.active span,
+.step:hover span {
+  background: var(--accent);
+  color: #fff;
+}
+
+.step p {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  color: #444;
+}
+
+.line {
+  width: 34px;
+  height: 1.5px;
+  background: #dddddd;
+}
+
+/* Case sections */
+.case-section {
+  max-width: 900px;
+  margin: 3.3rem auto;
+  padding: 0 1.5rem;
+}
+
+.case-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.case-section p {
+  font-size: 0.98rem;
+  color: #555;
+  margin: 1rem 0 1.4rem;
+}
+
+.case-section ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1.4rem;
+  color: #555;
+  font-size: 0.96rem;
+}
+
+.case-section ul li {
+  margin-bottom: 0.4rem;
+}
+
+.case-section img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* ========== GALLERIES / SLIDERS / TIKTOK ========== */
+.photo-gallery h2,
+.hobby-gallery h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-intro {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.gallery-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+/* Slider */
+.gallery-window {
+  width: 100%;
+  max-width: 520px;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fdfdfd;
+}
+
+.gallery-slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-slide.active {
+  display: block;
+}
+
+.gallery-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-btn {
+  border: none;
+  background: #ffffff;
+  font-size: 1.7rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* TikTok section */
+.tiktok-section {
+  text-align: center;
+  max-width: 650px;
+  margin: 3rem auto 4rem;
+  padding: 0 1.5rem;
+}
+
+.tiktok-section p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.tiktok-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff !important;
+  padding: 0.75rem 1.8rem;
+  border-radius: 30px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* ========== HOBBY GALLERY (MASONRY) ========== */
+.hobby-gallery {
+  width: 100%;
+  margin: 4rem 0;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.hobby-gallery-grid {
+  column-count: 4;
+  column-gap: 1.5rem;
+  width: 100%;
+}
+
+/* Default item state */
+.hobby-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+  position: relative;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s ease;
+}
+
+/* Image styling */
+.hobby-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  display: block;
+  object-fit: cover;
+}
+
+/* Hover scale on hobby items */
+.hobby-gallery-grid .hobby-item:hover {
+  transform: scale(1.06);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+  z-index: 2;
+}
+
+/* ========== SCROLL DIVIDER – CALMING ORB ========== */
+.scroll-divider {
+  padding: 4rem 1.5rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-blob-btn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+}
+
+/* The orb itself */
+.scroll-blob {
+  width: 170px;
+  height: 170px;
+  border-radius: 55% 70% 60% 80%;
+  background: radial-gradient(circle at 30% 20%, #ffe4f5, #f3b7dd);
+  box-shadow: 0 22px 45px rgba(214, 149, 186, 0.45);
+  animation: blobBreath 7s ease-in-out infinite alternate;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+/* Breathing / calm animation */
+@keyframes blobBreath {
+  0% {
+    transform: translateY(6px) scale(0.9);
+    box-shadow: 0 18px 40px rgba(214, 149, 186, 0.32);
+    filter: blur(0.2px);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.08);
+    box-shadow: 0 28px 60px rgba(214, 149, 186, 0.55);
+    filter: blur(0px);
+  }
+  100% {
+    transform: translateY(4px) scale(1);
+    box-shadow: 0 22px 48px rgba(214, 149, 186, 0.4);
+    filter: blur(0.3px);
+  }
+}
+
+/* POP animation class (JS adds .popped) */
+.scroll-blob.popped {
+  animation: popAnimation 0.45s ease forwards;
+}
+
+@keyframes popAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  40% {
+    transform: scale(1.25);
+  }
+  70% {
+    transform: scale(0.7);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* Slight “wake up” on hover / tap */
+.scroll-blob-btn:hover .scroll-blob,
+.scroll-blob-btn:focus-visible .scroll-blob {
+  animation-duration: 4.5s;
+  transform: scale(1.05);
+}
+
+/* ========== RESPONSIVE ========== */
+
+/* Tablets / small laptops */
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+  }
+
+  .hero-orb-col {
+    justify-content: flex-start; /* bubble aligned with text on smaller screens */
+  }
+}
+
+@media (max-width: 900px) {
+  /* NAV */
+  .nav-container {
+    padding-inline: 1rem;
+  }
+
+  .nav-links {
+    gap: 0.4rem;
+  }
+
+  .nav-link {
+    padding-inline: 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  /* HOME HERO */
+  .hero {
+    padding: 3.2rem 1.25rem 2.5rem;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+  }
+
+  .hero-image-wrap {
+    justify-content: flex-start;
+  }
+
+  .hero-img {
+    width: 220px;
+    height: 220px;
+  }
+
+  /* PROJECT GRID */
+  .projects {
+    padding: 1rem 1.25rem 3rem;
+  }
+
+  .section-title {
+    margin-bottom: 1.5rem;
+  }
+
+  /* ABOUT */
+  .about-intro {
+    flex-direction: column;
+    text-align: left;
+    padding-inline: 1.25rem;
+    margin-top: 3rem;
+  }
+
+  .about-left {
+    justify-content: flex-start;
+  }
+
+  .about-photo {
+    width: 260px;
+    height: 360px;
+  }
+
+  .about-right .subtitle {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* SKILLS – let columns wrap on tablet */
+  .skills {
+    max-width: 100%;
+  }
+
+  .skills-row {
+    flex-wrap: wrap;
+    gap: 2.5rem;
+  }
+
+  .skills-group {
+    min-width: 240px;
+  }
+
+  /* CASE STUDY HERO */
+  .case-hero {
+    padding: 2.8rem 1.25rem 1.8rem;
+  }
+
+  .case-hero-grid {
+    align-items: flex-start;
+    text-align: left;
+    gap: 1.8rem;
+  }
+
+  .case-hero-image img {
+    border-radius: 14px;
+    max-height: 420px;
+  }
+
+  /* CASE SECTIONS */
+  .case-section {
+    margin: 2.8rem auto;
+    padding-inline: 1.25rem;
+  }
+
+  /* HOBBY GALLERY */
+  .hobby-gallery {
+    padding: 0 1.25rem;
+    margin: 3rem 0;
+  }
+
+  .hobby-gallery-grid {
+    column-count: 2;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  /* NAV – keep it simple & scrollable horizontally if needed */
+  .nav-container {
+    padding-inline: 0.75rem;
+  }
+
+  .nav-links {
+    gap: 0.3rem;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .nav-link {
+    padding: 0.35rem 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  /* HOME HERO */
+  .hero {
+    padding-top: 2.6rem;
+    padding-inline: 1rem;
+    padding-bottom: 3.8rem; /* extra breathing room above orb */
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-sub {
+    font-size: 0.95rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* ORB */
+  .scroll-divider {
+    padding: 3rem 1rem 1.5rem;
+  }
+
+  .scroll-blob {
+    width: 140px;
+    height: 140px;
+  }
+
+  /* PROJECTS SECTION (Selected work) */
+  .projects {
+    padding-top: 2.8rem;
+    padding-inline: 1rem;
+    padding-bottom: 3rem;
+  }
+
+  /* PROJECT GRID */
+  .project-grid {
+    gap: 1.5rem;
+  }
+
+  .project-image img {
+    border-radius: 14px;
+  }
+
+  /* ABOUT */
+  .about-intro {
+    padding-inline: 1rem;
+    gap: 2rem;
+  }
+
+  .about-photo {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .about-right h1 {
+    font-size: 1.8rem;
+  }
+
+  .creative-section {
+    padding-inline: 1rem;
+  }
+
+  .creative-title {
+    font-size: 1.9rem;
+  }
+
+  .creative-subtitle {
+    font-size: 1rem;
+  }
+
+  /* SKILLS – stack columns nicely */
+  .skills {
+    padding: 0 1rem;
+    margin-top: 3.5rem;
+  }
+
+  .skills-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+  }
+
+  .skills-group {
+    min-width: 100%;
+    text-align: left;
+  }
+
+  .skills-group h3 {
+    text-align: left;
+  }
+
+  .skills-chip-list li {
+    font-size: 0.9rem;
+  }
+
+  /* CASE PAGES */
+  .case-hero {
+    padding-inline: 1rem;
+  }
+
+  .case-hero-image img {
+    max-height: 360px;
+  }
+
+  .project-info {
+    padding-inline: 1rem;
+  }
+
+  .case-section {
+    padding-inline: 1rem;
+  }
+
+  /* HOBBY GALLERY */
+  .hobby-gallery {
+    padding-inline: 1rem;
+  }
+
+  .hobby-gallery-grid {
+    column-count: 1;
+  }
+
+  /* TIKTOK SECTION */
+  .tiktok-section {
+    padding-inline: 1rem;
+  }
+
+  /* FOOTER */
+  .site-footer {
+    padding-inline: 1rem;
+  }
+}
+
+/* Phones – ensure fade-in sections are visible even if JS fails */
+@media (max-width: 600px) {
+  .fade-in-up {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
