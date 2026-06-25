@@ -4,31 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About | Ines Paric</title>
+    <meta
+      name="description"
+      content="About Ines Paric, a junior UX and product designer focused on user research, product design, e-commerce UX, and clear digital experiences."
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
+
+  <body class="about-page" id="top">
     <!-- ===== NAVBAR ===== -->
     <header class="navbar">
       <div class="container nav-container">
-        <div class="logo">
-          <a href="index.html" class="logo-link">
-            <img
-              src="assets/logo.svg"
-              alt="Ines Paric logo"
-              class="logo-icon"
-            />
-            Ines&nbsp;Paric
-          </a>
-        </div>
+        <a href="index.html" class="logo-link" aria-label="Go to homepage">
+          <img src="assets/logo.svg" alt="" class="logo-icon" />
+          <span>Ines Paric</span>
+        </a>
 
-        <nav>
+        <nav aria-label="Main navigation">
           <ul class="nav-links">
-            <li>
-              <a href="index.html#home" class="nav-link active">Work</a>
-            </li>
-            <li>
-              <a href="about.html" class="nav-link">About</a>
-            </li>
+            <li><a href="index.html#work" class="nav-link">Work</a></li>
+            <li><a href="about.html" class="nav-link active">About</a></li>
             <li>
               <a
                 href="assets/cv/Ines_CV.pdf"
@@ -39,6 +34,16 @@
                 Resume
               </a>
             </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="nav-link"
+              >
+                LinkedIn
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -46,216 +51,204 @@
 
     <main>
       <!-- ===== ABOUT HERO ===== -->
-      <section class="about-intro container">
-        <!-- Photo -->
-        <div class="about-left fade-in-up">
-          <img
-            src="assets/images/ines2.png"
-            alt="Ines Paric"
-            class="about-photo"
-          />
-        </div>
+      <section class="about-hero">
+        <div class="container about-hero-grid">
+          <div class="about-copy fade-in-up">
+            <p class="eyebrow">About me</p>
 
-        <!-- Text -->
-        <div class="about-right fade-in-up">
-          <h1>About Me</h1>
+            <p style="font-size: clamp(1.15rem, 1.5vw, 1.25rem); color: var(--ink); font-weight: 500; margin-bottom: 1.5rem; line-height: 1.6;">
+              I’m Ines, a Product Designer with a background in ICT &amp; Media Design. I am incredibly passionate about the sweet spot where creative visual design meets human psychology—building digital experiences that not only look beautiful but actually solve real user problems.
+            </p>
 
-          <p class="subtitle">
-            I’m Ines, a UX &amp; media design student in Eindhoven. I focus on
-            creating digital experiences that are intuitive, human-centred and
-            grounded in research.
-          </p>
+            <p>
+              I bring hands-on industry experience in e-commerce and product UX. Most recently, I shaped the Store Credit checkout experience at <strong>Otrium</strong>, where I learned how to balance complex business goals with crystal-clear user journeys through rigorous user testing, prototyping, and cross-functional collaboration. 
+            </p>
 
-          <p class="subtitle">
-            Through my ICT &amp; Media Design studies, I’ve developed strong
-            skills in user research, interaction design, prototyping and
-            translating insights into clear product decisions. Alongside this,
-            I’ve built technical understanding through front-end basics, APIs
-            and working closely with developers.
-          </p>
+            <p>
+              Whether I am optimizing a high-traffic checkout flow, designing inclusive navigation concepts, or building physical furniture in my studio, I thrive on turning messy, complex challenges into structured and practical design decisions.
+            </p>
 
-          <p class="subtitle">
-            I’ve designed for real companies through school projects and my
-            internship, giving me experience with user needs, business goals and
-            designing within real-world constraints.
-          </p>
+            <div class="about-actions">
+              <a
+                href="assets/cv/Ines_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link"
+              >
+                View my resume →
+              </a>
+              <a href="index.html#work" class="project-link secondary-link">
+                View my work →
+              </a>
+            </div>
+          
+          </div>
 
-          <p class="subtitle">
-            This semester I’m exploring immersive technologies and working on a
-            creative research project for an external partner - expanding my
-            skillset while staying rooted in my main strength: human-centred UX.
-          </p>
-
-          <div style="margin-top: 2rem">
-            <a
-              href="assets/cv/Ines_CV.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="primary-btn"
-            >
-              View my resume
-            </a>
+          <div class="about-image-wrap fade-in-up">
+            <img
+              src="assets/images/ines2.png"
+              alt="Portrait of Ines Paric"
+              class="about-main-image image-fallback"
+            />
           </div>
         </div>
       </section>
 
-      <!-- ===== SKILLS & TOOLS ===== -->
-      <section class="skills fade-in-up">
-        <h2>Skills &amp; Tools</h2>
-
-        <div class="skills-row">
-          <!-- Soft Skills -->
-          <div class="skills-group fade-in-up">
-            <h3>Soft Skills</h3>
-            <ul class="skills-chip-list">
-              <li>Creative Problem-Solving</li>
-              <li>Clear Communication &amp; Collaboration</li>
-              <li>Ownership &amp; Accountability</li>
-              <li>Structured Thinking &amp; Insight Generation</li>
-              <li>Empathy &amp; Human-Centered Perspective</li>
-              <li>Organized Workflow &amp; Prioritization</li>
-            </ul>
+      <!-- ===== PROFILE SUMMARY ===== -->
+      <section class="about-profile-strip">
+        <div class="container about-profile-grid fade-in-up">
+          <div>
+            <span>Current focus</span>
+            <p>UX and product design for digital products</p>
           </div>
-
-          <!-- Design Skills -->
-          <div class="skills-group fade-in-up">
-            <h3>Design Skills</h3>
-            <ul class="skills-chip-list">
-              <li>User Research &amp; HCD</li>
-              <li>UX &amp; Interaction Design</li>
-              <li>Wireframing &amp; Prototyping (Figma)</li>
-              <li>Information Architecture</li>
-              <li>UI &amp; Visual Design</li>
-            </ul>
+          <div>
+            <span>Strengths</span>
+            <p>Research, structure, visual design, and communication</p>
           </div>
-
-          <!-- Toolbox -->
-          <div class="skills-group fade-in-up">
-            <h3>Toolbox</h3>
-            <ul class="skills-chip-list">
-              <li>Figma · Miro · Notion</li>
-              <li>Adobe Photoshop · Illustrator</li>
-              <li>HTML &amp; CSS (front-end basics)</li>
-              <li>Basic .NET &amp; API collaboration</li>
-            </ul>
+          <div>
+            <span>Background</span>
+            <p>ICT &amp; Media Design with creative and technical foundations</p>
           </div>
         </div>
       </section>
 
-      <!-- ===== HOBBIES TEXT ===== -->
-      <section class="creative-section fade-in-up">
-        <h2 class="creative-title">Creative Work Beyond Digital Design</h2>
-        <p class="creative-subtitle">
-          A selection of my physical design projects, including furniture
-          making, sculpture, clay modelling and hand-drawn illustration. These
-          projects come from my high-school background in product and interior
-          architecture design and reflect my practical approach to creativity.
-        </p>
-      </section>
-
-      <!-- ===== HOBBIES PHOTO GALLERY ===== -->
-      <!-- Note: this section is NOT wrapped in .container so it can go full-width -->
-      <section class="hobby-gallery fade-in-up">
-        <div class="hobby-gallery-grid">
-          <div class="hobby-item">
-            <img src="assets/images/i1.JPG" alt="Sculpture study" />
+      <!-- ===== SKILLS ===== -->
+      <section class="about-skills-section">
+        <div class="container">
+          <div class="about-section-heading fade-in-up">
+            <p class="eyebrow">Skills &amp; tools</p>
+            <h2>What I bring into a product team</h2>
           </div>
 
-          <div class="hobby-item">
-            <img src="assets/images/i2.jpg" alt="Furniture workshop piece" />
-          </div>
+          <div class="about-skills-grid">
+            <article class="about-skill-column fade-in-up">
+              <h3>UX &amp; Product Design</h3>
+              <ul>
+                <li>User research</li>
+                <li>Usability testing</li>
+                <li>Interaction design</li>
+                <li>Information architecture</li>
+                <li>Wireframing and prototyping</li>
+                <li>E-commerce and conversion-focused UX</li>
+              </ul>
+            </article>
 
-          <div class="hobby-item">
-            <img src="assets/images/i3.JPG" alt="Furniture making process" />
-          </div>
+            <article class="about-skill-column fade-in-up">
+              <h3>Visual &amp; UI Design</h3>
+              <ul>
+                <li>Figma</li>
+                <li>Design systems</li>
+                <li>Responsive layouts</li>
+                <li>Visual hierarchy</li>
+                <li>Component thinking</li>
+                <li>Design handoff</li>
+              </ul>
+            </article>
 
-          <div class="hobby-item">
-            <img src="assets/images/i4.JPG" alt="Graphite portrait drawing" />
-          </div>
-
-          <div class="hobby-item">
-            <img src="assets/images/i5.PNG" alt="Colour portrait painting" />
-          </div>
-
-          <div class="hobby-item">
-            <img src="assets/images/i6.jpg" alt="Sketchbook page" />
-          </div>
-
-          <div class="hobby-item">
-            <img src="assets/images/i7.jpg" alt="Clay sculpture" />
-          </div>
-
-          <div class="hobby-item">
-            <img src="assets/images/i8.jpg" alt="Workshop detail" />
-          </div>
-
-          <div class="hobby-item">
-            <img src="assets/images/i9.jpg" alt="Furniture piece" />
-          </div>
-
-          <div class="hobby-item">
-            <img src="assets/images/i10.jpg" alt="Wood structure study" />
-          </div>
-
-          <div class="hobby-item">
-            <img src="assets/images/i11.jpg" alt="Studio process photo" />
-          </div>
-
-          <div class="hobby-item">
-            <img src="assets/images/i12.jpg" alt="Sunflower painting" />
-          </div>
-
-          <div class="hobby-item">
-            <img src="assets/images/i13.JPG" alt="Pencil illustration" />
-          </div>
-
-          <div class="hobby-item">
-            <img src="assets/images/i14.JPG" alt="Sketchbook portrait" />
-          </div>
-
-          <div class="hobby-item">
-            <img src="assets/images/i15.JPG" alt="Sketchbook drawing" />
-          </div>
-
-          <div class="hobby-item">
-            <img src="assets/images/i16.jpg" alt="Furniture detail" />
-          </div>
-
-          <div class="hobby-item">
-            <img src="assets/images/i17.JPG" alt="Figure drawing" />
-          </div>
-
-          <div class="hobby-item">
-            <img src="assets/images/i18.JPG" alt="Portrait sketch" />
-          </div>
-
-          <div class="hobby-item">
-            <img src="assets/images/i19.JPG" alt="Character illustration" />
-          </div>
-
-          <div class="hobby-item">
-            <img src="assets/images/i20.JPG" alt="Mixed media study" />
-          </div>
-
-          <div class="hobby-item">
-            <img src="assets/images/i21.JPG" alt="Sketchbook composition" />
-          </div>
-          <div class="hobby-item">
-            <img src="assets/images/i22.JPG" alt="Sketchbook composition" />
-          </div>
-          <div class="hobby-item">
-            <img src="assets/images/i23.JPG" alt="Sketchbook composition" />
+            <article class="about-skill-column fade-in-up">
+              <h3>Tools &amp; Workflow</h3>
+              <ul>
+                <li>Miro · Notion · Jira</li>
+                <li>Hotjar · Coframe</li>
+                <li>HTML · CSS · JavaScript basics</li>
+                <li>VS Code · GitHub</li>
+                <li>ChatGPT · Claude · Gemini</li>
+                <li>Cross-functional collaboration</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
 
-    
+      <!-- ===== CREATIVE WORK ===== -->
+      <section class="creative-work-intro">
+        <div class="container creative-work-grid fade-in-up">
+          <div>
+            <p class="eyebrow">Beyond digital design</p>
+            <h2>Physical and visual work that shaped my design eye.</h2>
+          </div>
+
+          <p>
+            Before focusing on UX, I built a foundation in physical and visual
+            design through furniture making, sculpture, clay modelling, and
+            illustration. It still influences how I think about form, detail, and
+            craft in digital interfaces.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== CREATIVE GALLERY ===== -->
+      <section class="about-gallery fade-in-up" aria-label="Creative work gallery">
+        <div class="about-gallery-grid">
+          <figure class="about-gallery-item"><img src="assets/images/i1.JPG" alt="Sculpture study" class="image-fallback" /></figure>
+          <figure class="about-gallery-item"><img src="assets/images/i2.jpg" alt="Furniture workshop piece" class="image-fallback" /></figure>
+          <figure class="about-gallery-item"><img src="assets/images/i3.JPG" alt="Furniture making process" class="image-fallback" /></figure>
+          <figure class="about-gallery-item"><img src="assets/images/i4.JPG" alt="Graphite portrait drawing" class="image-fallback" /></figure>
+          <figure class="about-gallery-item"><img src="assets/images/i5.PNG" alt="Colour portrait painting" class="image-fallback" /></figure>
+          <figure class="about-gallery-item"><img src="assets/images/i6.jpg" alt="Sketchbook page" class="image-fallback" /></figure>
+          <figure class="about-gallery-item"><img src="assets/images/i7.jpg" alt="Clay sculpture" class="image-fallback" /></figure>
+          <figure class="about-gallery-item"><img src="assets/images/i8.jpg" alt="Workshop detail" class="image-fallback" /></figure>
+          <figure class="about-gallery-item"><img src="assets/images/i9.jpg" alt="Furniture piece" class="image-fallback" /></figure>
+          <figure class="about-gallery-item"><img src="assets/images/i10.jpg" alt="Wood structure study" class="image-fallback" /></figure>
+          <figure class="about-gallery-item"><img src="assets/images/i11.jpg" alt="Studio process photo" class="image-fallback" /></figure>
+          <figure class="about-gallery-item"><img src="assets/images/i12.jpg" alt="Sunflower painting" class="image-fallback" /></figure>
+          <figure class="about-gallery-item"><img src="assets/images/i13.JPG" alt="Pencil illustration" class="image-fallback" /></figure>
+          <figure class="about-gallery-item"><img src="assets/images/i14.JPG" alt="Sketchbook portrait" class="image-fallback" /></figure>
+          <figure class="about-gallery-item"><img src="assets/images/i15.JPG" alt="Sketchbook drawing" class="image-fallback" /></figure>
+          <figure class="about-gallery-item"><img src="assets/images/i16.jpg" alt="Furniture detail" class="image-fallback" /></figure>
+          <figure class="about-gallery-item"><img src="assets/images/i17.JPG" alt="Figure drawing" class="image-fallback" /></figure>
+          <figure class="about-gallery-item"><img src="assets/images/i18.JPG" alt="Portrait sketch" class="image-fallback" /></figure>
+          <figure class="about-gallery-item"><img src="assets/images/i19.JPG" alt="Character illustration" class="image-fallback" /></figure>
+          <figure class="about-gallery-item"><img src="assets/images/i20.JPG" alt="Mixed media study" class="image-fallback" /></figure>
+          <figure class="about-gallery-item"><img src="assets/images/i21.JPG" alt="Sketchbook composition" class="image-fallback" /></figure>
+          <figure class="about-gallery-item"><img src="assets/images/i22.JPG" alt="Sketchbook composition" class="image-fallback" /></figure>
+          <figure class="about-gallery-item"><img src="assets/images/i23.JPG" alt="Sketchbook composition" class="image-fallback" /></figure>
+        </div>
+      </section>
+    </main>
+
     <footer class="site-footer">
-      <div class="container">
-        <p>© 2025 Ines Paric | Designed &amp; built by me.</p>
+      <div class="container footer-inner">
+        <p>© 2026 Ines Paric — Designed &amp; built by me.</p>
+        <a href="#top">Back to top ↑</a>
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script>
+      const fadeElements = document.querySelectorAll(".fade-in-up");
+
+      const fadeObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      fadeElements.forEach((element) => fadeObserver.observe(element));
+
+      const fallbackExtensions = ["jpg", "JPG", "jpeg", "JPEG", "png", "PNG", "webp", "WEBP"];
+
+      document.querySelectorAll("img.image-fallback").forEach((img) => {
+        img.dataset.fallbackIndex = "0";
+        img.dataset.originalSrc = img.getAttribute("src");
+
+        img.addEventListener("error", () => {
+          const originalSrc = img.dataset.originalSrc;
+          const currentIndex = Number(img.dataset.fallbackIndex || "0");
+          const pathWithoutExtension = originalSrc.replace(/\.[^/.]+$/, "");
+          const nextExtension = fallbackExtensions[currentIndex];
+
+          if (!nextExtension) {
+            img.classList.add("image-missing");
+            return;
+          }
+
+          img.dataset.fallbackIndex = String(currentIndex + 1);
+          img.src = `${pathWithoutExtension}.${nextExtension}`;
+        });
+      });
+    </script>
   </body>
 </html>

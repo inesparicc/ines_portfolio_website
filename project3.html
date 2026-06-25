@@ -4,539 +4,296 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OBBI: Bias Mapping Tool | Ines Paric</title>
+    <meta name="description" content="A product design and UX case study for OBBI, a web app that helps teams compare themselves with target audiences and discuss possible bias." />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="project-page">
-   <!-- ===== NAVBAR ===== -->
-   <header class="navbar">
-    <div class="container nav-container">
-      <div class="logo">
-        <a href="index.html" class="logo-link">
-          <img
-            src="assets/logo.svg"
-            alt="Ines Paric logo"
-            class="logo-icon"
-          />
-          Ines&nbsp;Paric
+
+  <body class="project-page obbi-page" id="top">
+
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="logo-link" aria-label="Go to homepage">
+          <img src="assets/logo.svg" alt="" class="logo-icon" />
+          <span>Ines Paric</span>
         </a>
+
+        <nav aria-label="Main navigation">
+          <ul class="nav-links">
+            <li><a href="index.html#work" class="nav-link active">Work</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li>
+              <a href="assets/cv/Ines_CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">
+                Resume
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/" target="_blank" rel="noopener noreferrer" class="nav-link">
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
-  
-      <nav>
-        <ul class="nav-links">
-          <li>
-            <a href="index.html#home" class="nav-link active">Work</a>
-          </li>
-          <li>
-            <a href="about.html" class="nav-link">About</a>
-          </li>
-          <li>
-            <a
-              href="assets/cv/Ines_CV.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="nav-link"
-            >
-              Resume
-            </a>
-          </li>
-        </ul>
+    </header>
+
+
+    <main>
+      <section class="project-hero">
+        <div class="container project-hero-inner fade-in-up">
+          <div class="project-kicker-row">
+            <p class="eyebrow">Product design · Web app · Ethical UX</p>
+            <a href="index.html#work" class="back-link">← Back to work</a>
+          </div>
+
+          <h1>OBBI: Bias Mapping Tool</h1>
+
+          <div class="project-hero-bottom">
+            <p class="project-hero-summary">A web app that helps teams compare themselves with their target audience and spot possible gaps in a clear, data-driven way.</p>
+
+            <div class="project-hero-meta">
+              <div>
+                <span>Type</span>
+                <p>Academic group project · 15 weeks</p>
+              </div>
+              <div>
+                <span>Role</span>
+                <p>UX research · UI design · testing</p>
+              </div>
+              <div>
+                <span>Team</span>
+                <p>1 designer · 2 developers</p>
+              </div>
+              <div>
+                <span>Tools</span>
+                <p>Figma · Miro · React · TypeScript · .NET</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container project-cover fade-in-up">
+          <img src="assets/images/OBBI.jpg" alt="OBBI bias mapping web app mockups" />
+        </div>
+      </section>
+
+      <section class="case-overview">
+        <div class="container overview-grid fade-in-up">
+          <div>
+            <p class="section-label">The challenge</p>
+            <h2>Help teams discuss bias without blaming individuals.</h2>
+          </div>
+          <div class="overview-copy">
+            <p>OBBI started from the question of how unconscious bias could be mapped in a way that feels objective, approachable, and useful.</p>
+            <p>My role was to translate research and expert feedback into a product concept, UX flow, visual design, and testing approach.</p>
+          </div>
+        </div>
+      </section>
+
+
+      <nav class="case-nav" aria-label="Case study sections">
+        <div class="container case-nav-inner">
+          <a href="#context">Context</a>
+          <a href="#research">Research</a>
+          <a href="#concept">Concept</a>
+          <a href="#design">Design</a>
+          <a href="#implementation">Build</a>
+          <a href="#test">Testing</a>
+          <a href="#outcome">Outcome</a>
+        </div>
       </nav>
-    </div>
-  </header>
-  
 
 
-    <!-- ===== HERO ===== -->
-    <section class="case-hero">
-      <div class="container">
-        <h1>OBBI: Bias Mapping Tool</h1>
-        <p class="subtitle">
-          A web app that helps teams compare themselves with their target
-          audience and spot possible gaps and potential bias in a
-          clear, data-driven way.
-        </p>
-        <img
-          src="assets/images/OBBI.jpg"
-          alt="Mockups of the OBBI bias mapping web app"
-        />
-      </div>
-    </section>
+      <section id="context" class="case-chapter" data-bg="#d7c3e3">
+        <div class="container chapter-grid">
+          <aside class="chapter-side">
+            <span>01</span>
+            <p>Context</p>
+          </aside>
 
-    <!-- ===== PROJECT INFO ===== -->
-    <section class="project-info">
-      <div class="container info-grid">
-        <div>
-          <h4>Type</h4>
-          <p>Academic group project · 15 weeks</p>
+          <div class="chapter-content">
+            <h2>From unconscious bias to objective gap mapping</h2>
+            <p>The project started as an HR unconscious bias tool. Through research and expert feedback, the team learned that bias is sensitive to measure directly and can easily feel judgmental.</p>
+            <p>We shifted toward a metrics-based approach that compares a team with its target audience and highlights gaps as conversation starters.</p>
+
+
+            <img src="assets/images/obbi1.jpg" alt="OBBI concept comparison" class="chapter-image" />
+          </div>
         </div>
-        <div>
-          <h4>Client</h4>
-          <p>Fontys HR Department · Center of Expertise Inclusive Society</p>
+      </section>
+
+      <section id="research" class="case-chapter" data-bg="#e6d8ef">
+        <div class="container chapter-grid">
+          <aside class="chapter-side">
+            <span>02</span>
+            <p>Research</p>
+          </aside>
+
+          <div class="chapter-content">
+            <h2>Understanding bias with experts</h2>
+            <p>I interviewed HR professionals and a psychology expert to understand how bias appears at work, what makes bias tools difficult to trust, and how to keep the experience low-threshold.</p>
+            <p>We also researched existing tools like Harvard's IAT and bias interrupter playbooks to understand what already exists and where our concept could be different.</p>
+            <div class="insight-list">
+              <div>
+                <h3>Research insight</h3>
+                <p>People need a safe way to discuss bias without feeling labelled.</p>
+              </div>
+              <div>
+                <h3>Design goal</h3>
+                <p>Make the tool objective, approachable, and easy to understand.</p>
+              </div>
+            </div>
+
+            <img src="assets/images/obbi2.jpg" alt="OBBI research board" class="chapter-image" />
+          </div>
         </div>
-        <div>
-          <h4>Team</h4>
-          <p>1 UX designer (me) · 2 software developers</p>
+      </section>
+
+      <section id="concept" class="case-chapter" data-bg="#d7c3e3">
+        <div class="container chapter-grid">
+          <aside class="chapter-side">
+            <span>03</span>
+            <p>Concept</p>
+          </aside>
+
+          <div class="chapter-content">
+            <h2>Pivoting from scenarios to metrics</h2>
+            <p>We explored two concepts: a scenario-based game and a metrics-based gap analysis. Users enjoyed the scenarios, but stakeholders preferred the metrics concept because it felt more objective and scalable.</p>
+            <p>I helped reshape the direction into OBBI: a web app that compares team and audience data, then explains possible gaps in plain language.</p>
+
+
+            <img src="assets/images/obbiwireframes.jpg" alt="OBBI metrics-based wireframes" class="chapter-image" />
+          </div>
         </div>
-        <div>
-          <h4>My Role</h4>
-          <p>
-            UX research &amp; concept · UI design · testing · front-end (React
-            demo modal)
-          </p>
+      </section>
+
+      <section id="design" class="case-chapter" data-bg="#e6d8ef">
+        <div class="container chapter-grid">
+          <aside class="chapter-side">
+            <span>04</span>
+            <p>Design</p>
+          </aside>
+
+          <div class="chapter-content">
+            <h2>Designing a calm tool for a sensitive topic</h2>
+            <p>The visual design needed to feel friendly and non-judgmental. I worked on flows, wireframes, high-fidelity screens, and chart readability.</p>
+            <p>Testing showed that users preferred bar charts over circular charts because they were easier to read and compare.</p>
+            <div class="decision-grid">
+              <div>
+                <h3>Plain language</h3>
+                <p>Results needed explanation, not only numbers.</p>
+              </div>
+              <div>
+                <h3>Low pressure</h3>
+                <p>The interface should support reflection, not blame.</p>
+              </div>
+              <div>
+                <h3>Readable data</h3>
+                <p>Bar charts made differences easier to understand.</p>
+              </div>
+            </div>
+
+            <img src="assets/images/obbifinal.jpg" alt="OBBI final UI design" class="chapter-image" />
+          </div>
         </div>
-        <div>
-          <h4>Tools</h4>
-          <p>Figma · Miro · React · TypeScript · .NET · GitLab</p>
+      </section>
+
+      <section id="implementation" class="case-chapter" data-bg="#d7c3e3">
+        <div class="container chapter-grid">
+          <aside class="chapter-side">
+            <span>05</span>
+            <p>Build</p>
+          </aside>
+
+          <div class="chapter-content">
+            <h2>Collaborating with developers</h2>
+            <p>I worked with two software developers to keep the design aligned with the technical architecture. We used user stories, GitLab issues, and weekly check-ins to track progress.</p>
+            <p>I also implemented a small React demo modal component used during demos, which gave me the chance to apply my UI decisions directly in code.</p>
+
+
+            <img src="assets/images/obbirole.jpg" alt="OBBI collaboration and sprint overview" class="chapter-image" />
+          </div>
         </div>
-        <div>
-          <h4>Focus</h4>
-          <p>
-            Bias mapping · data visualization · ethical UX · collaboration with
-            psychology &amp; HR experts
-          </p>
+      </section>
+
+      <section id="test" class="case-chapter" data-bg="#e6d8ef">
+        <div class="container chapter-grid">
+          <aside class="chapter-side">
+            <span>06</span>
+            <p>Testing</p>
+          </aside>
+
+          <div class="chapter-content">
+            <h2>Testing clarity, charts, and concept direction</h2>
+            <p>I created a testing plan to compare concepts and review the visual design with HR professionals, students, and design experts.</p>
+            <p>Feedback led to simpler input, more whitespace, clearer charts, and a calmer visual structure.</p>
+            <ul class="clean-list">
+              <li>Bar charts were easier to read than circular charts.</li>
+              <li>Age ranges felt more comfortable than exact ages.</li>
+              <li>Users needed explanations alongside data visualisations.</li>
+              <li>The tool worked best when it framed gaps as discussion starters.</li>
+            </ul>
+
+            <img src="assets/images/obbiiterations.jpg" alt="OBBI design iterations" class="chapter-image" />
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="process-tracker">
-      <div class="steps">
-        <a href="#context" class="step active">
-          <span>1</span>
-          <p>Context</p>
-        </a>
-        <div class="line"></div>
-
-        <a href="#research" class="step">
-          <span>2</span>
-          <p>Research</p>
-        </a>
-        <div class="line"></div>
-
-        <a href="#concept" class="step">
-          <span>3</span>
-          <p>Concept</p>
-        </a>
-        <div class="line"></div>
-
-        <a href="#design" class="step">
-          <span>4</span>
-          <p>Design</p>
-        </a>
-        <div class="line"></div>
-
-        <a href="#implementation" class="step">
-          <span>5</span>
-          <p>Implementation</p>
-        </a>
-        <div class="line"></div>
-
-        <a href="#test" class="step">
-          <span>6</span>
-          <p>Testing</p>
-        </a>
-        <div class="line"></div>
-
-        <a href="#takeaway" class="step">
-          <span>7</span>
-          <p>Takeaways</p>
-        </a>
-      </div>
-    </section>
-
-    <!-- ===== OVERVIEW ===== -->
-    <section id="overview" class="case-section">
-      <div class="container">
-        <h2>Overview</h2>
-        <p>
-          Everyone is biased but in hiring and product teams, those small
-          biases can influence who gets hired, which features are built and how
-          decisions are made. Together with the Fontys HR department and the
-          Center of Expertise Inclusive Society, our brief was:
-          <strong
-            >“How can we easily and objectively map unconscious bias within
-            teams or target audiences?”</strong
-          >
-        </p>
-        <p>
-          Our solution was <strong>OBBI</strong> (Objective Bias &amp; Belief
-          Inventory): a web application that lets a team describe their target
-          audience, answer a short questionnaire about themselves and then see
-          <strong>where they differ from that audience on key metrics</strong>
-          (age, nationality, education, etc.). Those gaps become starting points
-          for talking about potential bias instead of labelling people directly.
-        </p>
-        <p>
-          I worked as the only designer on the team, responsible for the
-          <strong>research, concept, UX/UI and user testing</strong>, and I also
-          implemented a small part of the
-          <strong>front-end in React (demo modal component)</strong> that guides
-          users through the prototype.
-        </p>
-        
-      </div>
-    </section>
-
-    <!-- ===== CONTEXT & CHALLENGE ===== -->
-    <section id="context" class="case-section alt-bg">
-      <div class="container">
-        <h2>1. Context &amp; challenge</h2>
-        <p>
-          The project started as an “HR Unconscious Bias Tool” focused on HR
-          teams. We looked at existing tools such as Harvard’s Implicit
-          Association Test and bias-interrupter toolkits and spoke with HR and
-          psychology experts about how bias shows up at work and why measuring
-          it is tricky.
-        </p>
-        <p>Early on we learned two things:</p>
-        <ul>
-          <li>
-            HR experts liked the idea of <strong>gamified scenarios</strong> but
-            worried about subjectivity and cultural context.
-          </li>
-          <li>
-            Stakeholders preferred an approach that felt
-            <strong>more objective and scalable</strong>, which led to the idea
-            of a metrics-based “gap analysis” between team and target audience.
-          </li>
-        </ul>
-        <p>
-          This meant we had to pivot: keep the playful, approachable feeling,
-          but move towards <strong>data-driven bias mapping</strong> instead of
-          only scenario-based gameplay.
-        </p>
-        <img
-          src="assets/images/obbi1.jpg"
-          alt="Side-by-side comparison of scenario-based and metrics-based concepts"
-        />
-      </div>
-    </section>
-
-    <!-- ===== MY ROLE & COLLABORATION ===== -->
-    <section id="role" class="case-section">
-      <div class="container">
-        <h2>2. My role in the team</h2>
-        <p>
-          I collaborated closely with two software developers. We split the
-          work:
-        </p>
-        <ul>
-          <li>
-            <strong>Me:</strong> research questions, expert interviews, user
-            journeys, mood boards, wireframes, high-fidelity UI, testing plan,
-            A/B tests with HR professionals and design experts, and front-end
-            demo modal in React.
-          </li>
-          <li>
-            <strong>Developers:</strong> C4 architecture, microservices, metrics
-            engine and gap-analysis logic, CI/CD setup and backend
-            implementation.
-          </li>
-        </ul>
-        <p>
-          We worked in sprints with <strong>weekly check-ins</strong> with HR,
-          psychology and software experts. My job was often to translate expert
-          feedback into clear UX decisions the team could build on.
-        </p>
-        <img
-          src="assets/images/obbirole.jpg"
-          alt="Sprint overview and collaboration between design and development"
-        />
-      </div>
-    </section>
-
-    <!-- ===== RESEARCH ===== -->
-    <section id="research" class="case-section alt-bg">
-      <div class="container">
-        <h2>3. Research &amp; problem framing</h2>
-        <p>
-          I started with <strong>expert interviews</strong> with HR
-          professionals and a psychology expert to understand:
-        </p>
-        <ul>
-          <li>Why bias matters on a team and organisational level</li>
-          <li>Which biases are most common in their work</li>
-          <li>
-            How far we can go with a “game” without people feeling judged or
-            manipulated
-          </li>
-        </ul>
-        <p>
-          We combined this with <strong>desk research</strong> on bias,
-          gamification and existing tools like Harvard’s IAT and bias
-          interrupter playbooks.
-        </p>
-        <p>
-          From this, I helped the team define five guiding questions, including
-          what “low entry barrier” looks like in practice and how we can talk
-          about bias without labelling
-          individuals.
-        </p>
-        <img
-          src="assets/images/obbi2.jpg"
-          alt="Miro board with research notes and key insights on bias and tools"
-        />
-      </div>
-    </section>
-
-    <!-- ===== CONCEPTS & PIVOT ===== -->
-    <section id="concept" class="case-section">
-      <div class="container">
-        <h2>4. Concepts &amp; pivot</h2>
-        <p>We explored two main concepts:</p>
-        <ul>
-          <li>
-            <strong>Scenario-based game</strong> – players create avatars and
-            move through realistic work situations; their choices reveal
-            patterns in how they treat different people.
-          </li>
-          <li>
-            <strong>Metrics-based gap analysis</strong> – teams describe their
-            target audience and themselves on objective metrics; OBBI compares
-            the two and highlights gaps that might hint at bias.
-          </li>
-        </ul>
-        <p>
-          We tested early click-through prototypes of both with HR
-          professionals, teachers and students. People
-          <strong>enjoyed the scenarios more</strong>
-          but stakeholders pushed for the metrics-based concept because it felt
-          more objective and easier to scale beyond HR.
-        </p>
-        <p>
-          I helped re-shape the concept into
-          <strong>OBBI, the metrics-based web app</strong>, while keeping:
-        </p>
-        <ul>
-          <li>A friendly visual style and clear storytelling</li>
-          <li>An educational “learning” step before people see any numbers</li>
-          <li>
-            Results that always come with
-            <strong>plain-language explanations</strong>, not just charts.
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ===== UX & UI DESIGN ===== -->
-    <!-- ===== DESIGN PROCESS SUB-SECTIONS ===== -->
-    <section id="design" class="case-section alt-bg">
-      <div class="container">
-        <h2>5. UX &amp; visual design</h2>
-        <h3 class="subheading">Scenario-Based Concept</h3>
-        <p>
-          The earliest direction was a <strong>scenario-based concept</strong> inspired by 
-          feedback from HR experts, who believed realistic situations could create 
-          a safe space for honest answers. In this version, users created an avatar 
-          and moved through short workplace scenarios where their choices revealed 
-          patterns in how they react to different people.
-        </p>
-        
-        <p>
-          The wireframes explored decision trees, storytelling, emotional tone, 
-          and how to keep the experience anonymous and non-judgmental. However, 
-          interviews with psychology and HR experts highlighted concerns about 
-          <strong>subjectivity</strong>, <strong>cultural interpretation</strong> and 
-          <strong>difficulty scaling</strong> across different teams.
-        </p>
-        
-        <img src="assets/images/obbiwireframess.jpg" 
-             alt="Scenario-based concept wireframes showing avatar creation and decision flows" 
-             class="full-width-img"/>
-        
-        <p>
-          These early iterations helped us understand how engaging a scenario could be, 
-          but also revealed the limitations of a narrative system when dealing with 
-          sensitive topics such as bias.
-        </p>
-        <img src="assets/images/obbiscenarioui.jpg" 
-             class="full-width-img"/>
-
-        <h3 class="subheading">Metrics-Based Concept (Pivot)</h3>
-<p>
-  After gathering feedback from stakeholders and experts, we shifted toward a 
-  <strong>metrics-based “gap analysis” concept</strong>. This version allowed 
-  teams to describe both themselves and their target audience using objective 
-  attributes such as age range, nationality, language, education level, and 
-  experience.
-</p>
-
-<p>
-  The wireframes focused on maintaining a <strong>low entry barrier</strong>: 
-  minimal text, simple questions, and a clear step-by-step flow. Multiple 
-  iterations explored different ways of visualising gaps, including circular 
-  diagrams, percentage bars and list-based comparisons.
-</p>
-
-<img src="assets/images/obbiwireframes.jpg" 
-     class="full-width-img"/>
-
-<p>
-  Usability tests revealed that users preferred <strong>bar charts</strong> over 
-  circular charts thanks to clearer readability. This feedback shaped the 
-  direction of the final OBBI results screen.
-</p>
-<img src="assets/images/obbiiterations.jpg" 
-class="full-width-img"/>
-<img src="assets/images/obbiiterations2.jpg" 
-class="full-width-img"/>
-<img src="assets/images/obbiiteration3.jpg" 
-class="full-width-img"/>
-<section id="design" class="case-section alt-bg">
-
-<h3 class="subheading">Final OBBI Concept – Refined Wireframes & UI Iterations</h3>
-<p>
-  Once the metrics-based approach was validated, I refined the full structure 
-  and interaction flow of OBBI. The final wireframes integrate the strongest 
-  elements from both early concepts: the <strong>clarity</strong> and 
-  <strong>objectivity</strong> of the metrics approach combined with the 
-  <strong>approachability</strong> and <strong>guidance</strong> from the 
-  scenario-based idea.
-</p>
-
-<p>
-  Several rounds of iterations focused on simplifying inputs, improving 
-  accessibility, adding whitespace, and ensuring users always received 
-  <strong>plain-language explanations</strong> alongside data visualisations.
-</p>
-
-<img src="assets/images/obbifinal.jpg" 
-     alt="Refined final OBBI wireframes with improved layout and accessibility"
-     class="full-width-img"/>
-
-<p>
-  These iterations directly responded to user feedback, leading to a cleaner, 
-  calmer, and more intuitive experience that supports teams in discussing bias 
-  constructively rather than judgmentally.
-</p>
+      </section>
 
 
-        
-  
+      <section id="outcome" class="case-outcome" data-bg="#f1e8ee">
+        <div class="container outcome-grid">
+          <div>
+            <p class="section-label">Outcome</p>
+            <h2>A supportive bias-mapping tool that turns data gaps into team reflection.</h2>
+          </div>
 
-    <!-- ===== IMPLEMENTATION & FRONT-END ===== -->
-    <section id="implementation" class="case-section">
-      <div class="container">
-        <h2>6. Collaboration with development</h2>
-        <p>
-          While my teammates focused on the microservice architecture and
-          metrics engine, I worked with them to keep the design and
-          implementation aligned. We used C4 diagrams, user stories and GitLab
-          issues to break down features and track progress.
-        </p>
-        <p>
-          On the front-end side I implemented a
-          <strong>React demo modal component</strong> used during demos to guide
-          users through new features. The modal:
-        </p>
-        <ul>
-          <li>Opens on top of the current screen with instructions</li>
-          <li>Uses a simple, reusable functional component</li>
-          <li>
-            Has a clearly placed close button in the top-right corner to keep it
-            easy to dismiss
-          </li>
-        </ul>
-        <p>
-          This small feature was my chance to apply my own UI decisions directly
-          in code and get feedback from our software expert on the quality of my
-          implementation.
-        </p>
-      </div>
-    </section>
-
-    <!-- ===== TESTING ===== -->
-    <section id="test" class="case-section alt-bg">
-      <div class="container">
-        <h2>7. Testing &amp; learning</h2>
-        <p>
-          I created a <strong>testing plan</strong> to evaluate both the
-          concepts and the visual designs:
-        </p>
-        <ul>
-          <li>
-            <strong>A/B testing</strong> with HR professionals to compare the
-            scenario-based and metrics-based concepts.
-          </li>
-          <li>
-            <strong>Design reviews</strong> with UX/UI experts on layout,
-            hierarchy, colour and charts.
-          </li>
-          <li>
-            Post-test questionnaires and short interviews to capture how clear,
-            engaging and useful OBBI felt.
-          </li>
-        </ul>
-        <p>Feedback led to several changes, for example:</p>
-        <ul>
-          <li>
-            Switching the results visualisation from a circular chart to a
-            <strong>bar chart</strong> because people found that easier to read.
-          </li>
-          <li>
-            Adding more white space and a clearer grid to make the interface
-            feel calmer.
-          </li>
-          <li>
-            Simplifying data input (age ranges instead of exact ages) to make
-            people more comfortable sharing information.
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ===== TAKEAWAYS ===== -->
-    <section id="takeaway" class="case-section">
-      <div class="container">
-        <h2>8. What I took from this project</h2>
-        <p>
-          This project taught me how to
-          <strong>balance research, ethics, design and development</strong> in
-          one product. I learned how to:
-        </p>
-        <ul>
-          <li>
-            Turn an open research question into concrete design decisions backed
-            by experts
-          </li>
-          <li>
-            Handle a <strong>pivot in scope</strong> and bring users and
-            stakeholders with us
-          </li>
-          <li>
-            Design data visualisations that are not only pretty but also clear
-            and respectful
-          </li>
-          <li>
-            Work with developers on architecture and still keep the experience
-            simple for end users
-          </li>
-        </ul>
-        <p>
-          I’m especially happy that OBBI manages to talk about bias in a
-          <strong>supportive and practical way</strong> instead of blaming
-          individuals — and that our final design is something both HR experts
-          and our stakeholders can build on in future iterations.
-        </p>
-        <div class="design-doc-cta">
-          <p>Want to explore the full design process, wireframes, iterations, and documentation?</p>
-          <a href="assets/documents/OL_HRBIAS_Design_Document-1 (1).pdf" 
-             target="_blank" 
-             class="btn">
-            View Full Design Document
-          </a>
+          <div class="overview-copy">
+            <p>This project taught me how to balance research, ethics, design, and development in one product.</p>
+            <p>I learned how to handle a pivot in scope, design respectful data visualisations, and collaborate with developers while keeping the end-user experience simple.</p>
+            <a href="assets/documents/OL_HRBIAS_Design_Document-1 (1).pdf" class="project-link">View full design document →</a>
+          </div>
         </div>
-        
-        
-        
-      </div>
-    </section>
+      </section>
 
-    <!-- ===== FOOTER ===== -->
+    </main>
+
     <footer class="site-footer">
-      <div class="container">
-        <p>© 2025 Ines Paric | Designed &amp; built by me.</p>
+      <div class="container footer-inner">
+        <p>© 2026 Ines Paric — Designed &amp; built by me.</p>
+        <a href="#top">Back to top ↑</a>
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+
+    <script>
+      const fadeElements = document.querySelectorAll(".fade-in-up");
+
+      const fadeObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      fadeElements.forEach((element) => fadeObserver.observe(element));
+
+      const colorSections = document.querySelectorAll("[data-bg]");
+
+      const bgObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const color = entry.target.getAttribute("data-bg");
+              document.documentElement.style.setProperty("--page-bg", color);
+            }
+          });
+        },
+        { threshold: 0.35 }
+      );
+
+      colorSections.forEach((section) => bgObserver.observe(section));
+    </script>
+
   </body>
 </html>

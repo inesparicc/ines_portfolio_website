@@ -4,39 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sensory Map App | Ines Paric</title>
+    <meta name="description" content="A UX research and app design case study exploring sensory-friendly navigation for autistic and sensory-sensitive adults." />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="project-page">
-    <!-- ===== NAVBAR ===== -->
+
+  <body class="project-page sensory-map-page" id="top">
+
     <header class="navbar">
       <div class="container nav-container">
-        <div class="logo">
-          <a href="index.html" class="logo-link">
-            <img
-              src="assets/logo.svg"
-              alt="Ines Paric logo"
-              class="logo-icon"
-            />
-            Ines&nbsp;Paric
-          </a>
-        </div>
+        <a href="index.html" class="logo-link" aria-label="Go to homepage">
+          <img src="assets/logo.svg" alt="" class="logo-icon" />
+          <span>Ines Paric</span>
+        </a>
 
-        <nav>
+        <nav aria-label="Main navigation">
           <ul class="nav-links">
+            <li><a href="index.html#work" class="nav-link active">Work</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
             <li>
-              <a href="index.html#home" class="nav-link active">Work</a>
-            </li>
-            <li>
-              <a href="about.html" class="nav-link">About</a>
-            </li>
-            <li>
-              <a
-                href="assets/cv/Ines_CV.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="nav-link"
-              >
+              <a href="assets/cv/Ines_CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">
                 Resume
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/" target="_blank" rel="noopener noreferrer" class="nav-link">
+                LinkedIn
               </a>
             </li>
           </ul>
@@ -44,515 +36,245 @@
       </div>
     </header>
 
-    <!-- ===== HERO ===== -->
-    <section class="case-hero">
-      <div class="container case-hero-grid">
-        <div class="case-hero-text">
+
+    <main>
+      <section class="project-hero">
+        <div class="container project-hero-inner fade-in-up">
+          <div class="project-kicker-row">
+            <p class="eyebrow">UX research · App concept · Inclusive design</p>
+            <a href="index.html#work" class="back-link">← Back to work</a>
+          </div>
+
           <h1>Sensory Map App</h1>
-          <p class="subtitle">
-            A mobile app concept that helps autistic and sensory-sensitive
-            adults discover calmer, more predictable public spaces using
-            crowd-sourced sensory data.
-          </p>
+
+          <div class="project-hero-bottom">
+            <p class="project-hero-summary">A mobile app concept that helps autistic and sensory-sensitive adults discover calmer, more predictable public spaces using sensory data.</p>
+
+            <div class="project-hero-meta">
+              <div>
+                <span>Type</span>
+                <p>Academic / Personal Project</p>
+              </div>
+              <div>
+                <span>Role</span>
+                <p>UX Researcher · UI Designer</p>
+              </div>
+              <div>
+                <span>Duration</span>
+                <p>Approx. 20 weeks</p>
+              </div>
+              <div>
+                <span>Tools</span>
+                <p>Figma · Miro · React · Map APIs</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="case-hero-image">
-          <img
-            src="assets/images/smmockup.jpg"
-            alt="Sensory Map App cover mockup"
-          />
+
+        <div class="container project-cover fade-in-up">
+          <img src="assets/images/smmockup.jpg" alt="Sensory Map App cover mockup" />
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ===== PROJECT INFO ===== -->
-    <section class="project-info">
-      <div class="container info-grid">
-        <div>
-          <h4>Type</h4>
-          <p>Academic / Personal Project</p>
+      <section class="case-overview">
+        <div class="container overview-grid fade-in-up">
+          <div>
+            <p class="section-label">The challenge</p>
+            <h2>Show not only where a place is, but how it might feel.</h2>
+          </div>
+          <div class="overview-copy">
+            <p>Many autistic and sensory-sensitive people experience public spaces differently because of noise, light, crowds, and unpredictability.</p>
+            <p>This project explores how a navigation app could support planning, confidence, and personal comfort through sensory filters and user-generated reviews.</p>
+          </div>
         </div>
-        <div>
-          <h4>Role</h4>
-          <p>UX Researcher · UI Designer</p>
+      </section>
+
+
+      <nav class="case-nav" aria-label="Case study sections">
+        <div class="container case-nav-inner">
+          <a href="#research">Research</a>
+          <a href="#empathize">Empathize</a>
+          <a href="#ideate">Ideate</a>
+          <a href="#design">Design</a>
+          <a href="#test">Testing</a>
+          <a href="#outcome">Outcome</a>
         </div>
-        <div>
-          <h4>Duration</h4>
-          <p>Approx. 20 weeks</p>
+      </nav>
+
+
+      <section id="research" class="case-chapter" data-bg="#c8d8eb">
+        <div class="container chapter-grid">
+          <aside class="chapter-side">
+            <span>01</span>
+            <p>Research</p>
+          </aside>
+
+          <div class="chapter-content">
+            <h2>Starting from sensory needs, not features</h2>
+            <p>I explored the daily challenges of autistic and sensory-sensitive adults, especially around unpredictable noise, lighting, crowds, and public spaces.</p>
+            <p>Desk research showed that most navigation tools focus on distance and ratings, but not on how a place might feel for someone with sensory sensitivities.</p>
+            <div class="insight-list">
+              <div>
+                <h3>Core question</h3>
+                <p>What if navigation apps showed how a place might feel?</p>
+              </div>
+              <div>
+                <h3>Design gap</h3>
+                <p>Existing tools rarely support sensory predictability.</p>
+              </div>
+            </div>
+
+            <img src="assets/images/smdd.jpg" alt="Sensory Map research overview" class="chapter-image" />
+          </div>
         </div>
-        <div>
-          <h4>Tools</h4>
-          <p>Figma · Miro · React · Map APIs</p>
+      </section>
+
+      <section id="empathize" class="case-chapter" data-bg="#d9e6f4">
+        <div class="container chapter-grid">
+          <aside class="chapter-side">
+            <span>02</span>
+            <p>Empathize</p>
+          </aside>
+
+          <div class="chapter-content">
+            <h2>Designing for predictability and control</h2>
+            <p>Personas focused on sensory needs, routines, coping strategies, and emotional states rather than generic demographics.</p>
+            <p>Expert feedback reinforced the importance of customisation, dark mode, GPS-based prompts, and clear sensory indicators.</p>
+
+
+            <img src="assets/images/smpersona.jpg" alt="Sensory Map personas" class="chapter-image" />
+          </div>
         </div>
-        <div>
-          <h4>Focus</h4>
-          <p>Accessibility · Neurodiversity · Map UX</p>
+      </section>
+
+      <section id="ideate" class="case-chapter" data-bg="#c8d8eb">
+        <div class="container chapter-grid">
+          <aside class="chapter-side">
+            <span>03</span>
+            <p>Ideate</p>
+          </aside>
+
+          <div class="chapter-content">
+            <h2>Turning research into a map concept</h2>
+            <p>I translated the research into features such as colour-coded sensory pins, personal sensory profiles, GPS alerts, sensory reviews, filters, and theme options.</p>
+            <p>The flow was intentionally kept predictable: sign up, set preferences, allow GPS, open the map, filter locations, and read or leave reviews.</p>
+            <div class="decision-grid">
+              <div>
+                <h3>Map pins</h3>
+                <p>Show noise, light, and crowd intensity at a glance.</p>
+              </div>
+              <div>
+                <h3>Profiles</h3>
+                <p>Let users personalise sensitivities and comfort levels.</p>
+              </div>
+              <div>
+                <h3>Alerts</h3>
+                <p>Warn users before entering overwhelming areas.</p>
+              </div>
+            </div>
+
+            <img src="assets/images/smuserflow.jpg" alt="Sensory Map user flow" class="chapter-image" />
+          </div>
         </div>
-      </div>
-    </section>
-    <!-- ===== PROCESS TRACKER ===== -->
-    <section class="process-tracker">
-      <div class="steps">
-        <a href="#overview" class="step active">
-          <span>0</span>
-          <p>Overview</p>
-        </a>
-        <div class="line"></div>
-        <a href="#research" class="step">
-          <span>1</span>
-          <p>Research</p>
-        </a>
-        <div class="line"></div>
-        <a href="#empathize" class="step">
-          <span>2</span>
-          <p>Empathize</p>
-        </a>
-        <div class="line"></div>
-        <a href="#ideate" class="step">
-          <span>3</span>
-          <p>Ideate</p>
-        </a>
-        <div class="line"></div>
-        <a href="#design" class="step">
-          <span>4</span>
-          <p>Design</p>
-        </a>
-        <div class="line"></div>
-        <a href="#test" class="step">
-          <span>5</span>
-          <p>Test</p>
-        </a>
-        <div class="line"></div>
-        <a href="#takeaway" class="step">
-          <span>6</span>
-          <p>Takeaway</p>
-        </a>
-      </div>
-    </section>
+      </section>
 
-    <!-- ===== OVERVIEW ===== -->
-    <section id="overview" class="case-section">
-      <div class="container">
-        <h2>Overview</h2>
-        <p>
-          The Sensory Map App is based on one simple question:
-          <strong
-            >“What if navigation apps didn’t just tell you where to go, but how
-            a place might feel?”</strong
-          >
-        </p>
-        <p>
-          Through research into autism and sensory processing, I discovered that
-          many autistic adults struggle not only with finding locations, but
-          with <strong>unpredictable noise, light, and crowds</strong>. Existing
-          tools like Google Maps focus on distance and ratings, but not on
-          whether a space feels overwhelming or comfortable.
-        </p>
-        <p>
-          This project explores an app that combines
-          <strong>GPS-enabled alerts</strong>,
-          <strong>user-generated sensory reviews</strong>, and
-          <strong>map filters</strong> so users can avoid overwhelming spaces –
-          or intentionally choose to challenge themselves on their own terms.
-        </p>
-        <img
-          src="assets/images/smmoodboard.jpg"
-          alt="Sensory Map moodboard and visual direction"
-        />
-      </div>
-    </section>
+      <section id="design" class="case-chapter" data-bg="#d9e6f4">
+        <div class="container chapter-grid">
+          <aside class="chapter-side">
+            <span>04</span>
+            <p>Design</p>
+          </aside>
 
-    <!-- ===== 1. RESEARCH ===== -->
-    <section id="research" class="case-section alt-bg">
-      <div class="container">
-        <h2>1. Research</h2>
+          <div class="chapter-content">
+            <h2>Creating a calm and readable interface</h2>
+            <p>I iterated through several visual directions before choosing a light-blue system that balanced calmness, contrast, and readability.</p>
+            <p>The interface followed accessibility principles such as clear hierarchy, predictable layouts, simple icons with labels, minimal animation, and customisable themes.</p>
 
-        <h3>Starting from the problem, not the app</h3>
-        <p>
-          I first explored the daily challenges of autistic adults: social
-          overload, sensory sensitivities, emotional regulation, and navigating
-          public spaces. Literature on Autism Spectrum Disorder highlighted that
-          environments with intense
-          <strong>noise, lighting, and crowd density</strong> can cause sensory
-          overload and avoidance of everyday situations.
-        </p>
 
-        <h3>From IT solutions to the “Sensory Environment Map” concept</h3>
-        <p>
-          In an early research document, I mapped existing IT solutions for
-          autistic people (communication apps, emotional regulation tools,
-          learning platforms, etc.) and identified a gap: there was no tool
-          focused specifically on
-          <strong>navigating sensory-friendly environments</strong>. From this,
-          the concept of a <strong>Sensory Environment Map</strong> emerged – a
-          map that shows how a place might feel based on user experiences and
-          external data.
-        </p>
+            <img src="assets/images/smfinaldesign.jpg" alt="Sensory Map final design" class="chapter-image" />
+          </div>
+        </div>
+      </section>
 
-        <h3>Defining what the map actually needs to show</h3>
-        <p>
-          I then explored how map-based apps work technically and what kind of
-          data I could realistically surface:
-          <strong
-            >crowd density, popular times, reviews, and real-time environmental
-            data</strong
-          >. I researched how to integrate data from services like Google Maps
-          and city open data into custom map layers with color-coded pins for
-          noise, light, and crowd levels.
-        </p>
+      <section id="test" class="case-chapter" data-bg="#c8d8eb">
+        <div class="container chapter-grid">
+          <aside class="chapter-side">
+            <span>05</span>
+            <p>Testing</p>
+          </aside>
 
-        <p>This led to the core UX concept:</p>
-        <ul>
-          <li><strong>Red pins</strong> – louder / high noise zones</li>
-          <li><strong>Blue pins</strong> – bright / intense light areas</li>
-          <li><strong>Green pins</strong> – crowded spaces</li>
-        </ul>
+          <div class="chapter-content">
+            <h2>Validating the concept with users and experts</h2>
+            <p>I tested the prototype with autistic students using observation, think-aloud, and post-session interviews. An autism expert also reviewed the concept.</p>
+            <p>Testing confirmed that the concept felt useful and supportive, especially because users could customise themes and receive prompts around overwhelming places.</p>
+            <ul class="clean-list">
+              <li>Participants found the flow clear and predictable.</li>
+              <li>Theme customisation was seen as valuable.</li>
+              <li>GPS prompts near pinned places felt useful.</li>
+              <li>Feedback led to stronger contrast and dark mode as a core option.</li>
+            </ul>
 
-        <h3>Desk research into autism-friendly UI</h3>
-        <p>
-          In parallel, I researched design guidelines for autistic users:
-          <strong
-            >muted color palettes, high contrast, predictable layouts, minimal
-            animation, clear iconography, and reduced text</strong
-          >. These principles later shaped every interface decision – from color
-          choices to how many elements appear on each screen.
-        </p>
+            <img src="assets/images/smcards.jpg" alt="Sensory Map testing feedback" class="chapter-image" />
+          </div>
+        </div>
+      </section>
 
-        <img
-          src="assets/images/smdd.jpg"
-          alt="Research overview: autism challenges, existing apps, and sensory map concept"
-        />
-      </div>
-    </section>
 
-    <!-- ===== 2. EMPATHIZE ===== -->
-    <section id="empathize" class="case-section">
-      <div class="container">
-        <h2>2. Empathize</h2>
+      <section id="outcome" class="case-outcome" data-bg="#f1e8ee">
+        <div class="container outcome-grid">
+          <div>
+            <p class="section-label">Outcome</p>
+            <h2>A research-based app concept connecting inclusive design and technical exploration.</h2>
+          </div>
 
-        <h3>Personas based on autistic adults, not generic “users”</h3>
-        <p>
-          Using insights from research and conversations with autistic students,
-          I created personas that focused on
-          <strong>sensory needs, routines, and coping strategies</strong> rather
-          than demographics. For example:
-        </p>
-        <ul>
-          <li>
-            <strong>The Planner</strong> – wants to carefully prepare outings
-            and avoid unexpected overstimulation
-          </li>
-          <li>
-            <strong>The Social Explorer</strong> – enjoys going out but needs
-            tools to manage when things become “too much”
-          </li>
-        </ul>
-        <img
-          src="assets/images/smpersona.jpg"
-          alt="Research overview: autism challenges, existing apps, and sensory map concept"
-        />
+          <div class="overview-copy">
+            <p>The project helped me turn autism and sensory research into practical design decisions, while also exploring how map APIs and a React prototype could support the concept.</p>
+            <p>It strengthened my interest in accessible, research-driven design that supports people in everyday situations.</p>
+            <a href="https://sensory-map.vercel.app/" class="project-link">View React prototype →</a>
+          </div>
+        </div>
+      </section>
 
-        <h3>Expert feedback on sensory needs</h3>
-        <p>
-          I consulted an autism professional who reinforced that customization
-          and predictability are crucial. They emphasized:
-        </p>
-        <ul>
-          <li>
-            the importance of <strong>theme options</strong> (including dark
-            mode) to support different visual sensitivities
-          </li>
-          <li>
-            the value of <strong>GPS-based prompts</strong> when entering
-            overstimulating areas
-          </li>
-          <li>
-            the potential of using pins and colored zones to quickly communicate
-            how an area feels
-          </li>
-        </ul>
-        <p>
-          They also raised future considerations like how to deal with “fake”
-          reviews and how to respond if someone has stayed too long in a “red”
-          zone and becomes overstimulated.
-        </p>
+    </main>
 
-        <h3>Emotional mapping</h3>
-        <p>
-          Through feedback and reflection, I mapped emotional states across a
-          typical journey: deciding where to go, traveling there, arriving, and
-          staying. Key feelings included
-          <strong
-            >anticipation, anxiety about unknown environments, relief when
-            things feel safe, and guilt or exhaustion</strong
-          >
-          after overstimulation. These emotional insights informed features like
-          personalized filters, calm visuals, and non-judgmental wording in the
-          app.
-        </p>
-        <img
-          src="assets/images/smemotionalmap.jpg"
-          alt="Research overview: autism challenges, existing apps, and sensory map concept"
-        />
-      </div>
-    </section>
-
-    <!-- ===== 3. IDEATE ===== -->
-    <section id="ideate" class="case-section alt-bg">
-      <div class="container">
-        <h2>3. Ideate</h2>
-
-        <h3>Turning research into features</h3>
-        <p>
-          During ideation, I translated research insights into concrete app
-          features. The main ideas were:
-        </p>
-        <ul>
-          <li>
-            <strong>Interactive map with color-coded pins</strong> for noise,
-            light, and crowd density
-          </li>
-          <li>
-            <strong>Personal sensory profile</strong> where users select
-            sensitivities (sound, light, crowds, smell)
-          </li>
-          <li>
-            <strong>GPS-enabled alerts</strong> when approaching a potentially
-            overwhelming area
-          </li>
-          <li>
-            <strong>User reviews</strong> focused on sensory experiences instead
-            of generic “good/bad” ratings
-          </li>
-          <li>
-            <strong>Customizable themes</strong> to adapt brightness and color
-            palette
-          </li>
-        </ul>
-
-        <h3>User flows and structure</h3>
-        <p>
-          I mapped the main user flow from onboarding to daily use: sign up →
-          set sensory sensitivities → allow GPS & notifications → land on main
-          map → filter and explore → view location details → read or leave
-          reviews → adjust profile and theme. The flow was intentionally linear
-          with minimal branches to keep it predictable and low-stress.
-        </p>
-        <img
-          src="assets/images/smuserflow.jpg"
-          alt="Personas and empathy map for autistic and sensory-sensitive users"
-        />
-
-        <p>
-          Low-fidelity sketches and wireframes focused on keeping screens clean,
-          with one main action per screen and large, recognizable icons instead
-          of dense text.
-        </p>
-
-        <img
-          src="assets/images/smsketches.jpg"
-          alt="Wireframes and user flows for Sensory Map App"
-        />
-        <img
-          src="assets/images/smwireframes.jpg"
-          alt="Personas and empathy map for autistic and sensory-sensitive users"
-        />
-      </div>
-    </section>
-
-    <!-- ===== 4. DESIGN ===== -->
-    <section id="design" class="case-section">
-      <div class="container">
-        <h2>4. Design</h2>
-
-        <h3>From purple and green to a calm light-blue system</h3>
-        <p>
-          I went through several visual iterations: a bold purple version, a
-          green nature-inspired version, deep blue layouts, and finally a
-          <strong>light blue interface</strong>. User and expert feedback showed
-          that:
-        </p>
-        <ul>
-          <li>too much white could feel bright and fatiguing</li>
-          <li>some green combinations lacked contrast and felt “muddy”</li>
-          <li>deep blue made text harder to read for some users</li>
-        </ul>
-        <img
-          src="assets/images/sm3.jpg"
-          alt="Wireframes and user flows for Sensory Map App"
-        />
-        <p>
-          The final light-blue system balanced
-          <strong
-            >calmness, readability, and autism-related color
-            associations</strong
-          >, supported by research on muted blue tones for reduced stimulation.
-        </p>
-        <img
-          src="assets/images/smfinaldesign.jpg"
-          alt="Wireframes and user flows for Sensory Map App"
-        />
-
-        <h3>Design principles for autistic users</h3>
-        <p>The final UI followed principles such as:</p>
-        <ul>
-          <li>clear hierarchy with one primary action per screen</li>
-          <li>high contrast text and simple typography</li>
-          <li>icons paired with labels for quick recognition</li>
-          <li>minimal animation and no flashing elements</li>
-          <li>customizable themes including lighter and darker modes</li>
-        </ul>
-
-        <h3>Technical exploration: map integration & React prototype</h3>
-        <p>
-          To understand how this concept could work as a real product, I
-          researched how to integrate map APIs (like Google Maps) with custom
-          data layers showing sensory information. I documented how to pull
-          place details, crowd levels, and reviews into the app, and how to
-          overlay custom pins and filters on top of a base map.
-        </p>
-        <p>
-          Based on this, I built a <strong>React prototype</strong> that
-          simulates the main map flow: users can see color-coded pins, open
-          location detail cards, and interact with basic filters and themes.
-          This helped validate that the interaction model and information
-          architecture work in a more realistic environment beyond static Figma
-          screens.
-        </p>
-        <p class="prototype-cta">
-          <a
-            href="https://sensory-map.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn"
-          >
-            View React prototype
-          </a>
-        </p>
-      </div>
-    </section>
-
-    <!-- ===== 5. TEST ===== -->
-    <section id="test" class="case-section alt-bg">
-      <div class="container">
-        <h2>5. Test</h2>
-
-        <h3>Testing with autistic students & expert review</h3>
-        <p>
-          I created a testing plan and ran usability sessions with autistic
-          students using observational testing, a
-          <strong>think-aloud protocol</strong>, and post-session interviews.
-          Participants were asked to:
-        </p>
-        <ul>
-          <li>navigate through the app sections</li>
-          <li>use the map to find and interpret pins</li>
-          <li>read and leave a sensory review</li>
-          <li>edit their profile and adjust theme settings</li>
-        </ul>
-        <p>
-          An autism expert also reviewed the concept and design, focusing on
-          customization, map clarity, and the long-term value of the tool.
-        </p>
-
-        <h3>What worked well</h3>
-        <ul>
-          <li>
-            Participants found the <strong>flow clear</strong> and “nothing can
-            go wrong” in navigation
-          </li>
-          <li>
-            They appreciated <strong>theme customization</strong> and the idea
-            of personal color schemes
-          </li>
-          <li>
-            The push notification concept near pinned places felt useful and
-            motivating
-          </li>
-          <li>
-            The app was described as something they could imagine using in daily
-            life
-          </li>
-        </ul>
-
-        <h3>What I improved based on feedback</h3>
-        <ul>
-          <li>
-            Improved <strong>contrast</strong> in some themes (e.g., pastel
-            backgrounds with white text)
-          </li>
-          <li>
-            Added <strong>dark mode</strong> as a core option, not just an extra
-          </li>
-          <li>
-            Considered ways to handle <strong>data reliability</strong> (e.g.,
-            outdated reviews, fake reviews)
-          </li>
-          <li>
-            Documented future ideas like community features and specifying
-            discomfort levels per sensory factor
-          </li>
-        </ul>
-
-        <p>
-          Overall, testing confirmed that the concept is meaningful for autistic
-          users and that the combination of map, filters, and customization
-          feels supportive rather than overwhelming.
-          :contentReference[oaicite:11]{index=11}
-        </p>
-
-        <img
-          src="assets/images/smcards.jpg"
-          alt="Usability testing feedback and key insights"
-        />
-      </div>
-    </section>
-
-    <!-- ===== 6. TAKEAWAY ===== -->
-    <section id="takeaway" class="case-section">
-      <div class="container">
-        <h2>6. Takeaway</h2>
-        <p>
-          The Sensory Map App project taught me how to move from a broad
-          question about autism and IT solutions to a focused, research-based
-          concept supported by real users and experts. I learned how to:
-        </p>
-        <ul>
-          <li>
-            translate autism research and sensory theory into concrete
-            interaction patterns
-          </li>
-          <li>
-            design with accessibility and neurodiversity as a starting point,
-            not an afterthought
-          </li>
-          <li>
-            iterate on visual design using both user feedback and expert
-            critique
-          </li>
-          <li>
-            bridge UX and technology by exploring React and map API integration
-          </li>
-        </ul>
-        <p>
-          This project reflects my interest in
-          <strong>inclusive, research-driven design</strong> and how digital
-          products can support people in very real, everyday situations –
-          starting with something as simple as choosing where to go.
-        </p>
-        <img
-          src="assets/images/smconclusion.jpg"
-          alt="Final app mockups across multiple devices"
-        />
-      </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
-      <div class="container">
-        <p>© 2025 Ines Paric | Designed & built by me.</p>
+      <div class="container footer-inner">
+        <p>© 2026 Ines Paric — Designed &amp; built by me.</p>
+        <a href="#top">Back to top ↑</a>
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+
+    <script>
+      const fadeElements = document.querySelectorAll(".fade-in-up");
+
+      const fadeObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      fadeElements.forEach((element) => fadeObserver.observe(element));
+
+      const colorSections = document.querySelectorAll("[data-bg]");
+
+      const bgObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const color = entry.target.getAttribute("data-bg");
+              document.documentElement.style.setProperty("--page-bg", color);
+            }
+          });
+        },
+        { threshold: 0.35 }
+      );
+
+      colorSections.forEach((section) => bgObserver.observe(section));
+    </script>
+
   </body>
 </html>

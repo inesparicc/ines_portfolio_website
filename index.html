@@ -3,29 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ines Paric | UX & Product Design</title>
+    <title>Ines Paric | Product Builder & Designer</title>
+    <meta
+      name="description"
+      content="Portfolio of Ines Paric, a Product Builder and Designer focused on user research, product optimization, e-commerce, and user-centred digital experiences."
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
-    <!-- ===== NAVBAR ===== -->
     <header class="navbar">
       <div class="container nav-container">
-        <div class="logo">
-          <a href="index.html" class="logo-link">
-            <img
-              src="assets/logo.svg"
-              alt="Ines Paric logo"
-              class="logo-icon"
-            />
-            Ines&nbsp;Paric
-          </a>
-        </div>
+        <a href="index.html" class="logo-link" aria-label="Go to homepage">
+          <img src="assets/logo.svg" alt="" class="logo-icon" />
+          <span>Ines Paric</span>
+        </a>
 
-        <nav>
+        <nav aria-label="Main navigation">
           <ul class="nav-links">
             <li>
-              <a href="index.html#home" class="nav-link active">Work</a>
+              <a href="index.html#work" class="nav-link active">Work</a>
             </li>
             <li>
               <a href="about.html" class="nav-link">About</a>
@@ -40,118 +37,218 @@
                 Resume
               </a>
             </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="nav-link"
+              >
+                LinkedIn
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main>
-      <!-- ===== HERO ===== -->
-      <section class="hero" id="home">
-        <div class="hero-inner">
-          <!-- Left: text -->
-          <div class="hero-text fade-in-up">
-            <p class="hero-kicker">UX / Product Design</p>
-            <h1>
-              Hi, my name is <span>Ines.</span> <br />
-              I’m a UX &amp; media design student dedicated to designing
-              thoughtful experiences for people.
-            </h1>
+      <section class="home-hero" id="home">
+        <div class="container hero-inner fade-in-up">
+          <p class="eyebrow">Product Builder & Designer</p>
 
-            <p class="hero-sub">
-              Currently studying in the Netherlands and building digital
-              products through research-driven, human-centred design.
+          <h1>
+            I design and build user-centred digital products <span class="text-accent">from research to launch.</span>
+          </h1>
+
+          <div class="hero-bottom">
+            <p>
+              With a foundation in user research, UI design, and cross-functional collaboration, I bring over a year of hands-on industry experience—spanning e-commerce, agency work, and freelance projects. I turn complex problems into clear, scalable product experiences.
             </p>
 
-            <div class="hero-actions fade-in-up">
-              <a
-                href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="primary-btn"
-              >
-                Connect on LinkedIn
+            <div class="scroll-cue-container">
+              <a href="#work" class="scroll-cue">
+                <span>Explore case studies</span>
+                <span class="scroll-arrow" aria-hidden="true">↓</span>
               </a>
             </div>
-          </div>
-
-          <!-- Right: interactive bubble (in its own grid column) -->
-          <div class="hero-orb-col fade-in-up">
-            <button class="scroll-blob-btn" aria-label="Click to view projects">
-              <div class="scroll-blob">
-                <span class="blob-text">Click</span>
-              </div>
-            </button>
           </div>
         </div>
       </section>
 
-      <!-- ===== PROJECTS ===== -->
-      <section class="projects" id="projects">
-        <div class="container fade-in-up">
-          <h2 class="section-title fade-in-up">Selected work</h2>
+      <section class="work-section" id="work">
+        <div class="container">
+          <div class="work-intro fade-in-up">
+            <p class="eyebrow">Selected work</p>
+            <h2>Case studies</h2>
+          </div>
 
-          <div class="project-grid">
-            <!-- Project 1 -->
-            <a href="project1.html" class="project-card fade-in-up">
-              <div class="project-image">
+          <div class="project-list">
+            <article class="project-feature fade-in-up" data-bg="#d9c8d3">
+              <div class="project-meta">
+                <p class="project-year">2026</p>
+                <p>Product design</p>
+                <p>A/B Testing</p>
+                <p>CRO Optimization</p>
+                <p>UI Architecture</p>
+              </div>
+
+              <div class="project-main">
+                <a href="project4.html" class="project-title-link">
+                  <h3>Otrium · Platform Optimization</h3>
+                </a>
+
+                <p class="project-description">
+                  Reducing friction across the shopping journey through data-driven experiments, checkout redesigns, and token systems, contributing to a €1.3M annualized GMV impact.
+                </p>
+
+                <a href="project4.html" class="project-link">View case study →</a>
+              </div>
+
+              <a href="project4.html" class="project-image-wrap" aria-label="View Otrium Platform Optimization case study">
+                <img
+                  src="assets/images/iOS EN.jpg"
+                  alt="Otrium Platform Optimization preview"
+                  class="project-image"
+                />
+              </a>
+            </article>
+
+            <article class="project-feature fade-in-up" data-bg="#c8d8eb">
+              <div class="project-meta">
+                <p class="project-year">2024</p>
+                <p>UX research</p>
+                <p>App concept</p>
+                <p>Inclusive design</p>
+                <p>Prototype</p>
+              </div>
+
+              <div class="project-main">
+                <a href="project2.html" class="project-title-link">
+                  <h3>Sensory Map</h3>
+                </a>
+
+                <p class="project-description">
+                  Created an inclusive map concept that helps sensory-sensitive
+                  people navigate cities based on real sensory experiences.
+                </p>
+
+                <a href="project2.html" class="project-link">View case study →</a>
+              </div>
+
+              <a href="project2.html" class="project-image-wrap" aria-label="View Sensory Map case study">
+                <img
+                  src="assets/images/SENSORYMAP.jpg"
+                  alt="Sensory Map app project preview"
+                  class="project-image"
+                />
+              </a>
+            </article>
+
+            <article class="project-feature fade-in-up" data-bg="#d7c3e3">
+              <div class="project-meta">
+                <p class="project-year">2024</p>
+                <p>Product design</p>
+                <p>Web app</p>
+                <p>UX flows</p>
+                <p>Prototype</p>
+              </div>
+
+              <div class="project-main">
+                <a href="project3.html" class="project-title-link">
+                  <h3>OBBI</h3>
+                </a>
+
+                <p class="project-description">
+                  Designed a web tool that helps teams compare their assumptions
+                  with their target audience and spot blind spots.
+                </p>
+
+                <a href="project3.html" class="project-link">View case study →</a>
+              </div>
+
+              <a href="project3.html" class="project-image-wrap" aria-label="View OBBI case study">
+                <img
+                  src="assets/images/OBBI.jpg"
+                  alt="OBBI web app project preview"
+                  class="project-image"
+                />
+              </a>
+            </article>
+
+            <article class="project-feature fade-in-up" data-bg="#c5dce4">
+              <div class="project-meta">
+                <p class="project-year">2025</p>
+                <p>Internship</p>
+                <p>UX/UI design</p>
+                <p>Front-end</p>
+                <p>WordPress</p>
+              </div>
+
+              <div class="project-main">
+                <a href="project4.html" class="project-title-link">
+                  <h3>Club Canary Upsell Page Redesign</h3>
+                </a>
+
+                <p class="project-description">
+                  Redesigned a post-booking upsell page to improve clarity,
+                  mobile structure, and booking confidence.
+                </p>
+
+                <a href="project4.html" class="project-link">View case study →</a>
+              </div>
+
+              <a href="project4.html" class="project-image-wrap" aria-label="View Club Canary case study">
                 <img
                   src="assets/images/CLUBCANARY.jpg"
-                  alt="Club Canary upsell page redesign"
+                  alt="Club Canary upsell page redesign preview"
+                  class="project-image"
                 />
-              </div>
-              <div class="project-meta">
-                <p class="project-tag">UX / UI · Web · Internship</p>
-                <h3>Club Canary Upsell Page Redesign</h3>
-                <p class="project-desc">
-                  Redesigning an upsell experience for a tour company to improve
-                  clarity, responsiveness and booking conversions.
-                </p>
-              </div>
-            </a>
-
-            <!-- Project 2 -->
-            <a href="project2.html" class="project-card fade-in-up">
-              <div class="project-image">
-                <img src="assets/images/SENSORYMAP.jpg" alt="Sensory Map app" />
-              </div>
-              <div class="project-meta">
-                <p class="project-tag">UX Research · App</p>
-                <h3>Sensory Map</h3>
-                <p class="project-desc">
-                  An inclusive map concept that helps sensory-sensitive people
-                  navigate cities based on real sensory experiences.
-                </p>
-              </div>
-            </a>
-
-            <!-- Project 3 -->
-            <a href="project3.html" class="project-card fade-in-up">
-              <div class="project-image">
-                <img src="assets/images/OBBI.jpg" alt="OBBI web app" />
-              </div>
-              <div class="project-meta">
-                <p class="project-tag">Product Design · Web</p>
-                <h3>OBBI</h3>
-                <p class="project-desc">
-                  A web tool that helps teams compare themselves to their target
-                  audience and spot blind spots and bias in their product
-                  decisions.
-                </p>
-              </div>
-            </a>
+              </a>
+            </article>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
-      <div class="container">
-        <p>© 2025 Ines Paric — Designed &amp; built by me.</p>
+      <div class="container footer-inner">
+        <p>© 2026 Ines Paric — Designed &amp; built by me.</p>
+        <a href="#home">Back to top ↑</a>
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script>
+      const fadeElements = document.querySelectorAll(".fade-in-up");
+
+      const fadeObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      fadeElements.forEach((element) => fadeObserver.observe(element));
+
+      const projectSections = document.querySelectorAll(".project-feature");
+
+      const bgObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const color = entry.target.getAttribute("data-bg");
+              document.documentElement.style.setProperty("--page-bg", color);
+            }
+          });
+        },
+        { threshold: 0.42 }
+      );
+
+      projectSections.forEach((section) => bgObserver.observe(section));
+    </script>
   </body>
 </html>

@@ -3,166 +3,279 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Club Canary 2025 Magazine | Ines Paric</title>
+    <title>Otrium: Platform & Conversion Optimization | Ines Paric</title>
+    <meta
+      name="description"
+      content="Otrium product design case study by Ines Paric. A data-driven project focused on checkout clarity, A/B testing, and scalable design systems driving €1.3M in GMV."
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="project-page">
+
+  <body class="project-page store-credit-page">
     <header class="navbar">
-      <div class="container">
-        <div class="logo">Ines<span>.</span></div>
-        <nav>
+      <div class="container nav-container">
+        <a href="index.html" class="logo-link" aria-label="Go to homepage">
+          <img src="assets/logo.svg" alt="" class="logo-icon" />
+          <span>Ines Paric</span>
+        </a>
+
+        <nav aria-label="Main navigation">
           <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="index.html#projects">Projects</a></li>
             <li>
-              <a href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/"
-                >LinkedIn</a
-              >
+              <a href="index.html#work" class="nav-link active">Work</a>
             </li>
             <li>
-              <a href="assets/cv/Ines_CV.pdf" target="_blank" class="resume-btn"
-                >Resume</a
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li>
+              <a
+                href="assets/cv/Ines_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="nav-link"
               >
+                Resume
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="nav-link"
+              >
+                LinkedIn
+              </a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <section class="case-hero">
-      <div class="container">
-        <h1>Club Canary 2025 Magazine</h1>
-        <p class="subtitle">
-          A digital & print magazine curated for tourists in Tenerife,
-          showcasing excursions and local culture.
-        </p>
-        <img src="assets/images/PADEL.jpg" alt="Magazine Cover" />
-      </div>
-    </section>
+    <main>
+      <section class="project-hero">
+        <div class="container project-hero-inner fade-in-up">
+          <div class="project-kicker-row">
+            <p class="eyebrow">Product Design · CRO · Design Systems</p>
+            <a href="index.html#work" class="back-link">← Back to work</a>
+          </div>
 
-    <section class="project-info">
-      <div class="container info-grid">
-        <div>
-          <h4>Client</h4>
-          <p>Club Canary</p>
+          <h1>Otrium: Platform & Conversion Optimization</h1>
+
+          <div class="project-hero-bottom">
+            <p class="project-hero-summary">
+              Reducing friction across the Otrium shopping journey through rigorous A/B testing, checkout optimization, and scalable design systems—driving €1.3M in annualized GMV impact.
+            </p>
+
+            <div class="project-hero-meta">
+              <div>
+                <span>Company</span>
+                <p>Otrium</p>
+              </div>
+              <div>
+                <span>Role</span>
+                <p>Product Designer</p>
+              </div>
+              <div>
+                <span>Focus</span>
+                <p>A/B Testing · Checkout UX · UI Architecture</p>
+              </div>
+              <div>
+                <span>Impact</span>
+                <p>+28.4% total conversion uplift</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <h4>Role</h4>
-          <p>Layout Designer & Content Curator</p>
+      </section>
+
+      <section class="case-overview">
+        <div class="container overview-grid fade-in-up">
+          <div>
+            <p class="section-label">The challenge</p>
+            <h2>
+              Fixing product-discovery friction with data, while supporting higher conversion.
+            </h2>
+          </div>
+
+          <div class="overview-copy">
+            <p>
+              My scope at Otrium was broad but deeply metrics-driven: "How can UX improvements across the shopping journey help users understand, discover, and use key features more easily?"
+            </p>
+            <p>
+              Instead of focusing on a single feature, I tackled two major design tracks alongside proactive platform work. The first was optimizing Store Credit into a trustworthy, frictionless retention feature. The second was diagnosing and fixing major product-discovery friction on the homepage and platform using rigorous A/B testing. 
+            </p>
+          </div>
         </div>
-        <div>
-          <h4>Duration</h4>
-          <p>3 weeks</p>
+      </section>
+
+      <nav class="case-nav" aria-label="Case study sections">
+        <div class="container case-nav-inner">
+          <a href="#discovery">A/B Testing</a>
+          <a href="#store-credit">Store Credit</a>
+          <a href="#design-system">UI Systems</a>
+          <a href="#outcome">Business Impact</a>
         </div>
-        <div>
-          <h4>Tools</h4>
-          <p>InDesign · Figma · Photoshop</p>
+      </nav>
+
+      <section id="discovery" class="case-chapter">
+        <div class="container chapter-grid">
+          <aside class="chapter-side">
+            <span>01</span>
+            <p>Discovery</p>
+          </aside>
+
+          <div class="chapter-content">
+            <h2>Turning the "escape room" into a clear path</h2>
+            <p>
+              Initial research revealed that users were treating the homepage like an "escape room," frantically scanning for the fastest way out to the search bar. To fix this, I initiated a series of platform-wide A/B tests using Coframe.
+            </p>
+            <p>
+              Through testing, I learned that hierarchy and placement are the biggest homepage levers. By moving high-intent content above interstitials, we achieved a massive +14.9% conversion win on homepage hierarchy alone. 
+            </p>
+
+            <div class="quote-block">
+              <p>
+                "A failed test isn't a failed idea, it's a diagnosis."
+              </p>
+            </div>
+
+            <ul class="clean-list">
+              <li><strong>Diagnosing Data:</strong> An initial USP block test underperformed. Instead of scrapping it, data revealed a targeting error. We fixed the segment, re-ran the test, and secured a +10% conversion win.</li>
+              <li><strong>Balancing Needs:</strong> Marketing wants more banners; UX wants clarity. I designed a desktop user-controlled carousel and a mobile swipe layout with clear indicators to satisfy both.</li>
+              <li><strong>Mobile Discoverability:</strong> Proved that a compact, fully visible grid beats a carousel on mobile, driving an additional +2.0% lift.</li>
+            </ul>
+
+            <img
+              src="assets/images/Coframe_USP.jpeg"
+              alt="Coframe A/B testing results for homepage USP block"
+              class="chapter-image"
+            />
+            <img
+              src="assets/images/otrium-mobile-grid-vs-carousel.jpg"
+              alt="Mobile category grid vs carousel designs"
+              class="chapter-image"
+            />
+          </div>
         </div>
-        <div>
-          <h4>Focus</h4>
-          <p>Visual Storytelling · Tourism Design</p>
+      </section>
+
+      <section id="store-credit" class="case-chapter">
+        <div class="container chapter-grid">
+          <aside class="chapter-side">
+            <span>02</span>
+            <p>Store Credit</p>
+          </aside>
+
+          <div class="chapter-content">
+            <h2>O-Credit</h2>
+            <p>
+              Store Credit is a vital retention tool, but users were confused by abstract points systems. Through prototyping and user interviews, I mapped the integration of a "My Vouchers" screen directly into the cart and checkout flows.
+            </p>
+            <p>
+              The ultimate pivot was scrapping gamification entirely in favor of a brutalist, clear €10 toggle within the checkout (evolving from Version 1 abstract points directly to the Final Version 7 clear toggle). By ensuring the credit functioned visually as a simple monetary discount, user confidence skyrocketed.
+            </p>
+            
+            <div class="decision-grid">
+              <div>
+                <h3>Edge Cases</h3>
+                <p>Every state was designed upfront—including empty states and technical errors—so exactly what we tested was built.</p>
+              </div>
+              <div>
+                <h3>Live Handoff</h3>
+                <p>Maintained clean, annotated Figma files for live alignment with B2C engineers.</p>
+              </div>
+              <div>
+                <h3>+150% Lift</h3>
+                <p>The clear toggle interaction generated a +150% conversion lift in a rolling A/B/C/D test.</p>
+              </div>
+            </div>
+
+            <video class="chapter-image" autoplay loop muted playsinline aria-label="60-second video demo of the final Store Credit checkout flow">
+              <source src="assets/storecredit.mov" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="process-tracker">
-      <div class="steps">
-        <a href="#research" class="step active"
-          ><span>1</span>
-          <p>Research</p></a
-        >
-        <div class="line"></div>
-        <a href="#empathize" class="step"
-          ><span>2</span>
-          <p>Empathize</p></a
-        >
-        <div class="line"></div>
-        <a href="#ideate" class="step"
-          ><span>3</span>
-          <p>Ideate</p></a
-        >
-        <div class="line"></div>
-        <a href="#design" class="step"
-          ><span>4</span>
-          <p>Design</p></a
-        >
-        <div class="line"></div>
-        <a href="#test" class="step"
-          ><span>5</span>
-          <p>Test</p></a
-        >
-        <div class="line"></div>
-        <a href="#takeaway" class="step"
-          ><span>6</span>
-          <p>Takeaway</p></a
-        >
-      </div>
-    </section>
+      <section id="design-system" class="case-chapter">
+        <div class="container chapter-grid">
+          <aside class="chapter-side">
+            <span>03</span>
+            <p>UI Systems</p>
+          </aside>
 
-    <section id="research" class="case-section">
-      <div class="container">
-        <h2>1. Research</h2>
-        <p>
-          I reviewed travel magazines and Club Canary’s brand identity to define
-          tone and visual style consistent with its audience.
-        </p>
-        <img src="assets/images/project4-research.jpg" alt="Research visuals" />
-      </div>
-    </section>
+          <div class="chapter-content">
+            <h2>Scaling quality and protecting against debt</h2>
+            <p>
+              Beyond immediate feature work, I proactively audited the foundations of Otrium's UI framework. I reviewed and updated the core Ozone tokens under the hood, focusing on corner radius, blurs, and elevation.
+            </p>
+            <p>
+              Cleaner tokens mean a single source of truth and a vastly smoother developer handoff. Because as I learned: <strong>"A fix made in the system is a fix made everywhere."</strong>
+            </p>
 
-    <section id="empathize" class="case-section alt-bg">
-      <div class="container">
-        <h2>2. Empathize</h2>
-        <p>
-          Personas represented young travellers and families looking for
-          authentic experiences and clear visual guidance.
-        </p>
-        <img src="assets/images/project4-empathize.jpg" alt="Personas" />
-      </div>
-    </section>
+            <ul class="clean-list">
+              <li>Standardized the system so one styling change trickles down to every button, card, and modal.</li>
+              <li>Designed the platform's Megamenu from scratch (from wireframes to final UI) to improve global navigation.</li>
+              <li>Redesigned outdated iOS App Store imagery to ensure core brand themes carried from the store listing straight into the app.</li>
+            </ul>
 
-    <section id="ideate" class="case-section">
-      <div class="container">
-        <h2>3. Ideate</h2>
-        <p>
-          I sketched article layouts, photo grids, and interactive QR code
-          placements for quick excursion booking access.
-        </p>
-        <img src="assets/images/project4-ideate.jpg" alt="Layouts" />
-      </div>
-    </section>
+           
+            <img
+              src="assets/images/iOS EN.jpg"
+              alt="Before and after comparison of the iOS App Store imagery redesign"
+              class="chapter-image"
+            />
+          </div>
+        </div>
+      </section>
 
-    <section id="design" class="case-section alt-bg">
-      <div class="container">
-        <h2>4. Design</h2>
-        <p>
-          Created a minimalist grid system with large imagery, bold titles, and
-          subtle pink accents for brand consistency.
-        </p>
-        <img src="assets/images/project4-design.jpg" alt="Magazine design" />
-      </div>
-    </section>
+      <section id="outcome" class="case-outcome">
+        <div class="container outcome-grid">
+          <div>
+            <p class="section-label">Business Impact</p>
+            <h2>
+              Understanding first, conversion follows.
+            </h2>
+          </div>
 
-    <section id="test" class="case-section">
-      <div class="container">
-        <h2>5. Test</h2>
-        <p>
-          The magazine prototype was reviewed by the marketing team and
-          tourists; feedback guided content re-organization.
-        </p>
-        <img src="assets/images/project4-test.jpg" alt="Testing visuals" />
-      </div>
-    </section>
+          <div class="overview-copy">
+            <p>
+              By diagnosing user friction through data and executing scalable design solutions, this body of work drove a total conversion uplift of +28.4% and an annualized GMV impact of €1.3M.
+            </p>
+            <p>
+              More importantly, this experience marked a profound personal shift: transforming from a junior dealing with impostor syndrome into an independent product builder who scopes, decides, and ships.
+            </p>
 
-    <section id="takeaway" class="case-section alt-bg">
-      <div class="container">
-        <h2>6. Takeaway</h2>
-        <p>
-          This project strengthened my editorial design skills and proved the
-          importance of visual hierarchy
-        </p>
+            <a href="index.html#work" class="project-link">Back to all projects →</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 Ines Paric — Designed &amp; built by me.</p>
+        <a href="#top">Back to top ↑</a>
       </div>
-    </section>
+    </footer>
+
+    <script>
+      const fadeElements = document.querySelectorAll(".fade-in-up");
+
+      const fadeObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      fadeElements.forEach((element) => fadeObserver.observe(element));
+    </script>
   </body>
 </html>
