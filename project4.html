@@ -6,12 +6,13 @@
     <title>Otrium: Platform & Conversion Optimization | Ines Paric</title>
     <meta
       name="description"
-      content="Otrium product design case study by Ines Paric. A data-driven project focused on checkout clarity, A/B testing, and scalable design systems driving €1.3M in GMV."
+      content="Commercial UX & Product Design case study at Otrium by Ines Paric. Focused on A/B testing, checkout UX, design systems, and driving €1.3M in GMV impact."
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body class="project-page store-credit-page">
+  <body class="project-page store-credit-page" id="top">
+    <!-- ===== NAVBAR ===== -->
     <header class="navbar">
       <div class="container nav-container">
         <a href="index.html" class="logo-link" aria-label="Go to homepage">
@@ -21,12 +22,8 @@
 
         <nav aria-label="Main navigation">
           <ul class="nav-links">
-            <li>
-              <a href="index.html#work" class="nav-link active">Work</a>
-            </li>
-            <li>
-              <a href="about.html" class="nav-link">About</a>
-            </li>
+            <li><a href="index.html#work" class="nav-link active">Work</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
             <li>
               <a
                 href="assets/cv/Ines_CV.pdf"
@@ -53,18 +50,19 @@
     </header>
 
     <main>
+      <!-- ===== HERO SECTION ===== -->
       <section class="project-hero">
         <div class="container project-hero-inner fade-in-up">
           <div class="project-kicker-row">
-            <p class="eyebrow">Product Design · CRO · Design Systems</p>
+            <p class="eyebrow">Product Design · A/B Testing · Systems</p>
             <a href="index.html#work" class="back-link">← Back to work</a>
           </div>
 
-          <h1>Otrium: Platform & Conversion Optimization</h1>
+          <h1>Otrium: Platform &amp; Conversion Optimization</h1>
 
           <div class="project-hero-bottom">
             <p class="project-hero-summary">
-              Reducing friction across the Otrium shopping journey through rigorous A/B testing, checkout optimization, and scalable design systems—driving €1.3M in annualized GMV impact.
+              Removing shopping friction through data-backed A/B testing, a frictionless checkout redesign, and foundational design tokens—driving an annualized €1.3M GMV impact.
             </p>
 
             <div class="project-hero-meta">
@@ -77,48 +75,57 @@
                 <p>Product Designer</p>
               </div>
               <div>
-                <span>Focus</span>
-                <p>A/B Testing · Checkout UX · UI Architecture</p>
+                <span>Annualized Impact</span>
+                <p>€1.3M GMV</p>
               </div>
               <div>
-                <span>Impact</span>
-                <p>+28.4% total conversion uplift</p>
+                <span>Conversion Lift</span>
+                <p>+28.4% Uplift</p>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="container project-cover fade-in-up">
+  <img
+    src="assets/images/iOS EN.jpg"
+    alt="Otrium product design showcase"
+    style="height: auto; object-fit: contain;"
+  />
+</div>
       </section>
 
+      <!-- ===== EXECUTIVE OVERVIEW ===== -->
       <section class="case-overview">
         <div class="container overview-grid fade-in-up">
           <div>
-            <p class="section-label">The challenge</p>
-            <h2>
-              Fixing product-discovery friction with data, while supporting higher conversion.
-            </h2>
+            <p class="section-label">The Challenge</p>
+            <h2>Understanding first, conversion follows.</h2>
           </div>
 
           <div class="overview-copy">
             <p>
-              My scope at Otrium was broad but deeply metrics-driven: "How can UX improvements across the shopping journey help users understand, discover, and use key features more easily?"
+              Otrium is an off-price fashion marketplace helping brands sell excess inventory. My mission was simple: <strong>uncover where shoppers get stuck, design hypotheses-driven fixes, and validate them with live data.</strong>
             </p>
             <p>
-              Instead of focusing on a single feature, I tackled two major design tracks alongside proactive platform work. The first was optimizing Store Credit into a trustworthy, frictionless retention feature. The second was diagnosing and fixing major product-discovery friction on the homepage and platform using rigorous A/B testing. 
+              I tackled two core tracks: turning the homepage into a fast product-discovery engine and rebuilding Store Credit into a trustworthy retention feature. Along the way, I upgraded core design tokens to eliminate frontend UI debt.
             </p>
           </div>
         </div>
       </section>
 
-      <nav class="case-nav" aria-label="Case study sections">
+      <!-- ===== STICKY CHAPTER NAV ===== -->
+      <nav class="case-nav" aria-label="Case study chapters">
         <div class="container case-nav-inner">
-          <a href="#discovery">A/B Testing</a>
-          <a href="#store-credit">Store Credit</a>
-          <a href="#design-system">UI Systems</a>
-          <a href="#outcome">Business Impact</a>
+          <a href="#discovery">01. Discovery</a>
+          <a href="#store-credit">02. O-Credit Checkout</a>
+          <a href="#design-system">03. UI Tokens</a>
+          <a href="#outcome">04. Results &amp; Impact</a>
         </div>
       </nav>
 
-      <section id="discovery" class="case-chapter">
+      <!-- ===== CHAPTER 01: DISCOVERY & A/B TESTS ===== -->
+      <section id="discovery" class="case-chapter" data-bg="#f4e8f0">
         <div class="container chapter-grid">
           <aside class="chapter-side">
             <span>01</span>
@@ -126,134 +133,191 @@
           </aside>
 
           <div class="chapter-content">
-            <h2>Turning the "escape room" into a clear path</h2>
+            <p class="eyebrow">Homepage Optimization</p>
+            <h2>Fixing the "Escape Room"</h2>
+            
             <p>
-              Initial research revealed that users were treating the homepage like an "escape room," frantically scanning for the fastest way out to the search bar. To fix this, I initiated a series of platform-wide A/B tests using Coframe.
-            </p>
-            <p>
-              Through testing, I learned that hierarchy and placement are the biggest homepage levers. By moving high-intent content above interstitials, we achieved a massive +14.9% conversion win on homepage hierarchy alone. 
+              Heatmaps and recordings showed shoppers treated the homepage like an escape room—skipping promo banners and rushing straight to search. It was acting like a transit hub instead of a discovery feed.
             </p>
 
             <div class="quote-block">
-              <p>
-                "A failed test isn't a failed idea, it's a diagnosis."
-              </p>
+              <p>"A failed test isn’t a failed idea—it’s a diagnosis."</p>
             </div>
 
-            <ul class="clean-list">
-              <li><strong>Diagnosing Data:</strong> An initial USP block test underperformed. Instead of scrapping it, data revealed a targeting error. We fixed the segment, re-ran the test, and secured a +10% conversion win.</li>
-              <li><strong>Balancing Needs:</strong> Marketing wants more banners; UX wants clarity. I designed a desktop user-controlled carousel and a mobile swipe layout with clear indicators to satisfy both.</li>
-              <li><strong>Mobile Discoverability:</strong> Proved that a compact, fully visible grid beats a carousel on mobile, driving an additional +2.0% lift.</li>
-            </ul>
+            <p>
+              Using <strong>Coframe</strong>, I launched targeted experiments to streamline navigation, layout hierarchy, and copy:
+            </p>
+
+            <div class="decision-grid">
+              <div>
+                <h3>Hierarchy Shift (+14.9%)</h3>
+                <p>Moving popular categories above promotional banners generated Otrium’s biggest homepage conversion win.</p>
+              </div>
+              <div>
+                <h3>Fixing Data (+10.0%)</h3>
+                <p>An initial USP test lagged because logged-in users saw signup buttons. Re-targeting logged-out shoppers flipped a -3.4% dip into a +10.0% win.</p>
+              </div>
+              <div>
+                <h3>Mobile Grid (+2.0%)</h3>
+                <p>Proved that a compact, 2-column category grid beat horizontal swipe carousels on mobile.</p>
+              </div>
+            </div>
 
             <img
               src="assets/images/Coframe_USP.jpeg"
-              alt="Coframe A/B testing results for homepage USP block"
+              alt="Coframe experimentation data"
               class="chapter-image"
             />
-            <img
-              src="assets/images/otrium-mobile-grid-vs-carousel.jpg"
-              alt="Mobile category grid vs carousel designs"
-              class="chapter-image"
-            />
-          </div>
+
+            
         </div>
       </section>
 
-      <section id="store-credit" class="case-chapter">
+      <!-- ===== CHAPTER 02: O-CREDIT CHECKOUT ===== -->
+      <section id="store-credit" class="case-chapter" data-bg="#eedbe8">
         <div class="container chapter-grid">
           <aside class="chapter-side">
             <span>02</span>
-            <p>Store Credit</p>
+            <p>Retention</p>
           </aside>
 
           <div class="chapter-content">
-            <h2>O-Credit</h2>
-            <p>
-              Store Credit is a vital retention tool, but users were confused by abstract points systems. Through prototyping and user interviews, I mapped the integration of a "My Vouchers" screen directly into the cart and checkout flows.
-            </p>
-            <p>
-              The ultimate pivot was scrapping gamification entirely in favor of a brutalist, clear €10 toggle within the checkout (evolving from Version 1 abstract points directly to the Final Version 7 clear toggle). By ensuring the credit functioned visually as a simple monetary discount, user confidence skyrocketed.
-            </p>
+            <p class="eyebrow">Checkout Architecture</p>
+            <h2>O-Credit: The 1-Click Toggle</h2>
             
-            <div class="decision-grid">
+            <p>
+              Many users made one purchase and never came back. Otrium introduced Store Credit to boost repeat orders, but initial designs used confusing points and complex rules.
+            </p>
+            <p>
+              Through 7 design iterations and moderated usability testing with 7 proxy users, I made the key design call: <strong>eliminate gamified points and treat credit as pure cash with a 1-click toggle directly in checkout.</strong> We branded it as <strong>"O-Credit"</strong>.
+            </p>
+
+            <div class="insight-list">
               <div>
-                <h3>Edge Cases</h3>
-                <p>Every state was designed upfront—including empty states and technical errors—so exactly what we tested was built.</p>
+                <h3>The Hypothesis</h3>
+                <p>Treating credit as a transparent discount line (-€10) removes checkout hesitation and builds trust.</p>
               </div>
               <div>
-                <h3>Live Handoff</h3>
-                <p>Maintained clean, annotated Figma files for live alignment with B2C engineers.</p>
-              </div>
-              <div>
-                <h3>+150% Lift</h3>
-                <p>The clear toggle interaction generated a +150% conversion lift in a rolling A/B/C/D test.</p>
+                <h3>The Live Result (+150%)</h3>
+                <p>A rolling A/B/C/D live test revealed a <strong>+150% conversion lift</strong> in second-order purchases for the €20 credit variant.</p>
               </div>
             </div>
 
-            <video class="chapter-image" autoplay loop muted playsinline aria-label="60-second video demo of the final Store Credit checkout flow">
+            <ul class="clean-list">
+              <li><strong>Zero Edge-Case Debt:</strong> Designed full UI specs upfront for expired vouchers, partial credits, empty states, and API error states.</li>
+              <li><strong>Engineer-Ready Handoff:</strong> Delivered structured component states directly to B2C developers for clean implementation.</li>
+              <li><strong>Customer Validation:</strong> Early launch to 281 shoppers scored <strong>4.6 out of 5</strong> for checkout ease of use.</li>
+            </ul>
+            
+
+            <video
+              class="chapter-image"
+              autoplay
+              loop
+              muted
+              playsinline
+              aria-label="Demo of the final Store Credit checkout flow"
+            >
               <source src="assets/storecredit.mov" type="video/mp4" />
-              Your browser does not support the video tag.
+              Your browser does not support HTML5 video.
             </video>
           </div>
         </div>
       </section>
 
-      <section id="design-system" class="case-chapter">
+      <!-- ===== CHAPTER 03: DESIGN SYSTEM & SCALING ===== -->
+      <section id="design-system" class="case-chapter" data-bg="#f4e8f0">
         <div class="container chapter-grid">
           <aside class="chapter-side">
             <span>03</span>
-            <p>UI Systems</p>
+            <p>Systems</p>
           </aside>
 
           <div class="chapter-content">
-            <h2>Scaling quality and protecting against debt</h2>
+            <p class="eyebrow">Design Systems &amp; Platform QA</p>
+            <h2>Tokens &amp; The Megamenu</h2>
+            
             <p>
-              Beyond immediate feature work, I proactively audited the foundations of Otrium's UI framework. I reviewed and updated the core Ozone tokens under the hood, focusing on corner radius, blurs, and elevation.
+              Fast experiments can create inconsistent interfaces. Alongside my main project tracks, I audited and upgraded Otrium’s <strong>Ozone Design System</strong> tokens and built global platform components.
             </p>
-            <p>
-              Cleaner tokens mean a single source of truth and a vastly smoother developer handoff. Because as I learned: <strong>"A fix made in the system is a fix made everywhere."</strong>
-            </p>
+
+            <div class="quote-block">
+              <p>"A fix made in the design system is a fix made everywhere."</p>
+            </div>
 
             <ul class="clean-list">
-              <li>Standardized the system so one styling change trickles down to every button, card, and modal.</li>
-              <li>Designed the platform's Megamenu from scratch (from wireframes to final UI) to improve global navigation.</li>
-              <li>Redesigned outdated iOS App Store imagery to ensure core brand themes carried from the store listing straight into the app.</li>
+              <li><strong>Ozone Token Architecture:</strong> Standardized tokens for corner radii, elevation, blur filters, and iconography line weights to ensure smooth dev handoffs.</li>
+              <li><strong>Desktop Megamenu:</strong> Designed and prototyped an A-Z brand navigation bar from scratch to make product discovery effortless.</li>
+              <li><strong>Pricing Clarity (RRP):</strong> Removed cluttered <em>adviesprijs</em> tags from listing pages, moving clean contextual explanations into Cart and PDP.</li>
+              <li><strong>App Store Redesign:</strong> Refreshed iOS/Android App Store screenshots with localized, consistent visuals carrying right into the app login.</li>
             </ul>
 
-           
             <img
-              src="assets/images/iOS EN.jpg"
-              alt="Before and after comparison of the iOS App Store imagery redesign"
+              src="assets/images/img2.png"
+              alt="Ozone design system token updates"
+              class="chapter-image"
+            />
+            <img
+              src="assets/images/img1.png"
+              alt="Desktop Megamenu design and information architecture"
               class="chapter-image"
             />
           </div>
         </div>
       </section>
 
-      <section id="outcome" class="case-outcome">
-        <div class="container outcome-grid">
+      <!-- ===== CHAPTER 04: OUTCOME & TESTIMONIALS ===== -->
+      <section id="outcome" class="case-outcome" data-bg="#f8eff4">
+        <div class="container outcome-grid fade-in-up">
           <div>
-            <p class="section-label">Business Impact</p>
-            <h2>
-              Understanding first, conversion follows.
-            </h2>
+            <p class="section-label">Results &amp; Impact</p>
+            <h2>Measurable Growth</h2>
           </div>
 
           <div class="overview-copy">
             <p>
-              By diagnosing user friction through data and executing scalable design solutions, this body of work drove a total conversion uplift of +28.4% and an annualized GMV impact of €1.3M.
-            </p>
-            <p>
-              More importantly, this experience marked a profound personal shift: transforming from a junior dealing with impostor syndrome into an independent product builder who scopes, decides, and ships.
+              By grounding UX in user data, rapid testing, and clean system architecture, this work proved that thoughtful design directly powers commercial growth.
             </p>
 
-            <a href="index.html#work" class="project-link">Back to all projects →</a>
+            <div class="decision-grid" style="margin-top: 1.5rem; margin-bottom: 2.5rem;">
+              <div>
+                <h3>€1.3M GMV</h3>
+                <p>Annualized revenue impact delivered across optimized funnels.</p>
+              </div>
+              <div>
+                <h3>+28.4% Lift</h3>
+                <p>Total conversion uplift across verified Coframe experiments.</p>
+              </div>
+              <div>
+                <h3>"Excellent" Grade</h3>
+                <p>Graduated with top assessment from Otrium leadership for independent execution.</p>
+              </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2.5rem;">
+              <div style="background: rgba(255,255,255,0.65); padding: 1.5rem; border-radius: 16px; border: 1px solid rgba(23,23,23,0.08);">
+                <p style="font-size: 0.95rem; line-height: 1.6; color: var(--ink); margin-bottom: 0.6rem;">
+                  <em>"Ines was a fantastic addition to our product team at Otrium. She supported us on complex projects like the Store Credit journey, where she did a great job managing user research and preparing clean, well-structured design handoffs for B2C engineers. She constantly seeks out feedback, adapts quickly, and really owns her growth as a designer."</em>
+                </p>
+                <p style="font-size: 0.82rem; font-weight: 700; color: var(--accent-dark);">— Elena Verling, Product Design @ Otrium</p>
+              </div>
+
+              <div style="background: rgba(255,255,255,0.65); padding: 1.5rem; border-radius: 16px; border: 1px solid rgba(23,23,23,0.08);">
+                <p style="font-size: 0.95rem; line-height: 1.6; color: var(--ink); margin-bottom: 0.6rem;">
+                  <em>"Contributing both technically on design elements but also by being a sharp and thoughtful pair of eyes on many things related to our e-commerce platform... I wouldn't hesitate to recommend her for roles!"</em>
+                </p>
+                <p style="font-size: 0.82rem; font-weight: 700; color: var(--accent-dark);">— Rob Myers, Director of Product, Technology &amp; Data @ Otrium</p>
+              </div>
+            </div>
+
+            <a href="index.html#work" class="project-link">← Back to all case studies</a>
           </div>
         </div>
       </section>
     </main>
 
+    <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
       <div class="container footer-inner">
         <p>© 2026 Ines Paric — Designed &amp; built by me.</p>
@@ -276,6 +340,22 @@
       );
 
       fadeElements.forEach((element) => fadeObserver.observe(element));
+
+      const colorSections = document.querySelectorAll("[data-bg]");
+
+      const bgObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const color = entry.target.getAttribute("data-bg");
+              document.documentElement.style.setProperty("--page-bg", color);
+            }
+          });
+        },
+        { threshold: 0.35 }
+      );
+
+      colorSections.forEach((section) => bgObserver.observe(section));
     </script>
   </body>
 </html>

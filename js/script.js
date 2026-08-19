@@ -1,21 +1,21 @@
-// ===== Case study step highlighting on scroll =====
-const sections = document.querySelectorAll(".case-section");
-const steps = document.querySelectorAll(".step");
+// ===== Case study navigation highlighting on scroll =====
+const caseSections = document.querySelectorAll(".case-chapter");
+const caseNavLinks = document.querySelectorAll(".case-nav-inner a");
 
-if (sections.length && steps.length) {
+if (caseSections.length && caseNavLinks.length) {
   window.addEventListener("scroll", () => {
     let current = "";
-    sections.forEach((section) => {
+    caseSections.forEach((section) => {
       const sectionTop = section.offsetTop - 150;
       if (window.scrollY >= sectionTop) {
         current = section.getAttribute("id");
       }
     });
 
-    steps.forEach((s) => {
-      s.classList.remove("active");
-      if (s.getAttribute("href") === `#${current}`) {
-        s.classList.add("active");
+    caseNavLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
       }
     });
   });
@@ -23,7 +23,7 @@ if (sections.length && steps.length) {
 
 // ===== MAIN INIT =====
 document.addEventListener("DOMContentLoaded", () => {
-  // --- Scroll-in animation for any .fade-in-up elements ---
+  // --- Scroll-in animation for .fade-in-up elements ---
   const faders = document.querySelectorAll(".fade-in-up");
 
   if (faders.length) {
@@ -42,7 +42,26 @@ document.addEventListener("DOMContentLoaded", () => {
     faders.forEach((el) => observer.observe(el));
   }
 
-  // --- Simple photo slider on About page ---
+  // --- Dynamic background color transition on scroll (for Case Studies) ---
+  const colorSections = document.querySelectorAll("[data-bg]");
+
+  if (colorSections.length) {
+    const bgObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const color = entry.target.getAttribute("data-bg");
+            document.documentElement.style.setProperty("--page-bg", color);
+          }
+        });
+      },
+      { threshold: 0.35 }
+    );
+
+    colorSections.forEach((section) => bgObserver.observe(section));
+  }
+
+  // --- Photo slider (About page) ---
   const gallerySlides = document.querySelectorAll(".gallery-slide");
   const prevBtn = document.querySelector(".gallery-btn.prev");
   const nextBtn = document.querySelector(".gallery-btn.next");
@@ -67,11 +86,10 @@ document.addEventListener("DOMContentLoaded", () => {
       updateSlides();
     });
 
-    // show first slide initially
     updateSlides();
   }
 
-  // --- Small "open to internships" popup ---
+  // --- "Open to opportunities" popup ---
   const popup = document.getElementById("interestPopup");
   const closePopupBtn = document.getElementById("closePopupBtn");
 
@@ -81,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!hasSeen) {
       setTimeout(() => {
         popup.style.display = "block";
-      }, 2000); // show after 2 seconds
+      }, 2000);
     }
 
     closePopupBtn.addEventListener("click", () => {
@@ -90,16 +108,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- Hero bubble: pop to scroll to projects ---
-  const blobBtn = document.querySelector(".scroll-blob-btn");
-  const projectsSection = document.querySelector("#projects");
+  // --- Hero scroll button (Homepage) ---
+  const scrollCue = document.querySelector(".scroll-cue");
+  const workSection = document.querySelector("#work");
 
-  if (blobBtn && projectsSection) {
-    blobBtn.addEventListener("click", () => {
-      projectsSection.scrollIntoView({ behavior: "smooth" });
-      // Optional: add "popped" class for a quick visual burst
-      blobBtn.classList.add("popped");
-      setTimeout(() => blobBtn.classList.remove("popped"), 400);
+  if (scrollCue && workSection) {
+    scrollCue.addEventListener("click", (e) => {
+      e.preventDefault();
+      workSection.scrollIntoView({ behavior: "smooth" });
     });
   }
 });
