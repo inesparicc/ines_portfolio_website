@@ -15,8 +15,7 @@
     <header class="navbar">
       <div class="container nav-container">
         <a href="index.html" class="logo-link" aria-label="Go to homepage">
-          <img src="assets/logo.svg" alt="" class="logo-icon" />
-          <span>Ines Paric</span>
+          <span class="logo-text">I<span class="highlight-pink">P</span></span>
         </a>
 
         <nav aria-label="Main navigation">
@@ -56,24 +55,24 @@
       <!-- ===== HERO SECTION ===== -->
       <section class="home-hero" id="home">
         <div class="container hero-inner fade-in-up">
-          <p class="eyebrow">Hey there, I'm Ines 👋</p>
-
-          <h1>
-            I design digital products that <span class="text-accent">actually make sense.</span>
-          </h1>
-
-          <div class="hero-bottom">
-            <p>
-              I love finding the sweet spot where human psychology meets clean, practical design. With a background in Information and Communication Technology, I’m all about turning messy, complicated problems into experiences people genuinely enjoy using (and that businesses love, too). When I’m not obsessing over user journeys, you’ll probably find me exploring Ireland, hunting for the perfect iced matcha, or baking an unreasonable amount of focaccia.
+          
+          <div class="hero-content-minimal">
+            <h1 class="hero-title">
+              ines<br>
+              <span class="highlight-pink">paric</span><span class="hero-year">©2026</span>
+            </h1>
+            
+            <p class="hero-bio">
+              I'm a <strong>Product Designer</strong> in Dublin specializing in conversion UX. A researcher by heart, a builder by mind. Built on structural logic and human psychology.
             </p>
 
-            <div class="scroll-cue-container">
-              <a href="#work" class="scroll-cue">
-                <span>Check out my work</span>
-                <span class="scroll-arrow" aria-hidden="true">↓</span>
-              </a>
+            <div class="hero-pills">
+              <a href="mailto:ines.paric1@gmail.com.com" class="pill">Email</a>
+              <a href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/" target="_blank" rel="noopener noreferrer" class="pill">LinkedIn</a>
+              <a href="assets/cv/Ines_CV.pdf" target="_blank" rel="noopener noreferrer" class="pill">Résumé</a>
             </div>
           </div>
+
         </div>
       </section>
 
@@ -81,171 +80,233 @@
       <section class="work-section" id="work">
         <div class="container">
           <div class="work-intro fade-in-up">
-            <p class="eyebrow">Selected work</p>
-            <h2>Things I've built</h2>
+            <h2>Selected Projects</h2>
           </div>
 
-          <div class="project-list">
+          <div class="project-grid">
             
-            <!-- PROJECT 1: OTRIUM -->
-            <article class="project-feature fade-in-up" data-bg="#d9c8d3">
-              <div class="project-meta">
-                <p>Product Design</p>
-                <p>A/B Testing</p>
-                <p>E-commerce</p>
-              </div>
-
-              <div class="project-main">
-                <a href="project4.html" class="project-title-link">
-                  <h3>Otrium: Making shopping make sense</h3>
-                </a>
-
-                <p class="project-description">
-                  How do you stop shoppers from treating a homepage like an escape room? I dug into the data, ran A/B tests, and simplified a clunky checkout into a 1-click toggle—driving a +28.4% conversion lift and an extra €1.3M in revenue.
-                </p>
-
-                <a href="project4.html" class="project-link">Read the case study →</a>
-              </div>
-
-              <a href="project4.html" class="project-image-wrap" aria-label="View Otrium case study">
-                <img
-                  src="assets/images/iOS EN.jpg"
-                  alt="Otrium e-commerce design"
-                  class="project-image"
-                  style="height: auto; object-fit: contain;"
-                />
+            <!-- PROJECT 001: OTRIUM -->
+            <article class="project-card fade-in-up" data-bg="#f4f4f4">
+              <a href="project4.html" class="card-image-link">
+                <div>
+                  <img src="assets/images/otrium.main.jpg" alt="Otrium" class="card-image" style="object-fit: contain; padding: 2rem;" />
+                </div>
               </a>
+              <div class="card-meta">
+                <div class="meta-row title-row">
+                  <h3>001 <span>↗</span></h3>
+                  <a href="project4.html" class="read-more">Otrium</a>
+                </div>
+                <div class="meta-row tag-row">
+                  <span class="tag" style="background: #e3267c; color: white;">Product Design</span>
+                  <span class="tag" style="background: #d1f4d1; color: #111;">A/B Testing</span>
+                </div>
+                <div class="meta-row desc-row">
+                  <p>Simplified a clunky checkout into a 1-click toggle—driving a +28.4% conversion lift and €1.3M in revenue.</p>
+                </div>
+              </div>
             </article>
 
-            <!-- PROJECT 2: SENSORY MAP -->
-            <article class="project-feature fade-in-up" data-bg="#c8d8eb">
-              <div class="project-meta">
-                <p>UX Research</p>
-                <p>App Concept</p>
-                <p>Inclusive Design</p>
-              </div>
-
-              <div class="project-main">
-                <a href="project2.html" class="project-title-link">
-                  <h3>Sensory Map: Navigating the noise</h3>
-                </a>
-
-                <p class="project-description">
-                  Navigation apps tell you where a place is, but what if they told you how it <em>feels</em>? I designed a concept app to help autistic and sensory-sensitive folks find calm, predictable spaces in busy cities.
-                </p>
-
-                <a href="project2.html" class="project-link">Read the case study →</a>
-              </div>
-
-              <a href="project2.html" class="project-image-wrap" aria-label="View Sensory Map case study">
-                <img
-                  src="assets/images/SENSORYMAP.jpg"
-                  alt="Sensory Map app interface"
-                  class="project-image"
-                />
+            <!-- PROJECT 002: SENSORY MAP -->
+            <article class="project-card fade-in-up" data-bg="#f4f4f4">
+              <a href="project2.html" class="card-image-link">
+                <div class="card-image-wrap" style="background: #d4e5f9;">
+                  <img src="assets/images/sensory.jpg" alt="Sensory Map" class="card-image" />
+                </div>
               </a>
+              <div class="card-meta">
+                <div class="meta-row title-row">
+                  <h3>002 <span>↗</span></h3>
+                  <a href="project2.html" class="read-more">Sensory Map</a>
+                </div>
+                <div class="meta-row tag-row">
+                  <span class="tag" style="background: #111; color: white;">UX Research</span>
+                  <span class="tag" style="background: #f0f0f0; color: #111;">Inclusive Design</span>
+                </div>
+                <div class="meta-row desc-row">
+                  <p>A concept app to help autistic and sensory-sensitive folks find calm, predictable spaces in busy cities.</p>
+                </div>
+              </div>
             </article>
 
-            <!-- PROJECT 3: OBBI -->
-            <article class="project-feature fade-in-up" data-bg="#d7c3e3">
-              <div class="project-meta">
-                <p>Product Design</p>
-                <p>Web App</p>
-                <p>Ethical UX</p>
-              </div>
-
-              <div class="project-main">
-                <a href="project3.html" class="project-title-link">
-                  <h3>OBBI: Taking the sting out of bias</h3>
-                </a>
-
-                <p class="project-description">
-                  Nobody likes being called out for their blind spots. I helped build a web tool that takes the pressure off, using real audience data to help teams have safe, productive, and blame-free conversations about bias.
-                </p>
-
-                <a href="project3.html" class="project-link">Read the case study →</a>
-              </div>
-
-              <a href="project3.html" class="project-image-wrap" aria-label="View OBBI case study">
-                <img
-                  src="assets/images/OBBI.jpg"
-                  alt="OBBI web app interface"
-                  class="project-image"
-                />
+            <!-- PROJECT 003: OBBI -->
+            <article class="project-card fade-in-up" data-bg="#f4f4f4">
+              <a href="project3.html" class="card-image-link">
+                <div class="card-image-wrap" style="background: #e9dcf2;">
+                  <img src="assets/images/OBBI.jpg" alt="OBBI" class="card-image" />
+                </div>
               </a>
+              <div class="card-meta">
+                <div class="meta-row title-row">
+                  <h3>003 <span>↗</span></h3>
+                  <a href="project3.html" class="read-more">OBBI</a>
+                </div>
+                <div class="meta-row tag-row">
+                  <span class="tag" style="background: #845ef7; color: white;">Web App</span>
+                  <span class="tag" style="background: #e3267c; color: white;">Ethical UX</span>
+                </div>
+                <div class="meta-row desc-row">
+                  <p>A web tool using real audience data to help teams have safe, productive, and blame-free conversations about bias.</p>
+                </div>
+              </div>
             </article>
 
-            <!-- PROJECT 4: CLUB CANARY -->
-            <article class="project-feature fade-in-up" data-bg="#c5dce4">
-              <div class="project-meta">
-                <p>UX/UI Design</p>
-                <p>Web Redesign</p>
-              </div>
-
-              <div class="project-main">
-                <a href="project1.html" class="project-title-link">
-                  <h3>Club Canary: Stress-free upsells</h3>
-                </a>
-
-                <p class="project-description">
-                  Booking a holiday should be exciting, not overwhelming. I gave a text-heavy, post-booking page a major facelift so travelers could easily (and confidently) add extra excursions to their trip without feeling pressured.
-                </p>
-
-                <a href="project1.html" class="project-link">Read the case study →</a>
-              </div>
-
-              <a href="project1.html" class="project-image-wrap" aria-label="View Club Canary case study">
-                <img
-                  src="assets/images/CLUBCANARY.jpg"
-                  alt="Club Canary upsell page redesign"
-                  class="project-image"
-                />
+            <!-- PROJECT 004: CLUB CANARY -->
+            <article class="project-card fade-in-up" data-bg="#f4f4f4">
+              <a href="project1.html" class="card-image-link">
+                <div class="card-image-wrap" style="background: #d3eaf2;">
+                  <img src="assets/images/club.jpg" alt="Club Canary" class="card-image" />
+                </div>
               </a>
+              <div class="card-meta">
+                <div class="meta-row title-row">
+                  <h3>004 <span>↗</span></h3>
+                  <a href="project1.html" class="read-more">Club Canary</a>
+                </div>
+                <div class="meta-row tag-row">
+                  <span class="tag" style="background: #111; color: white;">UI Design</span>
+                  <span class="tag" style="background: #d1f4d1; color: #111;">Conversion</span>
+                </div>
+                <div class="meta-row desc-row">
+                  <p>Redesigned a post-booking page so travelers could confidently add extra excursions without feeling pressured.</p>
+                </div>
+              </div>
             </article>
 
           </div>
         </div>
       </section>
+
+      <!-- ===== PERSONAL SECTION (Auto-Scrolling) ===== -->
+      <section class="personal-section fade-in-up">
+        
+        <div class="personal-gallery-wrapper">
+          <div class="personal-gallery-track">
+            
+            
+            <!-- ===== FIRST SET (All 20 Unique Images) ===== -->
+            <img src="assets/images/s1.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s2.JPG" alt="Life" class="personal-photo" />
+            <img src="assets/images/s3.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s4.JPG" alt="Life" class="personal-photo" />
+            <img src="assets/images/s5.JPG" alt="Life" class="personal-photo" />
+            <img src="assets/images/s6.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s7.JPG" alt="Life" class="personal-photo" />
+            <img src="assets/images/s8.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s9.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s10.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s11.JPG" alt="Life" class="personal-photo" />
+            <img src="assets/images/s12.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s13.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s14.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s15.JPG" alt="Life" class="personal-photo" />
+            <img src="assets/images/s16.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s17.jpg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s18.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s19.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s20.JPG" alt="Life" class="personal-photo" />
+
+            <!-- ===== DUPLICATED SET (For the infinite loop illusion) ===== -->
+            <img src="assets/images/s1.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s2.JPG" alt="Life" class="personal-photo" />
+            <img src="assets/images/s3.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s4.JPG" alt="Life" class="personal-photo" />
+            <img src="assets/images/s5.JPG" alt="Life" class="personal-photo" />
+            <img src="assets/images/s6.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s7.JPG" alt="Life" class="personal-photo" />
+            <img src="assets/images/s8.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s9.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s10.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s11.JPG" alt="Life" class="personal-photo" />
+            <img src="assets/images/s12.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s13.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s14.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s15.JPG" alt="Life" class="personal-photo" />
+            <img src="assets/images/s16.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s17.jpg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s18.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s19.jpeg" alt="Life" class="personal-photo" />
+            <img src="assets/images/s20.JPG alt="Life" class="personal-photo" />
+
+          </div>
+        </div>
+
+        <div class="container personal-text">
+          <h2>Away from work, you'll usually find me traveling, hunting down the best local brunch spots, or baking just about anything you can think of.</h2>
+          <p style="margin-bottom: 2rem;">
+            Currently based in Dublin. When I'm not out exploring the city, pet sitting for my favorite furry clients, or finding new adventures with friends and family, I'm probably in the kitchen making the absolute best banana bread you've ever had (seriously, no competition).
+          </p>
+
+          <!-- New link button to the About page -->
+          <div class="personal-action">
+            <a href="about.html" class="pill" style="border: 1px solid var(--border); display: inline-flex; align-items: center; gap: 0.5rem;">
+              More about my background &amp; experience →
+            </a>
+          </div>
+        </div>
+      <!-- ===== SPECIALTIES MARQUEE ===== -->
+      <section class="specialties-section">
+        <div class="specialties-marquee">
+          <div class="specialties-track">
+            <!-- First Set -->
+            <span>Product</span><span class="outline">UX Research</span><span>Conversion</span><span class="outline">A/B Testing</span><span>UI Design</span><span class="outline">E-commerce</span>
+            <!-- Duplicated Set for Infinite Loop -->
+            <span>Product</span><span class="outline">UX Research</span><span>Conversion</span><span class="outline">A/B Testing</span><span>UI Design</span><span class="outline">E-commerce</span>
+          </div>
+        </div>
+      </section>
+
     </main>
 
+    <!-- ===== NEW FOOTER ===== -->
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© 2026 Ines Paric — Designed &amp; built by me.</p>
-        <a href="#home">Back to top ↑</a>
+      <div class="container footer-grid">
+        
+        <!-- Left Side: Brand & Bio -->
+        <div class="footer-brand">
+          <a href="index.html" class="logo-link" aria-label="Go to homepage" style="margin-bottom: 1.5rem; display: block;">
+            <span class="logo-text">I<span class="highlight-pink" style="font-style: italic;">P</span></span>
+          </a>
+          <p>Made with many hours of work, a lot of self-reflection, and well-needed coffee breaks.</p>
+        </div>
+
+        <!-- Right Side: Link Grid -->
+        <div class="footer-links-group">
+          
+          <div class="footer-column">
+            <h4>Pages</h4>
+            <ul>
+              <li><a href="index.html">Work</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="mailto:ines.paric1@gmail.com">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Elsewhere</h4>
+            <ul>
+              <li><a href="mailto:ines.paric1@gmail.com">Email</a></li>
+              <li><a href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="assets/cv/Ines_CV.pdf" target="_blank" rel="noopener noreferrer">Résumé</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Work</h4>
+            <ul>
+              <li><a href="project4.html">Otrium</a></li>
+              <li><a href="project2.html">Sensory Map</a></li>
+              <li><a href="project3.html">OBBI</a></li>
+              <li><a href="project1.html">Club Canary</a></li>
+            </ul>
+          </div>
+
+        </div>
+
       </div>
     </footer>
 
-    <script>
-      const fadeElements = document.querySelectorAll(".fade-in-up");
-
-      const fadeObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-            }
-          });
-        },
-        { threshold: 0.12 }
-      );
-
-      fadeElements.forEach((element) => fadeObserver.observe(element));
-
-      const projectSections = document.querySelectorAll(".project-feature");
-
-      const bgObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const color = entry.target.getAttribute("data-bg");
-              document.documentElement.style.setProperty("--page-bg", color);
-            }
-          });
-        },
-        { threshold: 0.42 }
-      );
-
-      projectSections.forEach((section) => bgObserver.observe(section));
-    </script>
+    <!-- Link to your external JavaScript file -->
+    <script src="js/script.js"></script> 
   </body>
 </html>

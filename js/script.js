@@ -119,3 +119,52 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// ===== FAIRY DUST MOUSE TRAIL EFFECT =====
+let lastX = 0;
+let lastY = 0;
+
+document.addEventListener('mousemove', function(e) {
+  // Calculate distance from last particle spawned
+  const deltaX = e.pageX - lastX;
+  const deltaY = e.pageY - lastY;
+  const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+
+  // Spawn a new sparkle every 10 pixels moved
+  if (distance > 10) {
+    // Spawn 1 or 2 sparkles for a denser dust effect
+    const amount = Math.random() > 0.5 ? 2 : 1; 
+    for(let i = 0; i < amount; i++) {
+      createFairyDust(e.pageX, e.pageY);
+    }
+    lastX = e.pageX;
+    lastY = e.pageY;
+  }
+});
+
+function createFairyDust(x, y) {
+  const particle = document.createElement('div');
+  particle.className = 'mouse-particle';
+  
+  // Randomize the size of each sparkle (between 2px and 6px)
+  const size = Math.random() * 4 + 2;
+  particle.style.width = size + 'px';
+  particle.style.height = size + 'px';
+
+  // Scatter them randomly around the cursor tip
+  const offsetX = (Math.random() - 0.5) * 20;
+  const offsetY = (Math.random() - 0.5) * 20;
+  particle.style.left = (x + offsetX) + 'px';
+  particle.style.top = (y + offsetY) + 'px';
+
+  // Give each sparkle a random horizontal drift direction
+  const driftX = (Math.random() - 0.5) * 40;
+  particle.style.setProperty('--drift', driftX + 'px');
+  
+  document.body.appendChild(particle);
+
+  // Clean up after 1 second (1000ms)
+  setTimeout(() => {
+    particle.remove();
+  }, 1000);
+}

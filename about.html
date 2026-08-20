@@ -12,12 +12,11 @@
   </head>
 
   <body class="about-page" id="top">
-    <!-- ===== NAVBAR ===== -->
+    <!-- ===== NEW NAVBAR ===== -->
     <header class="navbar">
       <div class="container nav-container">
         <a href="index.html" class="logo-link" aria-label="Go to homepage">
-          <img src="assets/logo.svg" alt="" class="logo-icon" />
-          <span>Ines Paric</span>
+          <span class="logo-text">I<span class="highlight-pink" style="font-style: italic;">P</span></span>
         </a>
 
         <nav aria-label="Main navigation">
@@ -25,24 +24,10 @@
             <li><a href="index.html#work" class="nav-link">Work</a></li>
             <li><a href="about.html" class="nav-link active">About</a></li>
             <li>
-              <a
-                href="assets/cv/Ines_CV.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="nav-link"
-              >
-                Resume
-              </a>
+              <a href="assets/cv/Ines_CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">Resume</a>
             </li>
             <li>
-              <a
-                href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="nav-link"
-              >
-                LinkedIn
-              </a>
+              <a href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn</a>
             </li>
           </ul>
         </nav>
@@ -51,63 +36,62 @@
 
     <main>
       <!-- ===== ABOUT HERO ===== -->
-      <section class="about-hero">
-        <div class="container about-hero-grid">
-          <div class="about-copy fade-in-up">
-            <p class="eyebrow">About me</p>
-
-            <p style="font-size: clamp(1.15rem, 1.5vw, 1.25rem); color: var(--ink); font-weight: 500; margin-bottom: 1.5rem; line-height: 1.6;">
-              I’m Ines, a Product Designer based in Ireland. With a BSc in Information and Communication Technology, I am deeply passionate about the intersection of human psychology and functional design.
+      <section class="container fade-in-up" style="padding-top: 2rem;">
+        <div class="about-hero-grid">
+          
+          <div class="about-hero-text">
+            <!-- Shrunk the font size and the margin below the heading -->
+            <h1 class="hero-title" style="font-size: clamp(2.8rem, 6vw, 4.5rem); margin-bottom: 1.5rem; line-height: 1;">
+              designer,<br>
+              <span class="highlight-pink outline" style="color: transparent; -webkit-text-stroke: 1.5px var(--ink); font-style: italic;">builder</span>, &<br>
+              <span class="highlight-pink">researcher.</span>
+            </h1>
+            
+            <p class="hero-bio" style="font-size: 1.1rem; color: var(--ink); font-weight: 500; margin-bottom: 1.5rem;">
+              I’m Ines, a Product Designer based in Ireland. I believe the best digital products sit right at the intersection of human psychology and structural logic.
             </p>
 
-            <p>
-              My design process is firmly rooted in user research. I specialize in translating complex behaviors into clear, intuitive digital products. Whether I am running usability tests, analyzing heatmaps, or structuring A/B experiments, I believe the best design decisions are driven by real human data, not just aesthetics. 
+            <p class="hero-bio" style="margin-bottom: 1.5rem;">
+              My process isn't just about making things look good—it's rooted in real data. From analyzing heatmaps to structuring A/B experiments, I translate complex behaviors into clear, intuitive experiences that actually convert.
             </p>
 
-            <p>
-              Before focusing fully on digital product design, I built a foundation in physical crafting—from furniture making to sculpting. Working with physical materials taught me how to think critically about structure, form, and how people physically interact with the things they use. Today, I apply that same hands-on, structural thinking to building digital interfaces.
+            <p class="hero-bio" style="margin-bottom: 2.5rem;">
+              Before moving to pixels, my background was in physical crafting (think furniture making and sculpting). Building things with my hands taught me how people physically interact with structure and form—a hands-on mindset I bring to every digital interface I design today.
             </p>
 
-            <div class="about-actions">
-              <a
-                href="assets/cv/Ines_CV.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="project-link"
-              >
+            <div class="about-actions" style="display: flex; gap: 1rem;">
+              <a href="assets/cv/Ines_CV.pdf" target="_blank" rel="noopener noreferrer" class="pill" style="border: 1px solid var(--border);">
                 View my resume →
               </a>
-              <a href="index.html#work" class="project-link secondary-link">
+              <a href="index.html#work" class="pill" style="background: transparent; border: 1px solid var(--border);">
                 View my work →
               </a>
             </div>
-          
           </div>
 
-          <div class="about-image-wrap fade-in-up">
-            <img
-              src="assets/images/ines2.png"
-              alt="Portrait of Ines Paric"
-              class="about-main-image image-fallback"
-            />
+          <div class="about-image-wrapper">
+            <img src="assets/images/ines2.png" alt="Portrait of Ines Paric" class="about-main-image image-fallback" style="box-shadow: 0 20px 40px rgba(0,0,0,0.08);" />
           </div>
+
         </div>
       </section>
 
       <!-- ===== PROFILE SUMMARY ===== -->
-      <section class="about-profile-strip">
-        <div class="container about-profile-grid fade-in-up">
-          <div>
-            <span>My approach</span>
-            <p>Research-driven and user-centered.</p>
-          </div>
-          <div>
-            <span>Current focus</span>
-            <p>E-commerce, product optimization, and conversion UX.</p>
-          </div>
-          <div>
-            <span>Background</span>
-            <p>BSc in Information and Communication Technology.</p>
+      <section class="container fade-in-up">
+        <div class="about-profile-strip">
+          <div class="about-profile-grid">
+            <div>
+              <span>My approach</span>
+              <p>Research-driven and user-centered.</p>
+            </div>
+            <div>
+              <span>Current focus</span>
+              <p>E-commerce & conversion UX.</p>
+            </div>
+            <div>
+              <span>Background</span>
+              <p>BSc in Information & Communication Tech.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -116,8 +100,7 @@
       <section class="about-skills-section">
         <div class="container">
           <div class="about-section-heading fade-in-up">
-            <p class="eyebrow">Skills &amp; tools</p>
-            <h2>What I bring to a product team</h2>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); letter-spacing: -0.02em;">What I bring to a product team</h2>
           </div>
 
           <div class="about-skills-grid">
@@ -160,17 +143,15 @@
         </div>
       </section>
 
-      <!-- ===== CREATIVE WORK ===== -->
-      <section class="creative-work-intro">
-        <div class="container creative-work-grid fade-in-up">
-          <div>
-            <p class="eyebrow">Beyond digital design</p>
-            <h2>Physical and visual work that shaped my design eye.</h2>
+     <!-- ===== CREATIVE WORK ===== -->
+      <section class="creative-work-intro fade-in-up">
+        <div class="container">
+          <div class="creative-text-stack">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 1.5rem;">Physical work that shaped my digital eye.</h2>
+            <p style="font-size: 1.05rem; line-height: 1.6; color: var(--ink-muted);">
+              Before shifting to interfaces, I explored form and function through traditional art and woodworking. Figuring out how joints hold together in a physical chair or how light shapes a sculpture still heavily influences how I approach structure, detail, and craftsmanship in UI design.
+            </p>
           </div>
-
-          <p>
-            Before shifting to digital interfaces, I explored form and function through traditional art and woodworking. Figuring out how joints hold together in a physical chair or how light shapes a sculpture still heavily influences how I approach structure, detail, and craftsmanship in UI design.
-          </p>
         </div>
       </section>
 
@@ -204,27 +185,57 @@
       </section>
     </main>
 
+    <!-- ===== NEW GRID FOOTER ===== -->
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© 2026 Ines Paric — Designed &amp; built by me.</p>
-        <a href="#top">Back to top ↑</a>
+      <div class="container footer-grid">
+        
+        <div class="footer-brand">
+          <a href="index.html" class="logo-link" aria-label="Go to homepage" style="margin-bottom: 1.5rem; display: block;">
+            <span class="logo-text">I<span class="highlight-pink" style="font-style: italic;">P</span></span>
+          </a>
+          <p>Made with many hours of work, a lot of self-reflection, and well-needed coffee breaks.</p>
+        </div>
+
+        <div class="footer-links-group">
+          
+          <div class="footer-column">
+            <h4>Pages</h4>
+            <ul>
+              <li><a href="index.html">Work</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="mailto:ines.paric1@gmail.com">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Elsewhere</h4>
+            <ul>
+              <li><a href="mailto:ines.paric1@gmail.com">Email</a></li>
+              <li><a href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="assets/cv/Ines_CV.pdf" target="_blank" rel="noopener noreferrer">Résumé</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Work</h4>
+            <ul>
+              <li><a href="project4.html">Otrium</a></li>
+              <li><a href="project2.html">Sensory Map</a></li>
+              <li><a href="project3.html">OBBI</a></li>
+              <li><a href="project1.html">Club Canary</a></li>
+            </ul>
+          </div>
+
+        </div>
+
       </div>
     </footer>
 
+    <!-- Link your main JavaScript (Fairy Dust!) -->
+    <script src="js/script.js"></script>
+
+    <!-- Keep your image fallback logic here for the gallery -->
     <script>
-      const fadeElements = document.querySelectorAll(".fade-in-up");
-
-      const fadeObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) entry.target.classList.add("visible");
-          });
-        },
-        { threshold: 0.12 }
-      );
-
-      fadeElements.forEach((element) => fadeObserver.observe(element));
-
       const fallbackExtensions = ["jpg", "JPG", "jpeg", "JPEG", "png", "PNG", "webp", "WEBP"];
 
       document.querySelectorAll("img.image-fallback").forEach((img) => {

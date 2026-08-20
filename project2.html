@@ -10,271 +10,274 @@
 
   <body class="project-page sensory-map-page" id="top">
 
+    <!-- ===== NEW NAVBAR ===== -->
     <header class="navbar">
       <div class="container nav-container">
         <a href="index.html" class="logo-link" aria-label="Go to homepage">
-          <img src="assets/logo.svg" alt="" class="logo-icon" />
-          <span>Ines Paric</span>
+          <span class="logo-text">I<span class="highlight-pink" style="font-style: italic;">P</span></span>
         </a>
 
         <nav aria-label="Main navigation">
           <ul class="nav-links">
             <li><a href="index.html#work" class="nav-link active">Work</a></li>
             <li><a href="about.html" class="nav-link">About</a></li>
-            <li>
-              <a href="assets/cv/Ines_CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">
-                Resume
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/" target="_blank" rel="noopener noreferrer" class="nav-link">
-                LinkedIn
-              </a>
-            </li>
+            <li><a href="assets/cv/Ines_CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">Resume</a></li>
+            <li><a href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-
     <main>
-      <section class="project-hero">
-        <div class="container project-hero-inner fade-in-up">
-          <div class="project-kicker-row">
-            <p class="eyebrow">UX research · App concept · Inclusive design</p>
-            <a href="index.html#work" class="back-link">← Back to work</a>
+      <!-- ===== PROJECT HERO ===== -->
+      <section class="project-hero fade-in-up" style="padding-top: 10rem; padding-bottom: 4rem;">
+        <div class="container">
+          <div class="project-kicker-row" style="margin-bottom: 2rem;">
+            <a href="index.html#work" class="back-link" style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500;">← Back to work</a>
           </div>
 
-          <h1>Sensory Map App</h1>
+          <h1 class="hero-title" style="font-family: 'Playfair Display', serif; font-size: clamp(3rem, 7vw, 5.5rem); letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 2rem; max-width: 900px;">
+            Sensory <br>
+            <span class="highlight-pink outline" style="color: transparent; -webkit-text-stroke: 1.5px var(--ink); font-style: italic;">Map</span> App.
+          </h1>
 
-          <div class="project-hero-bottom">
-            <p class="project-hero-summary">A mobile app concept that helps autistic and sensory-sensitive adults discover calmer, more predictable public spaces using sensory data.</p>
+          <p class="hero-bio" style="font-size: 1.25rem; max-width: 700px; margin-bottom: 4rem; color: var(--ink-muted);">
+            A mobile app concept that helps autistic and sensory-sensitive adults discover calmer, more predictable public spaces using sensory data.
+          </p>
 
-            <div class="project-hero-meta">
-              <div>
-                <span>Type</span>
-                <p>Academic / Personal Project</p>
-              </div>
-              <div>
-                <span>Role</span>
-                <p>UX Researcher · UI Designer</p>
-              </div>
-              <div>
-                <span>Duration</span>
-                <p>Approx. 20 weeks</p>
-              </div>
-              <div>
-                <span>Tools</span>
-                <p>Figma · Miro · React · Map APIs</p>
-              </div>
+          <div class="project-hero-meta" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; padding: 2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+            <div>
+              <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-light); display: block; margin-bottom: 0.5rem;">Type</span>
+              <p style="font-weight: 500; font-size: 1.05rem;">Academic / Personal</p>
+            </div>
+            <div>
+              <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-light); display: block; margin-bottom: 0.5rem;">Role</span>
+              <p style="font-weight: 500; font-size: 1.05rem;">UX Researcher & UI Designer</p>
+            </div>
+            <div>
+              <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-light); display: block; margin-bottom: 0.5rem;">Duration</span>
+              <p style="font-weight: 500; font-size: 1.05rem;">Approx. 20 weeks</p>
+            </div>
+            <div>
+              <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-light); display: block; margin-bottom: 0.5rem;">Tools</span>
+              <p style="font-weight: 500; font-size: 1.05rem;">Figma, React, Map APIs</p>
             </div>
           </div>
         </div>
-
-        <div class="container project-cover fade-in-up">
-          <img src="assets/images/smmockup.jpg" alt="Sensory Map App cover mockup" />
-        </div>
       </section>
 
-      <section class="case-overview">
-        <div class="container overview-grid fade-in-up">
-          <div>
-            <p class="section-label">The challenge</p>
-            <h2>Show not only where a place is, but how it might feel.</h2>
-          </div>
-          <div class="overview-copy">
-            <p>Many autistic and sensory-sensitive people experience public spaces differently because of noise, light, crowds, and unpredictability.</p>
-            <p>This project explores how a navigation app could support planning, confidence, and personal comfort through sensory filters and user-generated reviews.</p>
-          </div>
-        </div>
+      <!-- Cover Image -->
+      <section class="container fade-in-up" style="margin-bottom: 4rem;">
+        <img src="assets/images/sensory.jpg" alt="Sensory Map App cover mockup" style="width: 100%; border-radius: 12px; background: #f8f9fa; padding: 2rem; box-shadow: 0 20px 40px rgba(0,0,0,0.04);" />
       </section>
 
-
-      <nav class="case-nav" aria-label="Case study sections">
-        <div class="container case-nav-inner">
-          <a href="#research">Research</a>
-          <a href="#empathize">Empathize</a>
-          <a href="#ideate">Ideate</a>
-          <a href="#design">Design</a>
-          <a href="#test">Testing</a>
-          <a href="#outcome">Outcome</a>
+      <!-- ===== IN-PAGE STICKY NAVIGATION ===== -->
+      <nav class="case-nav-sticky fade-in-up">
+        <div class="container case-nav-container">
+          <a href="#challenge" class="case-nav-item">
+            <span class="nav-num">00</span> <span class="nav-label">Challenge</span>
+          </a>
+          <a href="#research" class="case-nav-item">
+            <span class="nav-num">01</span> <span class="nav-label">Research</span>
+          </a>
+          <a href="#design" class="case-nav-item">
+            <span class="nav-num">02</span> <span class="nav-label">Design</span>
+          </a>
+          <a href="#testing" class="case-nav-item">
+            <span class="nav-num">03</span> <span class="nav-label">Testing</span>
+          </a>
+          <a href="#outcome" class="case-nav-item">
+            <span class="nav-num">04</span> <span class="nav-label">Outcome</span>
+          </a>
         </div>
       </nav>
 
+      <!-- ===== CASE STUDY CONTENT ===== -->
+      
+      <!-- Challenge -->
+      <section id="challenge" class="container case-chapter fade-in-up" data-bg="#ffffff">
+        <div class="editorial-grid">
+          <div class="editorial-sidebar">
+            <span class="chapter-num">00</span>
+            <h3>The Challenge</h3>
+          </div>
+          <div class="editorial-content">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Show not only where a place is, but how it might feel.</h2>
+            <p>Many autistic and sensory-sensitive people experience public spaces differently because of noise, light, crowds, and unpredictability. However, most modern navigation tools focus entirely on distance and standard user ratings.</p>
+            <p>This project explores how a map application could support planning, confidence, and personal comfort through sensory filters and user-generated environmental reviews.</p>
+          </div>
+        </div>
+      </section>
 
-      <section id="research" class="case-chapter" data-bg="#c8d8eb">
-        <div class="container chapter-grid">
-          <aside class="chapter-side">
-            <span>01</span>
-            <p>Research</p>
-          </aside>
-
-          <div class="chapter-content">
-            <h2>Starting from sensory needs, not features</h2>
-            <p>I explored the daily challenges of autistic and sensory-sensitive adults, especially around unpredictable noise, lighting, crowds, and public spaces.</p>
-            <p>Desk research showed that most navigation tools focus on distance and ratings, but not on how a place might feel for someone with sensory sensitivities.</p>
-            <div class="insight-list">
+      <!-- Research & Empathize -->
+      <section id="research" class="container case-chapter fade-in-up" data-bg="#f4f7fb">
+        <div class="editorial-grid">
+          <div class="editorial-sidebar">
+            <span class="chapter-num">01</span>
+            <h3>Research & Empathy</h3>
+          </div>
+          <div class="editorial-content">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Starting from sensory needs, not features.</h2>
+            <p>I explored the daily challenges of autistic and sensory-sensitive adults, focusing specifically on unpredictable noise, lighting, and crowded public spaces.</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 3rem 0; padding: 2rem; background: rgba(255,255,255,0.6); border-radius: 8px;">
               <div>
-                <h3>Core question</h3>
-                <p>What if navigation apps showed how a place might feel?</p>
+                <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Core Question</h4>
+                <p style="font-size: 0.95rem;">What if navigation apps showed how a place might feel before you arrive?</p>
               </div>
               <div>
-                <h3>Design gap</h3>
-                <p>Existing tools rarely support sensory predictability.</p>
+                <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">The Design Gap</h4>
+                <p style="font-size: 0.95rem;">Existing tools rarely support sensory predictability, leaving a massive accessibility gap.</p>
               </div>
             </div>
 
-            <img src="assets/images/smdd.jpg" alt="Sensory Map research overview" class="chapter-image" />
+            <img src="assets/images/smdd.jpg" alt="Sensory Map research overview" style="width: 100%; border-radius: 8px; margin-bottom: 2rem;" />
+
+            <p>To ensure I was designing for predictability and control, I built personas focused on sensory needs, routines, coping strategies, and emotional states rather than generic demographics. Expert feedback reinforced the importance of customization, dark mode, GPS-based prompts, and clear sensory indicators.</p>
+            
+            <img src="assets/images/smpersona.jpg" alt="Sensory Map personas" style="width: 100%; border-radius: 8px; margin-top: 1rem;" />
           </div>
         </div>
       </section>
 
-      <section id="empathize" class="case-chapter" data-bg="#d9e6f4">
-        <div class="container chapter-grid">
-          <aside class="chapter-side">
-            <span>02</span>
-            <p>Empathize</p>
-          </aside>
-
-          <div class="chapter-content">
-            <h2>Designing for predictability and control</h2>
-            <p>Personas focused on sensory needs, routines, coping strategies, and emotional states rather than generic demographics.</p>
-            <p>Expert feedback reinforced the importance of customisation, dark mode, GPS-based prompts, and clear sensory indicators.</p>
-
-
-            <img src="assets/images/smpersona.jpg" alt="Sensory Map personas" class="chapter-image" />
+      <!-- Ideate & Design -->
+      <section id="design" class="container case-chapter fade-in-up" data-bg="#ffffff">
+        <div class="editorial-grid">
+          <div class="editorial-sidebar">
+            <span class="chapter-num">02</span>
+            <h3>Ideate & Design</h3>
           </div>
-        </div>
-      </section>
+          <div class="editorial-content">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Creating a calm and readable interface.</h2>
+            <p>I translated the research into concrete features: color-coded sensory pins, personal sensory profiles, GPS alerts, and specific environmental filters. The user flow was intentionally kept highly predictable.</p>
+            
+            <img src="assets/images/smuserflow.jpg" alt="Sensory Map user flow" style="width: 100%; border-radius: 8px; margin-bottom: 2rem;" />
 
-      <section id="ideate" class="case-chapter" data-bg="#c8d8eb">
-        <div class="container chapter-grid">
-          <aside class="chapter-side">
-            <span>03</span>
-            <p>Ideate</p>
-          </aside>
-
-          <div class="chapter-content">
-            <h2>Turning research into a map concept</h2>
-            <p>I translated the research into features such as colour-coded sensory pins, personal sensory profiles, GPS alerts, sensory reviews, filters, and theme options.</p>
-            <p>The flow was intentionally kept predictable: sign up, set preferences, allow GPS, open the map, filter locations, and read or leave reviews.</p>
-            <div class="decision-grid">
-              <div>
-                <h3>Map pins</h3>
-                <p>Show noise, light, and crowd intensity at a glance.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+              <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; border: 1px solid var(--border);">
+                <h4 style="font-size: 1.25rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem;">Map Pins</h4>
+                <p style="font-size: 0.9rem; margin: 0;">Show noise, light, and crowd intensity at a single glance without needing to click.</p>
               </div>
-              <div>
-                <h3>Profiles</h3>
-                <p>Let users personalise sensitivities and comfort levels.</p>
+              <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; border: 1px solid var(--border);">
+                <h4 style="font-size: 1.25rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem;">Profiles</h4>
+                <p style="font-size: 0.9rem; margin: 0;">Allow users to personalize sensitivities and define their own comfort levels.</p>
               </div>
-              <div>
-                <h3>Alerts</h3>
-                <p>Warn users before entering overwhelming areas.</p>
+              <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; border: 1px solid var(--border);">
+                <h4 style="font-size: 1.25rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem;">Alerts</h4>
+                <p style="font-size: 0.9rem; margin: 0;">Proactively warn users via GPS before they enter potentially overwhelming areas.</p>
               </div>
             </div>
 
-            <img src="assets/images/smuserflow.jpg" alt="Sensory Map user flow" class="chapter-image" />
+            <p>I iterated through several visual directions before choosing a light-blue system that balanced calmness, contrast, and readability. The interface followed strict accessibility principles: clear hierarchy, simple icons with labels, minimal animation, and highly customizable themes.</p>
+
+            <img src="assets/images/smfinaldesign.jpg" alt="Sensory Map final design" style="width: 100%; border-radius: 8px; margin-top: 1rem;" />
           </div>
         </div>
       </section>
 
-      <section id="design" class="case-chapter" data-bg="#d9e6f4">
-        <div class="container chapter-grid">
-          <aside class="chapter-side">
-            <span>04</span>
-            <p>Design</p>
-          </aside>
-
-          <div class="chapter-content">
-            <h2>Creating a calm and readable interface</h2>
-            <p>I iterated through several visual directions before choosing a light-blue system that balanced calmness, contrast, and readability.</p>
-            <p>The interface followed accessibility principles such as clear hierarchy, predictable layouts, simple icons with labels, minimal animation, and customisable themes.</p>
-
-
-            <img src="assets/images/smfinaldesign.jpg" alt="Sensory Map final design" class="chapter-image" />
+      <!-- Testing -->
+      <section id="testing" class="container case-chapter fade-in-up" data-bg="#f9f4fb">
+        <div class="editorial-grid">
+          <div class="editorial-sidebar">
+            <span class="chapter-num">03</span>
+            <h3>Testing</h3>
           </div>
-        </div>
-      </section>
-
-      <section id="test" class="case-chapter" data-bg="#c8d8eb">
-        <div class="container chapter-grid">
-          <aside class="chapter-side">
-            <span>05</span>
-            <p>Testing</p>
-          </aside>
-
-          <div class="chapter-content">
-            <h2>Validating the concept with users and experts</h2>
-            <p>I tested the prototype with autistic students using observation, think-aloud, and post-session interviews. An autism expert also reviewed the concept.</p>
-            <p>Testing confirmed that the concept felt useful and supportive, especially because users could customise themes and receive prompts around overwhelming places.</p>
-            <ul class="clean-list">
-              <li>Participants found the flow clear and predictable.</li>
-              <li>Theme customisation was seen as valuable.</li>
-              <li>GPS prompts near pinned places felt useful.</li>
-              <li>Feedback led to stronger contrast and dark mode as a core option.</li>
+          <div class="editorial-content">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Validating the concept.</h2>
+            <p>I tested the prototype directly with autistic students using observation, think-aloud protocols, and post-session interviews. I also had an autism expert review the conceptual framework.</p>
+            
+            <ul class="clean-list" style="margin-top: 2rem; margin-bottom: 3rem;">
+              <li style="margin-bottom: 1rem;">Participants found the user flow to be clear, logical, and highly predictable.</li>
+              <li style="margin-bottom: 1rem;">Theme customization (specifically dark mode) was seen as a mandatory, valuable feature.</li>
+              <li style="margin-bottom: 1rem;">GPS prompts near pinned places felt supportive rather than intrusive.</li>
+              <li>Feedback directly led to stronger UI contrast ratios across the final designs.</li>
             </ul>
 
-            <img src="assets/images/smcards.jpg" alt="Sensory Map testing feedback" class="chapter-image" />
+            <img src="assets/images/smcards.jpg" alt="Sensory Map testing feedback" style="width: 100%; border-radius: 8px;" />
           </div>
         </div>
       </section>
 
-
-      <section id="outcome" class="case-outcome" data-bg="#f1e8ee">
-        <div class="container outcome-grid">
-          <div>
-            <p class="section-label">Outcome</p>
-            <h2>A research-based app concept connecting inclusive design and technical exploration.</h2>
+      <!-- Outcome -->
+      <section id="outcome" class="container case-chapter fade-in-up" data-bg="#ffffff">
+        <div class="editorial-grid">
+          <div class="editorial-sidebar">
+            <span class="chapter-num">04</span>
+            <h3>Outcome & Reflection</h3>
           </div>
+          <div class="editorial-content">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Inclusive design meets technical exploration.</h2>
+            <p>This project helped me turn complex autism and sensory research into practical, empathetic design decisions. By exploring how Map APIs and a React prototype could support the concept, I was able to bridge the gap between UX research and frontend execution.</p>
+            <p>Ultimately, it solidified my passion for accessible, research-driven design that supports people in their everyday lives.</p>
+            
+            <div style="margin-top: 4rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="https://sensory-map.vercel.app/" target="_blank" rel="noopener noreferrer" class="pill" style="background: var(--ink); color: white; border: 1px solid var(--ink);">
+                View React prototype →
+              </a>
+            </div>
 
-          <div class="overview-copy">
-            <p>The project helped me turn autism and sensory research into practical design decisions, while also exploring how map APIs and a React prototype could support the concept.</p>
-            <p>It strengthened my interest in accessible, research-driven design that supports people in everyday situations.</p>
-            <a href="https://sensory-map.vercel.app/" class="project-link">View React prototype →</a>
+           <div style="margin-top: 6rem; padding-top: 4rem; padding-bottom: 4rem; border-top: 1px solid var(--border);">
+              <a href="index.html#work" class="pill" style="border: 1px solid var(--border); display: inline-block;">← Back to all projects</a>
+            </div>
           </div>
         </div>
       </section>
-
     </main>
 
+    <!-- ===== NEW GRID FOOTER ===== -->
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© 2026 Ines Paric — Designed &amp; built by me.</p>
-        <a href="#top">Back to top ↑</a>
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-link" aria-label="Go to homepage" style="margin-bottom: 1.5rem; display: block;">
+            <span class="logo-text">I<span class="highlight-pink" style="font-style: italic;">P</span></span>
+          </a>
+          <p>Made with many hours of work, a lot of self-reflection, and well-needed coffee breaks.</p>
+        </div>
+        <div class="footer-links-group">
+          <div class="footer-column">
+            <h4>Pages</h4>
+            <ul>
+              <li><a href="index.html">Work</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="mailto:ines.paric1@gmail.com">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Elsewhere</h4>
+            <ul>
+              <li><a href="mailto:ines.paric1@gmail.com">Email</a></li>
+              <li><a href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="assets/cv/Ines_CV.pdf" target="_blank" rel="noopener noreferrer">Résumé</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Work</h4>
+            <ul>
+              <li><a href="project4.html">Otrium</a></li>
+              <li><a href="project2.html">Sensory Map</a></li>
+              <li><a href="project3.html">OBBI</a></li>
+              <li><a href="project1.html">Club Canary</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </footer>
 
-
+    <script src="js/script.js"></script>
     <script>
-      const fadeElements = document.querySelectorAll(".fade-in-up");
-
-      const fadeObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) entry.target.classList.add("visible");
-          });
-        },
-        { threshold: 0.12 }
-      );
-
-      fadeElements.forEach((element) => fadeObserver.observe(element));
-
       const colorSections = document.querySelectorAll("[data-bg]");
-
       const bgObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               const color = entry.target.getAttribute("data-bg");
-              document.documentElement.style.setProperty("--page-bg", color);
+              document.body.style.backgroundColor = color;
             }
           });
         },
-        { threshold: 0.35 }
+        { threshold: 0.4 }
       );
-
       colorSections.forEach((section) => bgObserver.observe(section));
     </script>
-
   </body>
 </html>

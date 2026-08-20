@@ -10,290 +10,278 @@
 
   <body class="project-page obbi-page" id="top">
 
+    <!-- ===== NEW NAVBAR ===== -->
     <header class="navbar">
       <div class="container nav-container">
         <a href="index.html" class="logo-link" aria-label="Go to homepage">
-          <img src="assets/logo.svg" alt="" class="logo-icon" />
-          <span>Ines Paric</span>
+          <span class="logo-text">I<span class="highlight-pink" style="font-style: italic;">P</span></span>
         </a>
 
         <nav aria-label="Main navigation">
           <ul class="nav-links">
             <li><a href="index.html#work" class="nav-link active">Work</a></li>
             <li><a href="about.html" class="nav-link">About</a></li>
-            <li>
-              <a href="assets/cv/Ines_CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">
-                Resume
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/" target="_blank" rel="noopener noreferrer" class="nav-link">
-                LinkedIn
-              </a>
-            </li>
+            <li><a href="assets/cv/Ines_CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">Resume</a></li>
+            <li><a href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-
     <main>
-      <section class="project-hero">
-        <div class="container project-hero-inner fade-in-up">
-          <div class="project-kicker-row">
-            <p class="eyebrow">Product design · Web app · Ethical UX</p>
-            <a href="index.html#work" class="back-link">← Back to work</a>
+      <!-- ===== PROJECT HERO ===== -->
+      <section class="project-hero fade-in-up" style="padding-top: 10rem; padding-bottom: 4rem;">
+        <div class="container">
+          <div class="project-kicker-row" style="margin-bottom: 2rem;">
+            <a href="index.html#work" class="back-link" style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500;">← Back to work</a>
           </div>
 
-          <h1>OBBI: Bias Mapping Tool</h1>
+          <h1 class="hero-title" style="font-family: 'Playfair Display', serif; font-size: clamp(3rem, 7vw, 5.5rem); letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 2rem; max-width: 900px;">
+            OBBI: Bias <br>
+            <span class="highlight-pink outline" style="color: transparent; -webkit-text-stroke: 1.5px var(--ink); font-style: italic;">Mapping</span> Tool.
+          </h1>
 
-          <div class="project-hero-bottom">
-            <p class="project-hero-summary">A web app that helps teams compare themselves with their target audience and spot possible gaps in a clear, data-driven way.</p>
+          <p class="hero-bio" style="font-size: 1.25rem; max-width: 700px; margin-bottom: 4rem; color: var(--ink-muted);">
+            A web app that helps teams compare themselves with their target audience and spot possible gaps in a clear, data-driven way without blaming individuals.
+          </p>
 
-            <div class="project-hero-meta">
-              <div>
-                <span>Type</span>
-                <p>Academic group project · 15 weeks</p>
-              </div>
-              <div>
-                <span>Role</span>
-                <p>UX research · UI design · testing</p>
-              </div>
-              <div>
-                <span>Team</span>
-                <p>1 designer · 2 developers</p>
-              </div>
-              <div>
-                <span>Tools</span>
-                <p>Figma · Miro · React · TypeScript · .NET</p>
-              </div>
+          <div class="project-hero-meta" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; padding: 2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+            <div>
+              <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-light); display: block; margin-bottom: 0.5rem;">Type</span>
+              <p style="font-weight: 500; font-size: 1.05rem;">Academic Project (15 wks)</p>
+            </div>
+            <div>
+              <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-light); display: block; margin-bottom: 0.5rem;">Role</span>
+              <p style="font-weight: 500; font-size: 1.05rem;">UX Researcher & UI Designer</p>
+            </div>
+            <div>
+              <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-light); display: block; margin-bottom: 0.5rem;">Team</span>
+              <p style="font-weight: 500; font-size: 1.05rem;">1 Designer, 2 Developers</p>
+            </div>
+            <div>
+              <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-light); display: block; margin-bottom: 0.5rem;">Tools</span>
+              <p style="font-weight: 500; font-size: 1.05rem;">Figma, React, TypeScript</p>
             </div>
           </div>
         </div>
-
-        <div class="container project-cover fade-in-up">
-          <img src="assets/images/OBBI.jpg" alt="OBBI bias mapping web app mockups" />
-        </div>
       </section>
 
-      <section class="case-overview">
-        <div class="container overview-grid fade-in-up">
-          <div>
-            <p class="section-label">The challenge</p>
-            <h2>Help teams discuss bias without blaming individuals.</h2>
-          </div>
-          <div class="overview-copy">
-            <p>OBBI started from the question of how unconscious bias could be mapped in a way that feels objective, approachable, and useful.</p>
-            <p>My role was to translate research and expert feedback into a product concept, UX flow, visual design, and testing approach.</p>
-          </div>
-        </div>
+      <!-- Cover Image -->
+      <section class="container fade-in-up" style="margin-bottom: 4rem;">
+        <img src="assets/images/OBBI.jpg" alt="OBBI bias mapping web app mockups" style="width: 100%; border-radius: 12px; background: #f8f9fa; padding: 2rem; box-shadow: 0 20px 40px rgba(0,0,0,0.04);" />
       </section>
 
-
-      <nav class="case-nav" aria-label="Case study sections">
-        <div class="container case-nav-inner">
-          <a href="#context">Context</a>
-          <a href="#research">Research</a>
-          <a href="#concept">Concept</a>
-          <a href="#design">Design</a>
-          <a href="#implementation">Build</a>
-          <a href="#test">Testing</a>
-          <a href="#outcome">Outcome</a>
+      <!-- ===== IN-PAGE STICKY NAVIGATION ===== -->
+      <nav class="case-nav-sticky fade-in-up">
+        <div class="container case-nav-container">
+          <a href="#challenge" class="case-nav-item">
+            <span class="nav-num">00</span> <span class="nav-label">Challenge</span>
+          </a>
+          <a href="#research" class="case-nav-item">
+            <span class="nav-num">01</span> <span class="nav-label">Research & Context</span>
+          </a>
+          <a href="#design" class="case-nav-item">
+            <span class="nav-num">02</span> <span class="nav-label">Concept & Design</span>
+          </a>
+          <a href="#build" class="case-nav-item">
+            <span class="nav-num">03</span> <span class="nav-label">Build & Test</span>
+          </a>
+          <a href="#outcome" class="case-nav-item">
+            <span class="nav-num">04</span> <span class="nav-label">Outcome</span>
+          </a>
         </div>
       </nav>
 
-
-      <section id="context" class="case-chapter" data-bg="#d7c3e3">
-        <div class="container chapter-grid">
-          <aside class="chapter-side">
-            <span>01</span>
-            <p>Context</p>
-          </aside>
-
-          <div class="chapter-content">
-            <h2>From unconscious bias to objective gap mapping</h2>
-            <p>The project started as an HR unconscious bias tool. Through research and expert feedback, the team learned that bias is sensitive to measure directly and can easily feel judgmental.</p>
-            <p>We shifted toward a metrics-based approach that compares a team with its target audience and highlights gaps as conversation starters.</p>
-
-
-            <img src="assets/images/obbi1.jpg" alt="OBBI concept comparison" class="chapter-image" />
+      <!-- ===== CASE STUDY CONTENT ===== -->
+      
+      <!-- Challenge -->
+      <section id="challenge" class="container case-chapter fade-in-up" data-bg="#ffffff">
+        <div class="editorial-grid">
+          <div class="editorial-sidebar">
+            <span class="chapter-num">00</span>
+            <h3>The Challenge</h3>
+          </div>
+          <div class="editorial-content">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Discussing bias without the blame.</h2>
+            <p>OBBI started from a difficult question: How can unconscious bias be mapped in a way that feels objective, approachable, and useful rather than judgmental?</p>
+            <p>My role was to translate sensitive psychological research and expert feedback into a working product concept, defining the UX flow, the visual design language, and the testing approach.</p>
           </div>
         </div>
       </section>
 
-      <section id="research" class="case-chapter" data-bg="#e6d8ef">
-        <div class="container chapter-grid">
-          <aside class="chapter-side">
-            <span>02</span>
-            <p>Research</p>
-          </aside>
-
-          <div class="chapter-content">
-            <h2>Understanding bias with experts</h2>
-            <p>I interviewed HR professionals and a psychology expert to understand how bias appears at work, what makes bias tools difficult to trust, and how to keep the experience low-threshold.</p>
-            <p>We also researched existing tools like Harvard's IAT and bias interrupter playbooks to understand what already exists and where our concept could be different.</p>
-            <div class="insight-list">
+      <!-- Research & Context -->
+      <section id="research" class="container case-chapter fade-in-up" data-bg="#f4f0f6">
+        <div class="editorial-grid">
+          <div class="editorial-sidebar">
+            <span class="chapter-num">01</span>
+            <h3>Research & Context</h3>
+          </div>
+          <div class="editorial-content">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">From unconscious bias to objective gaps.</h2>
+            <p>The project initially started as an HR unconscious bias tool. However, through interviews with HR professionals and a psychology expert, our team quickly learned that bias is highly sensitive to measure directly. It often makes users feel labeled or judged, immediately shutting down productive conversation.</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 3rem 0; padding: 2rem; background: rgba(255,255,255,0.6); border-radius: 8px;">
               <div>
-                <h3>Research insight</h3>
-                <p>People need a safe way to discuss bias without feeling labelled.</p>
+                <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Research Insight</h4>
+                <p style="font-size: 0.95rem;">People need a safe way to discuss bias without feeling personally attacked or labeled.</p>
               </div>
               <div>
-                <h3>Design goal</h3>
-                <p>Make the tool objective, approachable, and easy to understand.</p>
+                <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Design Goal</h4>
+                <p style="font-size: 0.95rem;">Make the tool metric-based, objective, approachable, and easy to understand.</p>
               </div>
             </div>
 
-            <img src="assets/images/obbi2.jpg" alt="OBBI research board" class="chapter-image" />
+            <p>We researched existing tools (like Harvard's IAT and bias interrupter playbooks) and made a massive pivot: shifting toward a metrics-based approach that simply compares a team's makeup with its target audience, highlighting gaps as neutral conversation starters.</p>
+
+            <div style="display: grid; gap: 2rem; margin-top: 2rem;">
+              <img src="assets/images/obbi1.jpg" alt="OBBI concept comparison" style="width: 80%; border-radius: 8px;" />
+              <img src="assets/images/obbi2.jpg" alt="OBBI research board" style="width: 100%; border-radius: 8px;" />
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="concept" class="case-chapter" data-bg="#d7c3e3">
-        <div class="container chapter-grid">
-          <aside class="chapter-side">
-            <span>03</span>
-            <p>Concept</p>
-          </aside>
-
-          <div class="chapter-content">
-            <h2>Pivoting from scenarios to metrics</h2>
-            <p>We explored two concepts: a scenario-based game and a metrics-based gap analysis. Users enjoyed the scenarios, but stakeholders preferred the metrics concept because it felt more objective and scalable.</p>
-            <p>I helped reshape the direction into OBBI: a web app that compares team and audience data, then explains possible gaps in plain language.</p>
-
-
-            <img src="assets/images/obbiwireframes.jpg" alt="OBBI metrics-based wireframes" class="chapter-image" />
+      <!-- Concept & Design -->
+      <section id="design" class="container case-chapter fade-in-up" data-bg="#ffffff">
+        <div class="editorial-grid">
+          <div class="editorial-sidebar">
+            <span class="chapter-num">02</span>
+            <h3>Concept & Design</h3>
           </div>
-        </div>
-      </section>
+          <div class="editorial-content">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Designing a calm tool for a sensitive topic.</h2>
+            <p>During ideation, we explored two main concepts: a scenario-based game and a metrics-based gap analysis. While users enjoyed the scenarios, stakeholders ultimately preferred the metrics concept because it felt more objective and scalable.</p>
+            <p>I helped reshape the direction into OBBI: a web app that compares team and audience data, then explains possible gaps in plain language. The visual design needed to feel friendly and non-judgmental.</p>
+            
+            <img src="assets/images/obbiwireframes.jpg" alt="OBBI metrics-based wireframes" style="width: 100%; border-radius: 8px; margin: 2rem 0;" />
 
-      <section id="design" class="case-chapter" data-bg="#e6d8ef">
-        <div class="container chapter-grid">
-          <aside class="chapter-side">
-            <span>04</span>
-            <p>Design</p>
-          </aside>
-
-          <div class="chapter-content">
-            <h2>Designing a calm tool for a sensitive topic</h2>
-            <p>The visual design needed to feel friendly and non-judgmental. I worked on flows, wireframes, high-fidelity screens, and chart readability.</p>
-            <p>Testing showed that users preferred bar charts over circular charts because they were easier to read and compare.</p>
-            <div class="decision-grid">
-              <div>
-                <h3>Plain language</h3>
-                <p>Results needed explanation, not only numbers.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+              <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; border: 1px solid var(--border);">
+                <h4 style="font-size: 1.25rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem;">Plain Language</h4>
+                <p style="font-size: 0.9rem; margin: 0;">Results required clear contextual explanations, not just raw numbers.</p>
               </div>
-              <div>
-                <h3>Low pressure</h3>
-                <p>The interface should support reflection, not blame.</p>
+              <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; border: 1px solid var(--border);">
+                <h4 style="font-size: 1.25rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem;">Low Pressure</h4>
+                <p style="font-size: 0.9rem; margin: 0;">The interface used soft colors and ample whitespace to support reflection, not blame.</p>
               </div>
-              <div>
-                <h3>Readable data</h3>
-                <p>Bar charts made differences easier to understand.</p>
+              <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; border: 1px solid var(--border);">
+                <h4 style="font-size: 1.25rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem;">Readable Data</h4>
+                <p style="font-size: 0.9rem; margin: 0;">Bar charts were chosen over complex circular charts to make differences easier to understand.</p>
               </div>
             </div>
 
-            <img src="assets/images/obbifinal.jpg" alt="OBBI final UI design" class="chapter-image" />
+            <img src="assets/images/obbifinal.jpg" alt="OBBI final UI design" style="width: 80%; border-radius: 8px;" />
           </div>
         </div>
       </section>
 
-      <section id="implementation" class="case-chapter" data-bg="#d7c3e3">
-        <div class="container chapter-grid">
-          <aside class="chapter-side">
-            <span>05</span>
-            <p>Build</p>
-          </aside>
-
-          <div class="chapter-content">
-            <h2>Collaborating with developers</h2>
-            <p>I worked with two software developers to keep the design aligned with the technical architecture. We used user stories, GitLab issues, and weekly check-ins to track progress.</p>
-            <p>I also implemented a small React demo modal component used during demos, which gave me the chance to apply my UI decisions directly in code.</p>
-
-
-            <img src="assets/images/obbirole.jpg" alt="OBBI collaboration and sprint overview" class="chapter-image" />
+      <!-- Build & Test -->
+      <section id="build" class="container case-chapter fade-in-up" data-bg="#f4f0f6">
+        <div class="editorial-grid">
+          <div class="editorial-sidebar">
+            <span class="chapter-num">03</span>
+            <h3>Build & Test</h3>
           </div>
-        </div>
-      </section>
+          <div class="editorial-content">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Aligning design with development architecture.</h2>
+            <p>I worked closely with two software developers to ensure the design remained aligned with the technical architecture. We used user stories, GitLab issues, and weekly check-ins to track sprint progress.</p>
+            <p>I also stepped into the code, implementing a small React demo modal component used during presentations, which allowed me to apply my UI decisions directly in the codebase.</p>
+            
+            <img src="assets/images/obbirole.jpg" alt="OBBI collaboration and sprint overview" style="width: 100%; border-radius: 8px; margin: 2rem 0;" />
 
-      <section id="test" class="case-chapter" data-bg="#e6d8ef">
-        <div class="container chapter-grid">
-          <aside class="chapter-side">
-            <span>06</span>
-            <p>Testing</p>
-          </aside>
-
-          <div class="chapter-content">
-            <h2>Testing clarity, charts, and concept direction</h2>
-            <p>I created a testing plan to compare concepts and review the visual design with HR professionals, students, and design experts.</p>
-            <p>Feedback led to simpler input, more whitespace, clearer charts, and a calmer visual structure.</p>
-            <ul class="clean-list">
-              <li>Bar charts were easier to read than circular charts.</li>
-              <li>Age ranges felt more comfortable than exact ages.</li>
-              <li>Users needed explanations alongside data visualisations.</li>
-              <li>The tool worked best when it framed gaps as discussion starters.</li>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem; margin-top: 3rem;">Testing the Visuals</h3>
+            <p>I created a testing plan to review the visual design and charting methods with HR professionals, students, and design experts. This feedback loop led to simpler data inputs, more whitespace, and a calmer overall structure.</p>
+            
+            <ul class="clean-list" style="margin-top: 1.5rem; margin-bottom: 2rem;">
+              <li style="margin-bottom: 0.75rem;">Bar charts proved vastly easier to read than circular charts.</li>
+              <li style="margin-bottom: 0.75rem;">Using age ranges felt more comfortable for users than asking for exact ages.</li>
+              <li style="margin-bottom: 0.75rem;">Users explicitly requested plain-text explanations alongside the data visualizations.</li>
             </ul>
 
-            <img src="assets/images/obbiiterations.jpg" alt="OBBI design iterations" class="chapter-image" />
+            <img src="assets/images/obbiiterations.jpg" alt="OBBI design iterations" style="width: 100%; border-radius: 8px;" />
           </div>
         </div>
       </section>
 
-
-      <section id="outcome" class="case-outcome" data-bg="#f1e8ee">
-        <div class="container outcome-grid">
-          <div>
-            <p class="section-label">Outcome</p>
-            <h2>A supportive bias-mapping tool that turns data gaps into team reflection.</h2>
+      <!-- Outcome -->
+      <section id="outcome" class="container case-chapter fade-in-up" data-bg="#ffffff">
+        <div class="editorial-grid">
+          <div class="editorial-sidebar">
+            <span class="chapter-num">04</span>
+            <h3>Outcome & Reflection</h3>
           </div>
+          <div class="editorial-content">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Turning data gaps into team reflection.</h2>
+            <p>This project was a masterclass in learning how to balance research, ethics, design, and development within a single product. I learned how to handle a major project scope pivot, design respectful data visualizations, and collaborate directly with developers while keeping the end-user experience simple and un-intimidating.</p>
+            
+            <div style="margin-top: 4rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="assets/documents/OL_HRBIAS_Design_Document-1 (1).pdf" target="_blank" rel="noopener noreferrer" class="pill" style="background: var(--ink); color: white; border: 1px solid var(--ink);">
+                View Full Design Document →
+              </a>
+            </div>
 
-          <div class="overview-copy">
-            <p>This project taught me how to balance research, ethics, design, and development in one product.</p>
-            <p>I learned how to handle a pivot in scope, design respectful data visualisations, and collaborate with developers while keeping the end-user experience simple.</p>
-            <a href="assets/documents/OL_HRBIAS_Design_Document-1 (1).pdf" class="project-link">View full design document →</a>
+            <div style="margin-top: 6rem; padding-top: 4rem; padding-bottom: 4rem; border-top: 1px solid var(--border);">
+              <a href="index.html#work" class="pill" style="border: 1px solid var(--border); display: inline-block;">← Back to all projects</a>
+            </div>
           </div>
         </div>
       </section>
-
     </main>
 
+    <!-- ===== NEW GRID FOOTER ===== -->
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© 2026 Ines Paric — Designed &amp; built by me.</p>
-        <a href="#top">Back to top ↑</a>
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-link" aria-label="Go to homepage" style="margin-bottom: 1.5rem; display: block;">
+            <span class="logo-text">I<span class="highlight-pink" style="font-style: italic;">P</span></span>
+          </a>
+          <p>Made with many hours of work, a lot of self-reflection, and well-needed coffee breaks.</p>
+        </div>
+        <div class="footer-links-group">
+          <div class="footer-column">
+            <h4>Pages</h4>
+            <ul>
+              <li><a href="index.html">Work</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="mailto:ines.paric1@gmail.com">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Elsewhere</h4>
+            <ul>
+              <li><a href="mailto:ines.paric1@gmail.com">Email</a></li>
+              <li><a href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="assets/cv/Ines_CV.pdf" target="_blank" rel="noopener noreferrer">Résumé</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Work</h4>
+            <ul>
+              <li><a href="project4.html">Otrium</a></li>
+              <li><a href="project2.html">Sensory Map</a></li>
+              <li><a href="project3.html">OBBI</a></li>
+              <li><a href="project1.html">Club Canary</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </footer>
 
-
+    <script src="js/script.js"></script>
     <script>
-      const fadeElements = document.querySelectorAll(".fade-in-up");
-
-      const fadeObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) entry.target.classList.add("visible");
-          });
-        },
-        { threshold: 0.12 }
-      );
-
-      fadeElements.forEach((element) => fadeObserver.observe(element));
-
       const colorSections = document.querySelectorAll("[data-bg]");
-
       const bgObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               const color = entry.target.getAttribute("data-bg");
-              document.documentElement.style.setProperty("--page-bg", color);
+              document.body.style.backgroundColor = color;
             }
           });
         },
-        { threshold: 0.35 }
+        { threshold: 0.4 }
       );
-
       colorSections.forEach((section) => bgObserver.observe(section));
     </script>
-
   </body>
 </html>
