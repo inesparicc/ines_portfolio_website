@@ -10,11 +10,10 @@
 
   <body class="project-page obbi-page" id="top">
 
-    <!-- ===== NEW NAVBAR ===== -->
-    <header class="navbar">
+   <header class="navbar">
       <div class="container nav-container">
         <a href="index.html" class="logo-link" aria-label="Go to homepage">
-          <span class="logo-text">I<span class="highlight-pink" style="font-style: italic;">P</span></span>
+          <span class="logo-text">I<span class="highlight-pink">P</span></span>
         </a>
 
         <nav aria-label="Main navigation">
@@ -23,6 +22,13 @@
             <li><a href="about.html" class="nav-link">About</a></li>
             <li><a href="assets/cv/Ines_CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">Resume</a></li>
             <li><a href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn</a></li>
+            
+            <!-- THEME TOGGLE -->
+            <li>
+              <button id="theme-toggle" class="nav-link" style="background: none; border: none; cursor: pointer; padding: 0;" aria-label="Toggle Dark Mode">
+                <span id="theme-icon">☾</span>
+              </button>
+            </li>
           </ul>
         </nav>
       </div>
@@ -42,7 +48,7 @@
           </h1>
 
           <p class="hero-bio" style="font-size: 1.25rem; max-width: 700px; margin-bottom: 4rem; color: var(--ink-muted);">
-            A web app that helps teams compare themselves with their target audience and spot possible gaps in a clear, data-driven way without blaming individuals.
+            A web-based product that enables cross-functional teams to map internal demographics against target audiences, fostering data-driven conversations about bias without relying on subjective blame.
           </p>
 
           <div class="project-hero-meta" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; padding: 2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
@@ -102,9 +108,9 @@
             <h3>The Challenge</h3>
           </div>
           <div class="editorial-content">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Discussing bias without the blame.</h2>
-            <p>OBBI started from a difficult question: How can unconscious bias be mapped in a way that feels objective, approachable, and useful rather than judgmental?</p>
-            <p>My role was to translate sensitive psychological research and expert feedback into a working product concept, defining the UX flow, the visual design language, and the testing approach.</p>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Facilitating objective conversations around bias.</h2>
+            <p>OBBI started from a difficult question: How can we map unconscious bias in a way that feels objective, actionable, and safe rather than judgmental?</p>
+            <p>My role was to translate behavioral research and domain expert feedback into a functional product strategy, defining the end-to-end UX flow, design system, and testing protocols.</p>
           </div>
         </div>
       </section>
@@ -117,21 +123,21 @@
             <h3>Research & Context</h3>
           </div>
           <div class="editorial-content">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">From unconscious bias to objective gaps.</h2>
-            <p>The project initially started as an HR unconscious bias tool. However, through interviews with HR professionals and a psychology expert, our team quickly learned that bias is highly sensitive to measure directly. It often makes users feel labeled or judged, immediately shutting down productive conversation.</p>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Pivoting from subjective bias to data-driven gaps.</h2>
+            <p>Initially scoped as an HR assessment tool, generative research and stakeholder interviews revealed that measuring bias directly often causes users to feel labeled, shutting down productive dialogue immediately.</p>
             
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 3rem 0; padding: 2rem; background: rgba(255,255,255,0.6); border-radius: 8px;">
               <div>
                 <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Research Insight</h4>
-                <p style="font-size: 0.95rem;">People need a safe way to discuss bias without feeling personally attacked or labeled.</p>
+                <p style="font-size: 0.95rem;">Teams require psychological safety to discuss bias without feeling personally attacked.</p>
               </div>
               <div>
                 <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Design Goal</h4>
-                <p style="font-size: 0.95rem;">Make the tool metric-based, objective, approachable, and easy to understand.</p>
+                <p style="font-size: 0.95rem;">Structure the tool entirely around objective metrics and approachable visual data.</p>
               </div>
             </div>
 
-            <p>We researched existing tools (like Harvard's IAT and bias interrupter playbooks) and made a massive pivot: shifting toward a metrics-based approach that simply compares a team's makeup with its target audience, highlighting gaps as neutral conversation starters.</p>
+            <p>After auditing existing mental models like Harvard's IAT and various HR playbooks, I advocated for a strategic pivot: moving toward a metrics-based gap analysis. By comparing internal team composition against target audience data, we framed gaps as neutral, objective conversation starters.</p>
 
             <div style="display: grid; gap: 2rem; margin-top: 2rem;">
               <img src="assets/images/obbi1.jpg" alt="OBBI concept comparison" style="width: 80%; border-radius: 8px;" />
@@ -149,24 +155,24 @@
             <h3>Concept & Design</h3>
           </div>
           <div class="editorial-content">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Designing a calm tool for a sensitive topic.</h2>
-            <p>During ideation, we explored two main concepts: a scenario-based game and a metrics-based gap analysis. While users enjoyed the scenarios, stakeholders ultimately preferred the metrics concept because it felt more objective and scalable.</p>
-            <p>I helped reshape the direction into OBBI: a web app that compares team and audience data, then explains possible gaps in plain language. The visual design needed to feel friendly and non-judgmental.</p>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Designing for psychological safety.</h2>
+            <p>During the ideation phase, I developed low-fidelity concepts for both a scenario-based interaction and a metrics-based gap analysis. While usability testing showed high engagement for scenarios, business stakeholders aligned on the metrics approach for its scalability and objectivity.</p>
+            <p>I defined the core information architecture for OBBI. The visual design language prioritized psychological safety, utilizing a low-stress UI to present sensitive data without inducing defensiveness.</p>
             
             <img src="assets/images/obbiwireframes.jpg" alt="OBBI metrics-based wireframes" style="width: 100%; border-radius: 8px; margin: 2rem 0;" />
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
               <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; border: 1px solid var(--border);">
-                <h4 style="font-size: 1.25rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem;">Plain Language</h4>
-                <p style="font-size: 0.9rem; margin: 0;">Results required clear contextual explanations, not just raw numbers.</p>
+                <h4 style="font-size: 1.25rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem;">Contextual Copy</h4>
+                <p style="font-size: 0.9rem; margin: 0;">Data results required clear contextual explanations, avoiding raw, intimidating numbers.</p>
               </div>
               <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; border: 1px solid var(--border);">
-                <h4 style="font-size: 1.25rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem;">Low Pressure</h4>
-                <p style="font-size: 0.9rem; margin: 0;">The interface used soft colors and ample whitespace to support reflection, not blame.</p>
+                <h4 style="font-size: 1.25rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem;">Low Cognitive Load</h4>
+                <p style="font-size: 0.9rem; margin: 0;">The interface utilized soft color palettes and ample whitespace to support reflection.</p>
               </div>
               <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; border: 1px solid var(--border);">
                 <h4 style="font-size: 1.25rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem;">Readable Data</h4>
-                <p style="font-size: 0.9rem; margin: 0;">Bar charts were chosen over complex circular charts to make differences easier to understand.</p>
+                <p style="font-size: 0.9rem; margin: 0;">Standard bar charts were implemented over complex circular graphs to ensure immediate comprehension.</p>
               </div>
             </div>
 
@@ -183,19 +189,19 @@
             <h3>Build & Test</h3>
           </div>
           <div class="editorial-content">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Aligning design with development architecture.</h2>
-            <p>I worked closely with two software developers to ensure the design remained aligned with the technical architecture. We used user stories, GitLab issues, and weekly check-ins to track sprint progress.</p>
-            <p>I also stepped into the code, implementing a small React demo modal component used during presentations, which allowed me to apply my UI decisions directly in the codebase.</p>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Cross-functional handoff and technical alignment.</h2>
+            <p>I partnered directly with frontend developers to ensure design decisions aligned with technical constraints. We managed sprint cycles using GitLab issues and structured user stories.</p>
+            <p>Leveraging my technical background, I contributed directly to the React codebase, building core UI components and ensuring the visual fidelity matched the Figma prototypes.</p>
             
             <img src="assets/images/obbirole.jpg" alt="OBBI collaboration and sprint overview" style="width: 100%; border-radius: 8px; margin: 2rem 0;" />
 
-            <h3 style="font-size: 1.5rem; margin-bottom: 1rem; margin-top: 3rem;">Testing the Visuals</h3>
-            <p>I created a testing plan to review the visual design and charting methods with HR professionals, students, and design experts. This feedback loop led to simpler data inputs, more whitespace, and a calmer overall structure.</p>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem; margin-top: 3rem;">Validating the Visuals</h3>
+            <p>I structured a testing plan to review the visual design and charting methods with HR professionals and design experts. This feedback loop led to simplified data inputs, increased whitespace, and a cleaner overall structural hierarchy.</p>
             
             <ul class="clean-list" style="margin-top: 1.5rem; margin-bottom: 2rem;">
-              <li style="margin-bottom: 0.75rem;">Bar charts proved vastly easier to read than circular charts.</li>
-              <li style="margin-bottom: 0.75rem;">Using age ranges felt more comfortable for users than asking for exact ages.</li>
-              <li style="margin-bottom: 0.75rem;">Users explicitly requested plain-text explanations alongside the data visualizations.</li>
+              <li style="margin-bottom: 0.75rem;">Bar charts proved significantly easier to scan than circular data visualizations.</li>
+              <li style="margin-bottom: 0.75rem;">Utilizing broad age ranges reduced friction compared to requesting exact ages.</li>
+              <li style="margin-bottom: 0.75rem;">Users explicitly requested plain-text summaries to accompany the data points.</li>
             </ul>
 
             <img src="assets/images/obbiiterations.jpg" alt="OBBI design iterations" style="width: 100%; border-radius: 8px;" />
@@ -211,8 +217,8 @@
             <h3>Outcome & Reflection</h3>
           </div>
           <div class="editorial-content">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Turning data gaps into team reflection.</h2>
-            <p>This project was a masterclass in learning how to balance research, ethics, design, and development within a single product. I learned how to handle a major project scope pivot, design respectful data visualizations, and collaborate directly with developers while keeping the end-user experience simple and un-intimidating.</p>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Driving actionable reflection through design.</h2>
+            <p>This project reinforced the importance of balancing behavioral ethics with product strategy. Successfully navigating a major scope pivot, I delivered respectful data visualizations and collaborated directly with engineering to ship an accessible, non-intimidating user experience.</p>
             
             <div style="margin-top: 4rem; display: flex; gap: 1rem; flex-wrap: wrap;">
               <a href="assets/documents/OL_HRBIAS_Design_Document-1 (1).pdf" target="_blank" rel="noopener noreferrer" class="pill" style="background: var(--ink); color: white; border: 1px solid var(--ink);">

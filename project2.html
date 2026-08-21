@@ -10,11 +10,10 @@
 
   <body class="project-page sensory-map-page" id="top">
 
-    <!-- ===== NEW NAVBAR ===== -->
     <header class="navbar">
       <div class="container nav-container">
         <a href="index.html" class="logo-link" aria-label="Go to homepage">
-          <span class="logo-text">I<span class="highlight-pink" style="font-style: italic;">P</span></span>
+          <span class="logo-text">I<span class="highlight-pink">P</span></span>
         </a>
 
         <nav aria-label="Main navigation">
@@ -23,6 +22,13 @@
             <li><a href="about.html" class="nav-link">About</a></li>
             <li><a href="assets/cv/Ines_CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">Resume</a></li>
             <li><a href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn</a></li>
+            
+            <!-- THEME TOGGLE -->
+            <li>
+              <button id="theme-toggle" class="nav-link" style="background: none; border: none; cursor: pointer; padding: 0;" aria-label="Toggle Dark Mode">
+                <span id="theme-icon">☾</span>
+              </button>
+            </li>
           </ul>
         </nav>
       </div>
@@ -42,7 +48,7 @@
           </h1>
 
           <p class="hero-bio" style="font-size: 1.25rem; max-width: 700px; margin-bottom: 4rem; color: var(--ink-muted);">
-            A mobile app concept that helps autistic and sensory-sensitive adults discover calmer, more predictable public spaces using sensory data.
+            A mobile product concept that helps neurodivergent and sensory-sensitive adults navigate public spaces by prioritizing environmental predictability and sensory data.
           </p>
 
           <div class="project-hero-meta" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; padding: 2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
@@ -102,9 +108,9 @@
             <h3>The Challenge</h3>
           </div>
           <div class="editorial-content">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Show not only where a place is, but how it might feel.</h2>
-            <p>Many autistic and sensory-sensitive people experience public spaces differently because of noise, light, crowds, and unpredictability. However, most modern navigation tools focus entirely on distance and standard user ratings.</p>
-            <p>This project explores how a map application could support planning, confidence, and personal comfort through sensory filters and user-generated environmental reviews.</p>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Map the sensory experience, not just the location.</h2>
+            <p>Many neurodivergent individuals experience public spaces differently due to noise, lighting, and crowds. However, standard navigation tools focus entirely on distance and generic star ratings.</p>
+            <p>I designed a map interface that supports predictability and personal comfort by utilizing customizable sensory filters and crowdsourced environmental data.</p>
           </div>
         </div>
       </section>
@@ -117,8 +123,8 @@
             <h3>Research & Empathy</h3>
           </div>
           <div class="editorial-content">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Starting from sensory needs, not features.</h2>
-            <p>I explored the daily challenges of autistic and sensory-sensitive adults, focusing specifically on unpredictable noise, lighting, and crowded public spaces.</p>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Designing for predictability.</h2>
+            <p>I conducted generative research to understand the daily challenges of sensory-sensitive adults, specifically focusing on environmental triggers in public spaces like unpredictable noise and harsh lighting.</p>
             
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 3rem 0; padding: 2rem; background: rgba(255,255,255,0.6); border-radius: 8px;">
               <div>
@@ -127,13 +133,13 @@
               </div>
               <div>
                 <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">The Design Gap</h4>
-                <p style="font-size: 0.95rem;">Existing tools rarely support sensory predictability, leaving a massive accessibility gap.</p>
+                <p style="font-size: 0.95rem;">Existing tools rarely support sensory predictability, leaving a massive accessibility gap in the market.</p>
               </div>
             </div>
 
             <img src="assets/images/smdd.jpg" alt="Sensory Map research overview" style="width: 100%; border-radius: 8px; margin-bottom: 2rem;" />
 
-            <p>To ensure I was designing for predictability and control, I built personas focused on sensory needs, routines, coping strategies, and emotional states rather than generic demographics. Expert feedback reinforced the importance of customization, dark mode, GPS-based prompts, and clear sensory indicators.</p>
+            <p>I synthesized user insights into behavioral archetypes focused on sensory triggers, coping strategies, and emotional states rather than standard demographics. Domain expert feedback reinforced the need for extensive customization, dark UI themes, and clear visual indicators.</p>
             
             <img src="assets/images/smpersona.jpg" alt="Sensory Map personas" style="width: 100%; border-radius: 8px; margin-top: 1rem;" />
           </div>
@@ -148,27 +154,27 @@
             <h3>Ideate & Design</h3>
           </div>
           <div class="editorial-content">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Creating a calm and readable interface.</h2>
-            <p>I translated the research into concrete features: color-coded sensory pins, personal sensory profiles, GPS alerts, and specific environmental filters. The user flow was intentionally kept highly predictable.</p>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Translating research into accessible UI patterns.</h2>
+            <p>I translated user needs into a core feature set. The information architecture prioritized a highly predictable user journey with zero dead ends.</p>
             
             <img src="assets/images/smuserflow.jpg" alt="Sensory Map user flow" style="width: 100%; border-radius: 8px; margin-bottom: 2rem;" />
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
               <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; border: 1px solid var(--border);">
                 <h4 style="font-size: 1.25rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem;">Map Pins</h4>
-                <p style="font-size: 0.9rem; margin: 0;">Show noise, light, and crowd intensity at a single glance without needing to click.</p>
+                <p style="font-size: 0.9rem; margin: 0;">Visual indicators showing noise, light, and crowd intensity at a single glance without requiring extra taps.</p>
               </div>
               <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; border: 1px solid var(--border);">
                 <h4 style="font-size: 1.25rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem;">Profiles</h4>
-                <p style="font-size: 0.9rem; margin: 0;">Allow users to personalize sensitivities and define their own comfort levels.</p>
+                <p style="font-size: 0.9rem; margin: 0;">Customizable settings allowing users to define their own specific sensory sensitivities and comfort levels.</p>
               </div>
               <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; border: 1px solid var(--border);">
                 <h4 style="font-size: 1.25rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem;">Alerts</h4>
-                <p style="font-size: 0.9rem; margin: 0;">Proactively warn users via GPS before they enter potentially overwhelming areas.</p>
+                <p style="font-size: 0.9rem; margin: 0;">Location-based notifications proactively warning users before they enter potentially overwhelming areas.</p>
               </div>
             </div>
 
-            <p>I iterated through several visual directions before choosing a light-blue system that balanced calmness, contrast, and readability. The interface followed strict accessibility principles: clear hierarchy, simple icons with labels, minimal animation, and highly customizable themes.</p>
+            <p>I explored multiple visual directions, ultimately selecting a low-stimulus palette that balanced visual calm with WCAG contrast requirements. The UI adhered to strict accessibility principles including clear hierarchy, explicit iconography, and zero disruptive animations.</p>
 
             <img src="assets/images/smfinaldesign.jpg" alt="Sensory Map final design" style="width: 100%; border-radius: 8px; margin-top: 1rem;" />
           </div>
@@ -183,14 +189,14 @@
             <h3>Testing</h3>
           </div>
           <div class="editorial-content">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Validating the concept.</h2>
-            <p>I tested the prototype directly with autistic students using observation, think-aloud protocols, and post-session interviews. I also had an autism expert review the conceptual framework.</p>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Validating usability and emotional response.</h2>
+            <p>I conducted moderated usability sessions with neurodivergent users utilizing think-aloud protocols and semi-structured interviews. I also partnered with a domain expert to validate the overall product strategy.</p>
             
             <ul class="clean-list" style="margin-top: 2rem; margin-bottom: 3rem;">
-              <li style="margin-bottom: 1rem;">Participants found the user flow to be clear, logical, and highly predictable.</li>
-              <li style="margin-bottom: 1rem;">Theme customization (specifically dark mode) was seen as a mandatory, valuable feature.</li>
-              <li style="margin-bottom: 1rem;">GPS prompts near pinned places felt supportive rather than intrusive.</li>
-              <li>Feedback directly led to stronger UI contrast ratios across the final designs.</li>
+              <li style="margin-bottom: 1rem;">Users found the navigation architecture logical and highly predictable.</li>
+              <li style="margin-bottom: 1rem;">Dark mode was validated not just as a preference, but as a critical accessibility requirement.</li>
+              <li style="margin-bottom: 1rem;">Location-based notifications felt supportive and avoided cognitive overload.</li>
+              <li>Research insights directly informed contrast adjustments in the final high-fidelity designs.</li>
             </ul>
 
             <img src="assets/images/smcards.jpg" alt="Sensory Map testing feedback" style="width: 100%; border-radius: 8px;" />
@@ -206,9 +212,9 @@
             <h3>Outcome & Reflection</h3>
           </div>
           <div class="editorial-content">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Inclusive design meets technical exploration.</h2>
-            <p>This project helped me turn complex autism and sensory research into practical, empathetic design decisions. By exploring how Map APIs and a React prototype could support the concept, I was able to bridge the gap between UX research and frontend execution.</p>
-            <p>Ultimately, it solidified my passion for accessible, research-driven design that supports people in their everyday lives.</p>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Bridging inclusive design and technical execution.</h2>
+            <p>This product allowed me to translate complex behavioral research into actionable, inclusive UI patterns. By building a functional React prototype integrated with Map APIs, I successfully bridged the gap between UX strategy and frontend feasibility.</p>
+            <p>This project reinforced my approach to building accessible, research-led digital products that prioritize real user needs over generic features.</p>
             
             <div style="margin-top: 4rem; display: flex; gap: 1rem; flex-wrap: wrap;">
               <a href="https://sensory-map.vercel.app/" target="_blank" rel="noopener noreferrer" class="pill" style="background: var(--ink); color: white; border: 1px solid var(--ink);">

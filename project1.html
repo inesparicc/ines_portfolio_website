@@ -13,14 +13,22 @@
     <header class="navbar">
       <div class="container nav-container">
         <a href="index.html" class="logo-link" aria-label="Go to homepage">
-          <span class="logo-text">I<span class="highlight-pink" style="font-style: italic;">P</span></span>
+          <span class="logo-text">I<span class="highlight-pink">P</span></span>
         </a>
+
         <nav aria-label="Main navigation">
           <ul class="nav-links">
             <li><a href="index.html#work" class="nav-link active">Work</a></li>
             <li><a href="about.html" class="nav-link">About</a></li>
             <li><a href="assets/cv/Ines_CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">Resume</a></li>
             <li><a href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn</a></li>
+            
+            <!-- THEME TOGGLE -->
+            <li>
+              <button id="theme-toggle" class="nav-link" style="background: none; border: none; cursor: pointer; padding: 0;" aria-label="Toggle Dark Mode">
+                <span id="theme-icon">☾</span>
+              </button>
+            </li>
           </ul>
         </nav>
       </div>
@@ -40,7 +48,7 @@
           </h1>
 
           <p class="hero-bio" style="font-size: 1.25rem; max-width: 700px; margin-bottom: 4rem; color: var(--ink-muted);">
-            Redesigning an inconsistent, text-heavy post-booking upsell page to improve clarity, mobile structure, and booking confidence for travellers choosing extra excursions.
+            Optimizing a text-heavy post-booking flow to improve visual hierarchy, mobile usability, and buyer confidence for travelers adding extra excursions.
           </p>
 
           <div class="project-hero-meta" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; padding: 2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
@@ -50,7 +58,7 @@
             </div>
             <div>
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-light); display: block; margin-bottom: 0.5rem;">Role</span>
-              <p style="font-weight: 500; font-size: 1.05rem;">ICT Intern (UX/UI)</p>
+              <p style="font-weight: 500; font-size: 1.05rem;">Product Designer (UX/UI)</p>
             </div>
             <div>
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-light); display: block; margin-bottom: 0.5rem;">Duration</span>
@@ -99,9 +107,9 @@
             <h3>The Challenge</h3>
           </div>
           <div class="editorial-content">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Cluttered layouts and lost sales opportunities.</h2>
-            <p>Club Canary's upsell page felt cluttered and unclear. Text and activity descriptions were inconsistent, and the page wasn't mobile-friendly—leading to user drop-off and lost sales opportunities.</p>
-            <p>I was tasked with redesigning the page to simplify the user journey, keeping in mind strict technical constraints like outdated availability calendars for over 150 excursions, hidden post-booking states, and a heavy priority on page load speeds.</p>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Reducing friction in the post-booking journey.</h2>
+            <p>Club Canary's post-booking upsell page suffered from a cluttered layout and inconsistent information architecture, resulting in high drop-off rates and lost revenue opportunities.</p>
+            <p>My goal was to restructure the user journey and interface while navigating strict technical constraints, including legacy availability calendars for over 150 excursions, complex booking states, and strict page-load performance requirements.</p>
           </div>
         </div>
       </section>
@@ -114,16 +122,16 @@
             <h3>Discover & Define</h3>
           </div>
           <div class="editorial-content">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Understanding the European traveller.</h2>
-            <p>To uncover the root issues, I ran a design analysis focusing on visual hierarchy and responsiveness, revealing massive text inconsistencies and a severe lack of information inside the activity boxes.</p>
-            <p>I backed this up with both qualitative and quantitative research:</p>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Understanding user friction and business context.</h2>
+            <p>I started with a comprehensive UX audit focused on visual hierarchy and responsive behavior. The audit revealed significant cognitive overload caused by unstructured text and missing critical data within the activity cards.</p>
+            <p>To validate these assumptions, I combined qualitative and quantitative research:</p>
             <ul class="clean-list" style="margin-bottom: 2rem;">
-              <li><strong>Interviews:</strong> Speaking with the CEO and colleagues revealed opportunities to target couples and families through personalized visuals and clear pricing.</li>
-              <li><strong>Post-Excursion Surveys:</strong> Feedback from European tourists aged 18-45 highlighted that confusing discounts and cluttered layouts were actively hindering bookings.</li>
+              <li><strong>Stakeholder Interviews:</strong> Discussions with leadership uncovered business goals to better target couples and families through clear pricing and specific imagery.</li>
+              <li><strong>User Surveys:</strong> Feedback from core demographics confirmed that confusing discount structures and a cluttered UI were the primary friction points blocking conversions.</li>
             </ul>
             
             <img src="assets/images/ccpersona.jpg" alt="User Personas" style="width: 100%; border-radius: 8px; margin-bottom: 2rem;" />
-            <p>This data informed four distinct user personas (The Family Planner, The Adventure Seeker, The Relaxation Enthusiast, and The Spontaneous Persona) and an empathy map that clearly showed users were feeling frustrated by the lack of clear information and anxious about missing out on a good experience.</p>
+            <p>Synthesizing this data into behavioral archetypes and an empathy map highlighted a clear pattern. Users felt anxious about missing out on good experiences, but they were too overwhelmed by the interface to proceed confidently with a booking.</p>
             <img src="assets/images/ccempathy.jpg" alt="Empathy Map" style="width: 100%; max-width: 500px; display: block; margin: 0 auto; border-radius: 8px;" />
           </div>
         </div>
@@ -137,21 +145,22 @@
             <h3>Design & Ideation</h3>
           </div>
           <div class="editorial-content">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">From Procreate sketches to high-fidelity logic.</h2>
-            <p>Mapping the user journey revealed key insights: the page needed clear instructions, logical organization, modern design visuals like icons, and a highly visible discount process.</p>
-            <p>I started by sketching out ideas in Procreate to organize the layout visually, before moving into Figma to create high-fidelity wireframes that established strict categorization and component structures.</p>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Translating research into scalable logic.</h2>
+            <p>Journey mapping made it clear that the page required explicit instructional copy, a logical component structure, clear iconography, and a highly visible discount mechanism.</p>
+            <p>I began by sketching layout concepts to define the structural hierarchy before moving into Figma to build high-fidelity components and scalable wireframes.</p>
             <img src="assets/images/ccwireframe.jpg" alt="Wireframes and Sketches" style="width: 100%; border-radius: 8px; margin-bottom: 2rem;" />
             
-            <p>Based on user research and stakeholder feedback, I developed two distinct prototypes:</p>
+            <p>To manage stakeholder expectations and advocate for the user, I developed two distinct prototypes for testing:</p>
             <ul class="clean-list" style="margin-bottom: 2rem;">
-              <li><strong>Prototype A:</strong> A UX-focused design reflecting my interpretation of the best user experience.</li>
-              <li><strong>Prototype B:</strong> A design aligning strictly with the stakeholder's vision to maintain the existing website's look and feel.</li>
+              <li><strong>Concept A (User-Centric):</strong> A completely restructured UI focused purely on best UX practices and conversion optimization.</li>
+              <li><strong>Concept B (Business-Aligned):</strong> A more conservative iteration that strictly maintained the existing legacy visual language.</li>
             </ul>
             <img src="assets/images/ccprototype.jpg" alt="A/B Prototypes" style="width: 100%; border-radius: 8px;" />
           </div>
         </div>
       </section>
 
+      <!-- Develop & Test -->
       <!-- Develop & Test -->
       <section id="develop" class="container case-chapter fade-in-up" data-bg="#f9f4fb">
         <div class="editorial-grid">
@@ -160,27 +169,35 @@
             <h3>Develop & Test</h3>
           </div>
           <div class="editorial-content">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Validating UX and pushing technical boundaries.</h2>
-            <p>I ran an A/B usability test with 8 representative participants across both in-person and remote Zoom sessions. The results were definitive:</p>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Validating usability and technical feasibility.</h2>
+            <p>I conducted moderated A/B usability testing with 8 representative users via in-person and remote sessions. The data clearly validated the user-centric approach:</p>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
               <div style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border);">
                 <h4 style="font-size: 2rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem; color: #e3267c;">3 mins</h4>
-                <p style="font-size: 0.9rem; margin: 0;">Average task completion time for Design A (compared to 4.5 mins for Design B).</p>
+                <p style="font-size: 0.9rem; margin: 0;">Average task completion time for Concept A (compared to 4.5 mins for Concept B).</p>
               </div>
               <div style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border);">
                 <h4 style="font-size: 2rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem; color: #e3267c;">87.5%</h4>
-                <p style="font-size: 0.9rem; margin: 0;">Success rate using Design A's intuitive layout (vs 62.5% for Design B).</p>
+                <p style="font-size: 0.9rem; margin: 0;">Task success rate using Concept A's intuitive layout (versus 62.5% for Concept B).</p>
               </div>
               <div style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border);">
                 <h4 style="font-size: 2rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem; color: #e3267c;">6 of 8</h4>
-                <p style="font-size: 0.9rem; margin: 0;">Participants preferred Design A for its modern, luxury-aligned aesthetic.</p>
+                <p style="font-size: 0.9rem; margin: 0;">Participants preferred Concept A for its modern and trustworthy aesthetic.</p>
               </div>
             </div>
 
-            <p>Moving into development, the stakeholder opted to stick with WordPress for ecosystem consistency. However, to address major concerns around scalability and speed, I proactively built a separate .NET API and React.js proof-of-concept. This highlighted how transitioning to a full-stack web application could drastically reduce page load times and enhance dynamic content management in the future.</p>
+            <p>Concept A was the undisputed winner. Bringing these concrete usability metrics back to the stakeholder fundamentally shifted the conversation. Instead of debating subjective visual preferences, the data proved that a cleaner, user-focused architecture directly reduced friction and improved the booking experience. This quantitative evidence successfully convinced leadership to abandon their initial assumptions and fully champion the user-centric design.</p>
+          
+
+            <p>While business constraints ultimately required the live product to remain on WordPress, I proactively built a separate .NET API and React.js proof-of-concept. This allowed me to demonstrate to leadership how transitioning to a modern frontend stack could drastically reduce latency and improve dynamic content management long-term.</p>
+            
             <img src="assets/images/ccdev.png" alt="Development tech stack" style="width: 100%; border-radius: 8px; margin-top: 1rem;" />
-            <!-- Reflection -->
+          </div>
+        </div>
+      </section>
+            
+     <!-- Reflection -->
       <section id="reflection" class="container case-chapter fade-in-up" data-bg="#ffffff">
         <div class="editorial-grid">
           <div class="editorial-sidebar">
@@ -188,32 +205,29 @@
             <h3>Reflection</h3>
           </div>
           <div class="editorial-content">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">What I learned.</h2>
-            <p>This internship project was an incredible deep dive into real-world product design, where the "ideal" UX solution isn't always the one that gets built right away. Here are my biggest takeaways:</p>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Impact & Takeaways.</h2>
+            <p>This project was a deep dive into balancing ideal user experience with rigid business and technical constraints. Key takeaways include:</p>
             
             <ul class="clean-list" style="margin-top: 2rem; margin-bottom: 3rem;">
               <li style="margin-bottom: 1.5rem;">
-                <strong>Balancing user needs with business goals:</strong> 
-                I learned how to navigate stakeholder pushback. By presenting Prototype A and Prototype B in user testing, I was able to use concrete data to prove that a cleaner, user-focused design actually converts faster than a text-heavy, stakeholder-preferred one.
+                <strong>Driving decisions with data:</strong> 
+                Navigating stakeholder pushback is much easier with concrete usability metrics. Testing two distinct prototypes proved that a cleaner, user-focused design converts significantly better than a familiar, text-heavy layout.
               </li>
               <li style="margin-bottom: 1.5rem;">
-                <strong>Designing within technical constraints:</strong> 
-                Working with an outdated WordPress ecosystem taught me how to compromise visually without sacrificing usability. It also pushed me to step outside pure UI design and build a .NET/React prototype to advocate for better long-term technical architecture.
+                <strong>Designing for technical reality:</strong> 
+                Working within an outdated CMS taught me how to maximize UX value without over-engineering. It also gave me the opportunity to advocate for better architecture by actually building a functional React prototype.
               </li>
               <li>
-                <strong>The power of clear typography and spacing:</strong> 
-                Sometimes, the biggest conversion drivers aren't flashy new features. Simply fixing the visual hierarchy and giving content room to breathe drastically reduced user anxiety and friction.
+                <strong>The ROI of structural logic:</strong> 
+                Sometimes the biggest conversion drivers are not flashy features. Simply fixing the information architecture and giving content room to breathe drastically reduced user friction and anxiety.
               </li>
             </ul>
 
-            
-          </div>
-        </div>
-      </section>
-
-            <div style="margin-top: 6rem; padding-top: 4rem; border-top: 1px solid var(--border);">
+            <!-- Button is now safely inside the content block -->
+            <div style="margin-top: 4rem; margin-bottom: 6rem; padding-top: 4rem; border-top: 1px solid var(--border); text-align: left;">
               <a href="index.html#work" class="pill" style="border: 1px solid var(--border); display: inline-block;">← Back to all projects</a>
             </div>
+
           </div>
         </div>
       </section>

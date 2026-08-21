@@ -12,11 +12,10 @@
   </head>
 
   <body class="project-page store-credit-page" id="top">
-    <!-- ===== NEW NAVBAR ===== -->
-    <header class="navbar">
+   <header class="navbar">
       <div class="container nav-container">
         <a href="index.html" class="logo-link" aria-label="Go to homepage">
-          <span class="logo-text">I<span class="highlight-pink" style="font-style: italic;">P</span></span>
+          <span class="logo-text">I<span class="highlight-pink">P</span></span>
         </a>
 
         <nav aria-label="Main navigation">
@@ -25,6 +24,13 @@
             <li><a href="about.html" class="nav-link">About</a></li>
             <li><a href="assets/cv/Ines_CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">Resume</a></li>
             <li><a href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn</a></li>
+            
+            <!-- THEME TOGGLE -->
+            <li>
+              <button id="theme-toggle" class="nav-link" style="background: none; border: none; cursor: pointer; padding: 0;" aria-label="Toggle Dark Mode">
+                <span id="theme-icon">☾</span>
+              </button>
+            </li>
           </ul>
         </nav>
       </div>
@@ -44,7 +50,7 @@
           </h1>
 
           <p class="hero-bio" style="font-size: 1.25rem; max-width: 750px; margin-bottom: 4rem; color: var(--ink-muted);">
-            Removing shopping friction through data-backed A/B testing, a frictionless checkout redesign, and foundational design tokens—driving an annualized €1.3M GMV impact.
+            Reducing shopping friction through A/B testing, a simplified checkout flow, and cleaner design tokens, resulting in an annualized €1.3M GMV impact.
           </p>
 
           <div class="project-hero-meta" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; padding: 2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
@@ -104,9 +110,9 @@
             <h3>The Challenge</h3>
           </div>
           <div class="editorial-content">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Understanding first, conversion follows.</h2>
-            <p>Otrium is an off-price fashion marketplace helping brands sell excess inventory. My mission was simple: <strong>uncover where shoppers get stuck, design hypotheses-driven fixes, and validate them with live data.</strong></p>
-            <p>I tackled two core tracks: turning the homepage into a fast product-discovery engine, and rebuilding Store Credit into a trustworthy retention feature. Along the way, I upgraded core design tokens to eliminate frontend UI debt.</p>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Research first, design second.</h2>
+            <p>Otrium is an off-price fashion marketplace for excess inventory. My goal was straightforward: figure out where shoppers were dropping off, design targeted solutions, and validate them with real user data.</p>
+            <p>I focused on two main areas: improving product discovery on the homepage and designing Store Credit to encourage repeat purchases. I also updated core design tokens to clean up our UI components and improve developer handoff.</p>
           </div>
         </div>
       </section>
@@ -119,31 +125,36 @@
             <h3>Discovery</h3>
           </div>
           <div class="editorial-content">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Fixing the "Escape Room"</h2>
-            <p>Heatmaps and recordings showed shoppers treated the homepage like an escape room—skipping promo banners and rushing straight to search. It was acting like a transit hub instead of a discovery feed.</p>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Fixing Homepage Drop-off</h2>
+            <p>Heatmaps and session recordings revealed that shoppers were mostly ignoring promotional banners and going straight for the search bar. The homepage wasn't guiding them to discover new items effectively.</p>
             
             <div style="padding: 2rem; border-left: 3px solid #e3267c; background: rgba(255,255,255,0.4); margin: 2rem 0;">
-              <p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.35rem; color: var(--ink); margin: 0;">"A failed test isn’t a failed idea—it’s a diagnosis."</p>
+              <p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.35rem; color: var(--ink); margin: 0;">"A failed A/B test just tells you what the user actually needs."</p>
             </div>
 
-            <p>Using <strong>Coframe</strong>, I launched targeted experiments to streamline navigation, layout hierarchy, and copy. Here were the most impactful data points:</p>
+            <p>A perfect example of this was testing a new "Why Shop Otrium" block. As shown in the Coframe data below, the initial rollout actually caused a 3.4% drop in conversion. Instead of scrapping the design, I dug into the user experience to understand the friction. The issue wasn't the information; it was the timing and placement.</p>
+
+            <p>We were asking users to commit too early. By moving the block to the bottom of the page and adding clear Unique Selling Propositions (USPs) to actively build trust, we gave users the space to explore the platform first without feeling forced to sign up or log in. This empathetic shift in the user journey flipped the test from a -3.4% loss to a <strong>+10.0% conversion win</strong>.</p>
             
+            <p>I used <strong>Coframe</strong> to run similar tests across navigation, layout hierarchy, and microcopy. Here is a breakdown of the most impactful structural wins:</p>
+
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem; margin-bottom: 3rem;">
               <div style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border);">
                 <h4 style="font-size: 1.5rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem; color: #e3267c;">+14.9%</h4>
-                <p style="font-size: 0.9rem; margin: 0;"><strong>Hierarchy Shift:</strong> Moving popular categories above promotional banners generated Otrium’s biggest homepage conversion win.</p>
+                <p style="font-size: 0.9rem; margin: 0;"><strong>Layout Shift:</strong> Moving category links above promotional banners resulted in our biggest conversion win on the homepage.</p>
               </div>
               <div style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border);">
                 <h4 style="font-size: 1.5rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem; color: #e3267c;">+10.0%</h4>
-                <p style="font-size: 0.9rem; margin: 0;"><strong>Targeting Fix:</strong> Re-targeting logged-out shoppers for a specific USP test flipped an initial -3.4% dip into a +10.0% success.</p>
+                <p style="font-size: 0.9rem; margin: 0;"><strong>Timing & Trust:</strong> Moving the USP block to the bottom of the page allowed users to explore first, turning an initial drop into a massive uplift.</p>
               </div>
               <div style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border);">
                 <h4 style="font-size: 1.5rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem; color: #e3267c;">+2.0%</h4>
-                <p style="font-size: 0.9rem; margin: 0;"><strong>Mobile Grid:</strong> Proved that a compact, 2-column category grid outperformed horizontal swipe carousels on mobile.</p>
+                <p style="font-size: 0.9rem; margin: 0;"><strong>Mobile UI:</strong> Validated that a simple 2-column grid performed much better than horizontal swipe carousels on mobile screens.</p>
               </div>
             </div>
 
-            <img src="assets/images/Coframe_USP.jpeg" alt="Coframe experimentation data" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);" />
+            <!-- Ensure your image source path matches your project files -->
+            <img src="assets/images/Coframe_USP.jpeg" alt="Coframe experimentation data showing a -3.4% miss turning into a +10.0% win" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);" />
           </div>
         </div>
       </section>
@@ -156,14 +167,14 @@
             <h3>Retention</h3>
           </div>
           <div class="editorial-content">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">O-Credit: The 1-Click Toggle.</h2>
-            <p>Many users made one purchase and never came back. Otrium introduced Store Credit to boost repeat orders, but initial designs used confusing points and complex rules.</p>
-            <p>Through 7 design iterations and moderated usability testing with 7 proxy users, I made the key design call: <strong>eliminate gamified points and treat credit as pure cash with a 1-click toggle directly in checkout.</strong> We branded it as <strong>"O-Credit"</strong>.</p>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Building O-Credit</h2>
+            <p>A lot of users would buy once and not return. To drive repeat purchases, I designed Otrium's store credit feature completely from scratch. This required deep competitor analysis, rapid wireframing, and tight collaboration across product, marketing, and engineering teams.</p>
+            <p>Working closely with marketing, who officially named the feature <strong>"O-Credit"</strong>, I mapped out the entire end-to-end journey. I created a dedicated O-Credit hub within the "My Account" area, integrated its visibility into the global menu bar, and designed a fun, intuitive 1-click toggle to apply the cash value directly at checkout.</p>
             
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 3rem 0; padding: 2rem; background: rgba(255,255,255,0.4); border-radius: 8px;">
               <div>
                 <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">The Hypothesis</h4>
-                <p style="font-size: 0.95rem;">Treating credit as a transparent discount line (-€10) removes checkout hesitation and builds trust.</p>
+                <p style="font-size: 0.95rem;">Presenting earned credit as a transparent, fun cash discount (-€10) with a 1-click toggle at checkout builds trust and motivates users to complete a second order.</p>
               </div>
               <div>
                 <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">The Live Result</h4>
@@ -172,9 +183,9 @@
             </div>
 
             <ul class="clean-list" style="margin-bottom: 3rem;">
-              <li><strong>Zero Edge-Case Debt:</strong> Designed full UI specs upfront for expired vouchers, partial credits, empty states, and API error states.</li>
-              <li><strong>Engineer-Ready Handoff:</strong> Delivered structured component states directly to B2C developers for clean implementation.</li>
-              <li><strong>Customer Validation:</strong> Early launch to 281 shoppers scored <strong>4.6 out of 5</strong> for checkout ease of use.</li>
+              <li><strong>Handling Edge Cases:</strong> Mapped out and designed the full UI for expired vouchers, partial balances, empty states, and API errors.</li>
+              <li><strong>Developer Handoff:</strong> Provided structured component states and documentation directly to the B2C engineering team.</li>
+              <li><strong>User Feedback:</strong> An early release to 281 shoppers resulted in a <strong>4.6 out of 5</strong> rating for ease of use.</li>
             </ul>
 
             <div class="mockup-showcase">
@@ -199,6 +210,11 @@
         </div>
       </section>
 
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Systems -->
       <section id="systems" class="container case-chapter fade-in-up" data-bg="#f4e8f0">
         <div class="editorial-grid">
@@ -207,18 +223,18 @@
             <h3>Systems</h3>
           </div>
           <div class="editorial-content">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Tokens &amp; The Megamenu.</h2>
-            <p>Fast experiments can create inconsistent interfaces. Alongside my main project tracks, I audited and upgraded Otrium’s <strong>Ozone Design System</strong> tokens and built global platform components.</p>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Design Tokens &amp; Navigation.</h2>
+            <p>Running fast A/B tests can sometimes lead to an inconsistent UI. To prevent this, I audited and updated the design tokens in Otrium’s design system (Ozone) and created new global components.</p>
             
             <div style="padding: 2rem; border-left: 3px solid #e3267c; background: rgba(255,255,255,0.4); margin: 2rem 0;">
               <p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.35rem; color: var(--ink); margin: 0;">"A fix made in the design system is a fix made everywhere."</p>
             </div>
 
             <ul class="clean-list" style="margin-bottom: 3rem;">
-              <li><strong>Ozone Token Architecture:</strong> Standardized tokens for corner radii, elevation, blur filters, and iconography line weights to ensure smooth dev handoffs.</li>
-              <li><strong>Desktop Megamenu:</strong> Designed and prototyped an A-Z brand navigation bar from scratch to make product discovery effortless.</li>
-              <li><strong>Pricing Clarity (RRP):</strong> Removed cluttered <em>adviesprijs</em> tags from listing pages, moving clean contextual explanations into Cart and PDP.</li>
-              <li><strong>App Store Redesign:</strong> Refreshed iOS/Android App Store screenshots with localized, consistent visuals carrying right into the app login.</li>
+              <li><strong>Token Architecture:</strong> Cleaned up the variables for border radii, elevation shadows, blurs, and icon weights for a smoother developer handoff.</li>
+              <li><strong>Desktop Megamenu:</strong> Designed a new A-Z brand navigation dropdown to help users find specific brands much faster.</li>
+              <li><strong>Pricing Clarity:</strong> Cleaned up the product cards by removing complex pricing tags, moving that context into the Product Details Page (PDP) and Cart instead.</li>
+              <li><strong>App Store Assets:</strong> Updated the iOS and Android store screenshots to be more visually consistent with the actual app experience.</li>
             </ul>
 
             <div style="display: grid; gap: 2rem;">
@@ -237,8 +253,8 @@
             <h3>Outcome</h3>
           </div>
           <div class="editorial-content">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Measurable Growth &amp; Impact.</h2>
-            <p>By grounding UX in user data, rapid testing, and clean system architecture, this work proved that thoughtful design directly powers commercial growth.</p>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">Measurable Growth.</h2>
+            <p>This project showed how heavily focusing on user data, iterative testing, and a clean UI system can directly impact business growth.</p>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 3rem 0;">
               <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; border: 1px solid var(--border);">
@@ -255,20 +271,26 @@
               </div>
             </div>
 
+            <!-- Testimonials Introduction -->
+            <div style="margin-top: 4rem; margin-bottom: 1.5rem;">
+              <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Team Feedback</h3>
+              <p>Beyond the quantitative data, shipping these features successfully relied heavily on cross-functional alignment. I was incredibly grateful to receive such positive feedback and public LinkedIn recommendations from product and engineering leadership upon wrapping up these tracks.</p>
+            </div>
+
             <!-- Testimonials -->
             <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 4rem;">
               <div style="background: rgba(255,255,255,0.8); padding: 2rem; border-radius: 12px; border: 1px solid var(--border);">
                 <p style="font-size: 1.05rem; line-height: 1.7; color: var(--ink); margin-bottom: 1rem; font-style: italic;">
                   "Ines was a fantastic addition to our product team at Otrium. She supported us on complex projects like the Store Credit journey, where she did a great job managing user research and preparing clean, well-structured design handoffs for B2C engineers. She constantly seeks out feedback, adapts quickly, and really owns her growth as a designer."
                 </p>
-                <p style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-light); margin: 0;">— Elena Verling, Product Design @ Otrium</p>
+                <p style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-light); margin: 0;">Elena Verling, Product Design @ Otrium</p>
               </div>
 
               <div style="background: rgba(255,255,255,0.8); padding: 2rem; border-radius: 12px; border: 1px solid var(--border);">
                 <p style="font-size: 1.05rem; line-height: 1.7; color: var(--ink); margin-bottom: 1rem; font-style: italic;">
                   "Contributing both technically on design elements but also by being a sharp and thoughtful pair of eyes on many things related to our e-commerce platform... I wouldn't hesitate to recommend her for roles!"
                 </p>
-                <p style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-light); margin: 0;">— Rob Myers, Director of Product, Technology &amp; Data @ Otrium</p>
+                <p style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-light); margin: 0;">Rob Myers, Director of Product, Technology &amp; Data @ Otrium</p>
               </div>
             </div>
 

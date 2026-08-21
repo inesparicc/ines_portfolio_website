@@ -1,29 +1,62 @@
-// ===== Case study navigation highlighting on scroll =====
-const caseSections = document.querySelectorAll(".case-chapter");
-const caseNavLinks = document.querySelectorAll(".case-nav-inner a");
-
-if (caseSections.length && caseNavLinks.length) {
-  window.addEventListener("scroll", () => {
-    let current = "";
-    caseSections.forEach((section) => {
-      const sectionTop = section.offsetTop - 150;
-      if (window.scrollY >= sectionTop) {
-        current = section.getAttribute("id");
-      }
-    });
-
-    caseNavLinks.forEach((link) => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === `#${current}`) {
-        link.classList.add("active");
-      }
-    });
-  });
-}
-
-// ===== MAIN INIT =====
+// ==========================================
+// MAIN INITIALIZATION
+// ==========================================
 document.addEventListener("DOMContentLoaded", () => {
-  // --- Scroll-in animation for .fade-in-up elements ---
+  
+  // --- 1. DARK MODE TOGGLE ---
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeIcon = document.getElementById('theme-icon');
+
+  if (themeToggle && themeIcon) {
+    // Check if they already have a preference saved
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      if (currentTheme === 'dark') {
+        themeIcon.textContent = '☀'; // Sun icon for dark mode
+      }
+    }
+
+    // Handle the click
+    themeToggle.addEventListener('click', () => {
+      let theme = document.documentElement.getAttribute('data-theme');
+      
+      if (theme === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        themeIcon.textContent = '☾'; // Moon icon for light mode
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        themeIcon.textContent = '☀'; 
+      }
+    });
+  }
+
+  // --- 2. CASE STUDY NAVIGATION HIGHLIGHTING ---
+  const caseSections = document.querySelectorAll(".case-chapter");
+  const caseNavLinks = document.querySelectorAll(".case-nav-inner a");
+
+  if (caseSections.length && caseNavLinks.length) {
+    window.addEventListener("scroll", () => {
+      let current = "";
+      caseSections.forEach((section) => {
+        const sectionTop = section.offsetTop - 150;
+        if (window.scrollY >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      caseNavLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active");
+        }
+      });
+    });
+  }
+
+  // --- 3. SCROLL-IN ANIMATION (.fade-in-up) ---
   const faders = document.querySelectorAll(".fade-in-up");
 
   if (faders.length) {
@@ -42,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
     faders.forEach((el) => observer.observe(el));
   }
 
-  // --- Dynamic background color transition on scroll (for Case Studies) ---
+  // --- 4. DYNAMIC BACKGROUND COLOR ON SCROLL ---
   const colorSections = document.querySelectorAll("[data-bg]");
 
   if (colorSections.length) {
@@ -61,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     colorSections.forEach((section) => bgObserver.observe(section));
   }
 
-  // --- Photo slider (About page) ---
+  // --- 5. PHOTO SLIDER (ABOUT PAGE) ---
   const gallerySlides = document.querySelectorAll(".gallery-slide");
   const prevBtn = document.querySelector(".gallery-btn.prev");
   const nextBtn = document.querySelector(".gallery-btn.next");
@@ -76,8 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     prevBtn.addEventListener("click", () => {
-      currentIndex =
-        (currentIndex - 1 + gallerySlides.length) % gallerySlides.length;
+      currentIndex = (currentIndex - 1 + gallerySlides.length) % gallerySlides.length;
       updateSlides();
     });
 
@@ -89,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateSlides();
   }
 
-  // --- "Open to opportunities" popup ---
+  // --- 6. "OPEN TO OPPORTUNITIES" POPUP ---
   const popup = document.getElementById("interestPopup");
   const closePopupBtn = document.getElementById("closePopupBtn");
 
@@ -108,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- Hero scroll button (Homepage) ---
+  // --- 7. HERO SCROLL BUTTON (HOMEPAGE) ---
   const scrollCue = document.querySelector(".scroll-cue");
   const workSection = document.querySelector("#work");
 
@@ -120,7 +152,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// ===== FAIRY DUST MOUSE TRAIL EFFECT =====
+
+// ==========================================
+// FAIRY DUST MOUSE TRAIL EFFECT
+// ==========================================
 let lastX = 0;
 let lastY = 0;
 

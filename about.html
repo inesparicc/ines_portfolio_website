@@ -16,18 +16,21 @@
     <header class="navbar">
       <div class="container nav-container">
         <a href="index.html" class="logo-link" aria-label="Go to homepage">
-          <span class="logo-text">I<span class="highlight-pink" style="font-style: italic;">P</span></span>
+          <span class="logo-text">I<span class="highlight-pink">P</span></span>
         </a>
 
         <nav aria-label="Main navigation">
           <ul class="nav-links">
-            <li><a href="index.html#work" class="nav-link">Work</a></li>
-            <li><a href="about.html" class="nav-link active">About</a></li>
+            <li><a href="index.html#work" class="nav-link active">Work</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="assets/cv/Ines_CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">Resume</a></li>
+            <li><a href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn</a></li>
+            
+            <!-- THEME TOGGLE -->
             <li>
-              <a href="assets/cv/Ines_CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">Resume</a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn</a>
+              <button id="theme-toggle" class="nav-link" style="background: none; border: none; cursor: pointer; padding: 0;" aria-label="Toggle Dark Mode">
+                <span id="theme-icon">☾</span>
+              </button>
             </li>
           </ul>
         </nav>
@@ -48,16 +51,18 @@
             </h1>
             
             <p class="hero-bio" style="font-size: 1.1rem; color: var(--ink); font-weight: 500; margin-bottom: 1.5rem;">
-              I’m Ines, a Product Designer based in Ireland. I believe the best digital products sit right at the intersection of human psychology and structural logic.
+              I'm Ines, a product designer based in Dublin, originally from Split, Croatia. 
             </p>
 
             <p class="hero-bio" style="margin-bottom: 1.5rem;">
-              My process isn't just about making things look good—it's rooted in real data. From analyzing heatmaps to structuring A/B experiments, I translate complex behaviors into clear, intuitive experiences that actually convert.
+              My work and perspective are heavily influenced by my international background, having lived and worked across Croatia, the Netherlands, Spain, and Ireland. Navigating different cultures taught me how to observe and adapt to diverse user needs.
             </p>
 
-            <p class="hero-bio" style="margin-bottom: 2.5rem;">
-              Before moving to pixels, my background was in physical crafting (think furniture making and sculpting). Building things with my hands taught me how people physically interact with structure and form—a hands-on mindset I bring to every digital interface I design today.
+            <p class="hero-bio" style="margin-bottom: 1.5rem;">
+              With a degree in Information and Communication Technology and an academic background in psychology, I approach product design as the intersection of human behavior and structural logic. I rely on concrete data and user research to drive my decisions, ensuring the digital products I build are intuitive, scalable, and highly functional.
             </p>
+
+          
 
             <div class="about-actions" style="display: flex; gap: 1rem;">
               <a href="assets/cv/Ines_CV.pdf" target="_blank" rel="noopener noreferrer" class="pill" style="border: 1px solid var(--border);">
@@ -86,7 +91,7 @@
             </div>
             <div>
               <span>Current focus</span>
-              <p>E-commerce & conversion UX.</p>
+              <p>E-commerce & conversion UX/UI.</p>
             </div>
             <div>
               <span>Background</span>
@@ -104,42 +109,41 @@
           </div>
 
           <div class="about-skills-grid">
-            <article class="about-skill-column fade-in-up">
-              <h3>UX &amp; Strategy</h3>
-              <ul>
-                <li>User research &amp; empathy</li>
-                <li>A/B testing &amp; CRO</li>
-                <li>Information architecture</li>
-                <li>Interaction design</li>
-                <li>Usability testing</li>
-                <li>E-commerce workflows</li>
-              </ul>
-            </article>
+  <article class="about-skill-column fade-in-up">
+    <h3>UX &amp; Strategy</h3>
+    <ul>
+      <li>Behavioral Research &amp; Synthesis</li>
+      <li>Conversion Rate Optimization (CRO)</li>
+      <li>Data-Driven A/B Testing</li>
+      <li>Information Architecture</li>
+      <li>Inclusive &amp; Accessible Design</li>
+      <li>E-commerce &amp; SaaS Workflows</li>
+    </ul>
+  </article>
 
-            <article class="about-skill-column fade-in-up">
-              <h3>Pixels &amp; Prototyping</h3>
-              <ul>
-                <li>Figma</li>
-                <li>Design systems &amp; tokens</li>
-                <li>Responsive layouts</li>
-                <li>Visual hierarchy</li>
-                <li>Component architecture</li>
-                <li>Developer-ready handoff</li>
-              </ul>
-            </article>
+  <article class="about-skill-column fade-in-up">
+    <h3>Design &amp; Systems</h3>
+    <ul>
+      <li>Advanced Figma &amp; Variables</li>
+      <li>Scalable Design Systems</li>
+      <li>AI-Assisted Prototyping</li>
+      <li>Component Architecture</li>
+      <li>Adaptive &amp; Responsive UI</li>
+      <li>Cross-Functional Handoff</li>
+    </ul>
+  </article>
 
-            <article class="about-skill-column fade-in-up">
-              <h3>My Toolkit</h3>
-              <ul>
-                <li>Miro, Notion, Jira</li>
-                <li>Hotjar, Coframe</li>
-                <li>HTML, CSS, JavaScript basics</li>
-                <li>VS Code, GitHub</li>
-                <li>Cross-functional communication</li>
-                <li>Fluent in English &amp; Croatian</li>
-              </ul>
-            </article>
-          </div>
+  <article class="about-skill-column fade-in-up">
+    <h3>Toolkit &amp; Tech</h3>
+    <ul>
+      <li>Figma, Miro, Notion, Jira</li>
+      <li>AI Prompting &amp; Generation (Coframe, ChatGPT)</li>
+      <li>User Analytics &amp; Mapping (Hotjar, Map APIs)</li>
+      <li>Frontend Basics (React, HTML/CSS/JS)</li>
+      <li>VS Code &amp; Git</li>
+    </ul>
+  </article>
+</div>
         </div>
       </section>
 
@@ -149,8 +153,8 @@
           <div class="creative-text-stack">
             <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 1.5rem;">Physical work that shaped my digital eye.</h2>
             <p style="font-size: 1.05rem; line-height: 1.6; color: var(--ink-muted);">
-              Before shifting to interfaces, I explored form and function through traditional art and woodworking. Figuring out how joints hold together in a physical chair or how light shapes a sculpture still heavily influences how I approach structure, detail, and craftsmanship in UI design.
-            </p>
+  Before shifting to digital products, my creative foundation started with studying interior architecture and building furniture in high school, alongside a lifelong hobby of drawing and painting. That constant drive to express myself creatively is exactly what led me to product design. It taught me how to balance form and function early on, bringing a strong sense of craftsmanship to every interface I create today.
+</p>
           </div>
         </div>
       </section>
