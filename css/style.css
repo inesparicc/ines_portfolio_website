@@ -17,7 +17,7 @@
   --container: 1100px;
 }
 
-/* DARK MODE (Uses !important to override inline JS styles) */
+/* DARK MODE */
 [data-theme="dark"] {
   --page-bg: #121212 !important; 
   --ink: #f8f9fa !important; 
@@ -136,6 +136,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem; 
 }
 
 .logo-link {
@@ -145,6 +146,7 @@ p {
   font-weight: 500;
   font-size: 1rem;
   letter-spacing: -0.01em;
+  flex-shrink: 0; 
 }
 
 .logo-text {
@@ -157,17 +159,26 @@ p {
 .nav-links-container {
   display: flex;
   list-style: none;
-  gap: 2rem;
-  position: relative; /* Acts as the anchor for the sliding indicator */
+  gap: 1rem; 
+  position: relative; 
+  overflow-x: auto; 
+  scrollbar-width: none; 
+  -webkit-overflow-scrolling: touch; 
+}
+
+.nav-links-container::-webkit-scrollbar {
+  display: none;
 }
 
 .nav-item {
-  display: block;
+  display: flex;
+  align-items: center;
   font-size: 0.85rem;
   font-weight: 400;
   color: var(--ink-muted);
   transition: color 0.2s ease;
   cursor: pointer;
+  white-space: nowrap; 
 }
 
 .nav-item:hover, 
@@ -181,10 +192,16 @@ p {
   opacity: 0.5;
 }
 
+@media (min-width: 768px) {
+  .nav-links-container {
+    gap: 2rem;
+    overflow-x: visible; 
+  }
+}
+
 /* The Sliding Pink Line */
 .active-indicator {
   position: absolute;
-  /* Drops the line down to perfectly overlap the navbar's bottom border */
   bottom: -1.55rem; 
   left: 0;
   height: 2px;
@@ -192,7 +209,8 @@ p {
   transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   width: 0;
 }
-/* Static pink underline for subpages where JS scroll spy is disabled */
+
+/* Static pink underline for subpages */
 .static-nav .nav-item.active {
   position: relative;
 }
@@ -495,17 +513,19 @@ p {
   padding: 0 2rem; 
 }
 
-/* Mobile view: simple block stacking, no column-count math! */
+/* Mobile First: Safe flex-column so iOS doesn't clip the images */
 .about-gallery-grid {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .about-gallery-item {
-  margin-bottom: 1.5rem;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--surface);
+  transform: translateZ(0); 
 }
 
 .about-gallery-item img {
@@ -522,11 +542,14 @@ p {
 /* Tablet view: 2 columns */
 @media (min-width: 600px) {
   .about-gallery-grid {
+    display: block; 
     column-count: 2;
     column-gap: 1.5rem;
   }
-  /* We only apply the break rule when there are actual columns */
   .about-gallery-item {
+    display: inline-block; 
+    width: 100%;
+    margin-bottom: 1.5rem;
     break-inside: avoid;
   }
 }
@@ -607,7 +630,7 @@ p {
    8. SPECIALTIES MARQUEE
    ========================================= */
 .specialties-section {
-  padding: 12rem 0 0 0; 
+  padding: 2rem 0 0 0; /* Reduced from 12rem to 2rem to close the gap */
   overflow: hidden;
   margin-bottom: 3rem; 
 }
