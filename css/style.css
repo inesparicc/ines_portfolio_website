@@ -2,10 +2,9 @@
    1. RESET & VARIABLES
    ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&display=swap');
 
-/* 1. LIGHT MODE VARIABLES */
+/* LIGHT MODE */
 :root {
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --page-bg: #f9f9f9; 
@@ -18,7 +17,7 @@
   --container: 1100px;
 }
 
-/* 2. DARK MODE VARIABLES (Added !important to override JS) */
+/* DARK MODE (Uses !important to override inline JS styles) */
 [data-theme="dark"] {
   --page-bg: #121212 !important; 
   --ink: #f8f9fa !important; 
@@ -29,23 +28,14 @@
   --surface: rgba(0, 0, 0, 0.8) !important;
 }
 
-/* 3. APPLY VARIABLES TO BODY */
-body {
-  background-color: var(--page-bg);
-  color: var(--ink);
-  font-family: var(--font-main);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* 4. THE CRITICAL FIX: Stop JS from painting pastel backgrounds in dark mode */
-[data-theme="dark"] body {
-  background-color: var(--page-bg) !important;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -56,11 +46,12 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* This ensures the JS background color change is buttery smooth */
-  transition: background-color 0.8s cubic-bezier(0.25, 1, 0.5, 1); 
+  transition: background-color 0.8s cubic-bezier(0.25, 1, 0.5, 1), color 0.3s ease; 
 }
-html {
-  scroll-behavior: smooth;
+
+/* Ensure JS doesn't paint pastel backgrounds over dark mode */
+[data-theme="dark"] body {
+  background-color: var(--page-bg) !important;
 }
 
 img, video {
@@ -125,7 +116,7 @@ p {
 }
 
 /* =========================================
-   3. NAVIGATION
+   3. MAIN NAVIGATION (SCROLL SPY)
    ========================================= */
 .navbar {
   position: fixed;
@@ -156,40 +147,75 @@ p {
   letter-spacing: -0.01em;
 }
 
-.logo-icon {
-  width: 20px;
-  height: 20px;
+.logo-text {
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  color: var(--ink);
 }
 
-.nav-links {
+.nav-links-container {
   display: flex;
   list-style: none;
   gap: 2rem;
+  position: relative; /* Acts as the anchor for the sliding indicator */
 }
 
-.nav-link {
+.nav-item {
+  display: block;
   font-size: 0.85rem;
   font-weight: 400;
   color: var(--ink-muted);
   transition: color 0.2s ease;
+  cursor: pointer;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-item:hover, 
+.nav-item.active {
   color: var(--ink);
+}
+
+.nav-item .nav-num {
+  font-size: 0.75rem;
+  margin-right: 0.25rem;
+  opacity: 0.5;
+}
+
+/* The Sliding Pink Line */
+.active-indicator {
+  position: absolute;
+  /* Drops the line down to perfectly overlap the navbar's bottom border */
+  bottom: -1.55rem; 
+  left: 0;
+  height: 2px;
+  background-color: #e3267c;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  width: 0;
+}
+/* Static pink underline for subpages where JS scroll spy is disabled */
+.static-nav .nav-item.active {
+  position: relative;
+}
+
+.static-nav .nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1.55rem;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #e3267c;
 }
 
 /* =========================================
    4. HERO SECTION
    ========================================= */
-/* =========================================
-   4. HERO SECTION & LAYOUT
-   ========================================= */
 .home-hero {
-  padding-top: 14rem; /* This is the magic line that pushes it below the navbar! */
+  padding-top: 14rem;
   padding-bottom: 6rem;
   min-height: 85vh;
   display: flex;
-  align-items: center; /* This centers it vertically on the screen */
+  align-items: center; 
 }
 
 .hero-content-minimal {
@@ -197,11 +223,11 @@ p {
 }
 
 .hero-title {
-  font-family: 'Playfair Display', serif; /* Applies the editorial font */
+  font-family: 'Playfair Display', serif; 
   font-size: clamp(4.5rem, 12vw, 9.5rem);
   font-weight: 500;
   line-height: 0.82;
-  letter-spacing: -0.02em; /* Adjusted slightly for the serif font */
+  letter-spacing: -0.02em; 
   margin-top: 0;
   margin-bottom: 2rem;
   color: var(--ink);
@@ -209,11 +235,11 @@ p {
 
 .highlight-pink {
   color: #e3267c; 
-  font-style: italic; /* Adds that elegant slant to your last name */
+  font-style: italic; 
 }
 
 .hero-year {
-  font-family: var(--font-main); /* Keeps the copyright year in the clean sans-serif */
+  font-family: var(--font-main); 
   font-size: clamp(0.9rem, 2vw, 1.25rem);
   font-weight: 400;
   color: var(--ink-light);
@@ -256,74 +282,7 @@ p {
 }
 
 /* =========================================
-   5. STATUS CARD (Right Column)
-   ========================================= */
-.hero-status-card {
-  background: transparent;
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 2.5rem;
-  max-width: 380px;
-  justify-self: center;
-  width: 100%;
-}
-
-.status-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 12px;
-  border-radius: 100px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--ink);
-  border: 1px solid var(--border);
-  margin-bottom: 2rem;
-}
-
-.status-badge .dot {
-  width: 6px;
-  height: 6px;
-  background: #111;
-  border-radius: 50%;
-}
-
-.status-list {
-  list-style: none;
-  margin: 0 0 2rem 0;
-}
-
-.status-list li {
-  font-size: 0.9rem;
-  margin-bottom: 1.25rem;
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.status-list li:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.status-list span.label {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--ink-light);
-  font-weight: 500;
-}
-
-.status-list span.value {
-  font-weight: 400;
-  color: var(--ink);
-}
-
-/* =========================================
-   6. WORK SECTION (GRID LAYOUT)
+   5. WORK SECTION (GRID LAYOUT)
    ========================================= */
 .work-section {
   padding: 2rem 0 8rem 0;
@@ -342,12 +301,10 @@ p {
   gap: 4rem 2rem;
 }
 
-/* On desktop, make it a 2-column masonry-style grid */
 @media (min-width: 850px) {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  /* Offset the second column slightly to create that dynamic staggered look */
   .project-card:nth-child(even) {
     margin-top: 6rem;
   }
@@ -427,95 +384,7 @@ p {
 }
 
 /* =========================================
-   12. PERSONAL SECTION (AUTO-SCROLL)
-   ========================================= */
-.personal-section {
-  padding: 8rem 0;
-}
-
-.personal-gallery-wrapper {
-  width: 100%;
-  overflow: hidden;
-  margin-bottom: 4rem;
-  /* Adds a subtle fade to the left and right edges */
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-}
-
-.personal-gallery-track {
-  display: flex;
-  width: max-content;
-  gap: 1.5rem;
-  /* 35s controls the speed. Lower = faster! */
-  animation: scrollMarquee 35s linear infinite; 
-}
-
-/* Pause the scrolling when you hover over the images! */
-.personal-gallery-track:hover {
-  animation-play-state: paused;
-}
-
-.personal-photo {
-  height: 340px;
-  width: auto;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  flex-shrink: 0;
-  filter: grayscale(20%);
-  transition: filter 0.3s ease;
-}
-
-.personal-photo:hover {
-  filter: grayscale(0%);
-}
-
-@keyframes scrollMarquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    /* Moves the track exactly halfway, then loops seamlessly */
-    transform: translateX(calc(-50% - 0.75rem)); 
-  }
-}
-
-.personal-text {
-  max-width: 800px;
-}
-
-.personal-text h2 {
-  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-  line-height: 1.25;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  margin-bottom: 2rem;
-  color: var(--ink);
-}
-
-.personal-text p {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: var(--ink-muted);
-  max-width: 600px;
-}
-
-
-
-/* =========================================
-   8. ANIMATIONS
-   ========================================= */
-.fade-in-up {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-in-up.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-/* =========================================
-   9. ABOUT PAGE
+   6. ABOUT PAGE COMPONENTS
    ========================================= */
 .about-page main {
   padding-top: 8rem;
@@ -550,7 +419,6 @@ p {
   margin-top: 2.5rem;
 }
 
-/* Profile Strip */
 .about-profile-strip {
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
@@ -579,7 +447,6 @@ p {
   color: var(--ink);
 }
 
-/* Skills Section */
 .about-skills-section {
   margin-bottom: 8rem;
 }
@@ -614,11 +481,8 @@ p {
   margin-bottom: 0.75rem;
 }
 
-/* =========================================
-   CREATIVE WORK INTRO & GALLERY (MASONRY)
-   ========================================= */
 .creative-work-intro {
-  padding: 4rem 0 3rem 0; /* Creates the perfect breathing room above the gallery */
+  padding: 4rem 0 3rem 0; 
 }
 
 .creative-text-stack {
@@ -628,28 +492,15 @@ p {
 .about-gallery {
   max-width: var(--container);
   margin: 0 auto 8rem auto;
-  padding: 0 2rem; /* This brings back the side padding! */
+  padding: 0 2rem; 
 }
 
+/* Mobile view: simple block stacking, no column-count math! */
 .about-gallery-grid {
-  column-count: 1;
-  column-gap: 1.5rem;
-}
-
-@media (min-width: 600px) {
-  .about-gallery-grid {
-    column-count: 2;
-  }
-}
-
-@media (min-width: 900px) {
-  .about-gallery-grid {
-    column-count: 3;
-  }
+  display: block;
 }
 
 .about-gallery-item {
-  break-inside: avoid;
   margin-bottom: 1.5rem;
   border-radius: 12px;
   overflow: hidden;
@@ -667,55 +518,28 @@ p {
 .about-gallery-item:hover img {
   transform: scale(1.03); 
 }
-/* =========================================
-   10. MOUSE FAIRY DUST TRAIL
-   ========================================= */
-.mouse-particle {
-  position: absolute;
-  pointer-events: none;
-  z-index: 9999;
-  background-color: #e3267c; /* Your signature pink */
-  border-radius: 50%; /* Makes them perfectly round */
-  box-shadow: 0 0 8px 2px rgba(227, 38, 124, 0.4); /* Adds a magical glow */
-  animation: fairyDust 1s forwards cubic-bezier(0.25, 1, 0.5, 1);
-}
 
-@keyframes fairyDust {
-  0% {
-    opacity: 1;
-    transform: scale(1) translateY(0) translateX(0);
+/* Tablet view: 2 columns */
+@media (min-width: 600px) {
+  .about-gallery-grid {
+    column-count: 2;
+    column-gap: 1.5rem;
   }
-  100% {
-    opacity: 0;
-    transform: scale(0) translateY(-25px) translateX(var(--drift)); /* Drifts up and away */
+  /* We only apply the break rule when there are actual columns */
+  .about-gallery-item {
+    break-inside: avoid;
   }
 }
-/* =========================================
-   11. LOGO & BACKGROUND DEPTH
-   ========================================= */
-/* Subtle noise texture for depth */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 9998; /* Sits just under the fairy dust */
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-}
 
-.logo-text {
-  font-size: 1.35rem;
-  font-weight: 600;
-  letter-spacing: -0.04em;
-  color: var(--ink);
+/* Desktop view: 3 columns */
+@media (min-width: 900px) {
+  .about-gallery-grid {
+    column-count: 3;
+  }
 }
 
 /* =========================================
-   12. PERSONAL SECTION (AUTO-SCROLL)
+   7. PERSONAL SECTION (AUTO-SCROLL)
    ========================================= */
 .personal-section {
   padding: 8rem 0;
@@ -725,7 +549,6 @@ body::before {
   width: 100%;
   overflow: hidden;
   margin-bottom: 4rem;
-  /* Adds a subtle fade to the left and right edges */
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
@@ -734,11 +557,9 @@ body::before {
   display: flex;
   width: max-content;
   gap: 1.5rem;
-  /* 35s controls the speed. Lower = faster! */
   animation: scrollMarquee 60s linear infinite; 
 }
 
-/* Pause the scrolling when you hover over the images! */
 .personal-gallery-track:hover {
   animation-play-state: paused;
 }
@@ -758,13 +579,8 @@ body::before {
 }
 
 @keyframes scrollMarquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    /* Moves the track exactly halfway, then loops seamlessly */
-    transform: translateX(calc(-50% - 0.75rem)); 
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 0.75rem)); }
 }
 
 .personal-text {
@@ -786,13 +602,14 @@ body::before {
   color: var(--ink-muted);
   max-width: 600px;
 }
+
 /* =========================================
-   13. SPECIALTIES MARQUEE
+   8. SPECIALTIES MARQUEE
    ========================================= */
 .specialties-section {
-  padding: 12rem 0 0 0; /* Massive space above, zero space below */
+  padding: 12rem 0 0 0; 
   overflow: hidden;
-  margin-bottom: 3rem; /* Small gap before the footer line */
+  margin-bottom: 3rem; 
 }
 
 .specialties-marquee {
@@ -812,14 +629,13 @@ body::before {
 }
 
 .specialties-track span {
-  font-family: 'Playfair Display', serif; /* Your new custom editorial font */
-  font-size: clamp(3.5rem, 8vw, 6.5rem); /* Scaled up slightly */
+  font-family: 'Playfair Display', serif; 
+  font-size: clamp(3.5rem, 8vw, 6.5rem); 
   font-weight: 500;
   letter-spacing: -0.02em;
   color: var(--ink);
 }
 
-/* Makes the outlined words italic for a highly custom, premium look */
 .specialties-track span.outline {
   color: transparent;
   -webkit-text-stroke: 1.5px var(--ink);
@@ -832,10 +648,124 @@ body::before {
 }
 
 /* =========================================
-   14. NEW GRID FOOTER
+   9. CASE STUDY COMPONENTS
+   ========================================= */
+.case-nav-sticky {
+  position: sticky;
+  top: 80px; 
+  z-index: 90;
+  padding: 1rem 0;
+  margin: 2rem 0 4rem 0;
+  background-color: transparent; 
+}
+
+.case-nav-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  overflow-x: auto; 
+  scrollbar-width: none; 
+}
+
+.case-nav-container::-webkit-scrollbar {
+  display: none;
+}
+
+.case-nav-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: var(--ink);
+  white-space: nowrap;
+  transition: border-color 0.3s ease;
+}
+
+.case-nav-item:hover {
+  border-bottom: 2px solid #e3267c; 
+}
+
+.case-nav-item .nav-num {
+  color: var(--ink-light);
+}
+
+.case-chapter {
+  scroll-margin-top: 160px; 
+}
+
+/* Device Mockup Showcase */
+.mockup-showcase {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin: 4rem 0;
+}
+
+@media (min-width: 900px) {
+  .mockup-showcase {
+    grid-template-columns: 1fr 2.5fr; 
+    gap: 4rem;
+  }
+}
+
+.iphone-frame {
+  position: relative;
+  width: 100%;
+  max-width: 240px; 
+  margin: 0 auto;
+  border: 12px solid #1a1a1a;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  background-color: #000;
+  aspect-ratio: 9/19.5; 
+}
+
+.iphone-frame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35%;
+  height: 25px;
+  background-color: #1a1a1a;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  z-index: 10;
+}
+
+.iphone-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+.desktop-frame {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+  border: 1px solid var(--border);
+}
+
+.desktop-frame video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================================
+   10. FOOTER
    ========================================= */
 .site-footer {
-  padding: 4rem 0 6rem 0; /* Reduced top padding so it sits closer to the marquee */
+  padding: 4rem 0 6rem 0; 
   border-top: 1px solid var(--border);
   background: transparent;
 }
@@ -892,123 +822,53 @@ body::before {
 .footer-column a:hover {
   opacity: 0.5;
 }
+
 /* =========================================
-   16. CASE STUDY STICKY NAV
+   11. ANIMATIONS & EFFECTS
    ========================================= */
-.case-nav-sticky {
-  position: sticky;
-  top: 80px; /* Sticks just beneath your main navigation bar */
-  z-index: 90;
-  padding: 1rem 0;
-  margin: 2rem 0 4rem 0;
-  background-color: transparent; /* Inherits the changing background colors */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.case-nav-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  overflow-x: auto; /* Allows swiping on mobile */
-  scrollbar-width: none; 
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.case-nav-container::-webkit-scrollbar {
-  display: none;
+/* Mouse Fairy Dust */
+.mouse-particle {
+  position: absolute;
+  pointer-events: none;
+  z-index: 9999;
+  background-color: #e3267c; 
+  border-radius: 50%; 
+  box-shadow: 0 0 8px 2px rgba(227, 38, 124, 0.4); 
+  animation: fairyDust 1s forwards cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.case-nav-item {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--border);
-  text-decoration: none;
-  font-size: 1.1rem;
-  color: var(--ink);
-  white-space: nowrap;
-  transition: border-color 0.3s ease;
-}
-
-.case-nav-item:hover {
-  border-bottom: 2px solid #e3267c; /* Adds your signature pink on hover */
-}
-
-.case-nav-item .nav-num {
-  color: var(--ink-light);
-}
-
-/* This forces the browser to leave a gap above the section when scrolling, 
-   so the sticky nav doesn't cover up your chapter titles! */
-.case-chapter {
-  scroll-margin-top: 160px; 
-}
-/* =========================================
-   17. DEVICE MOCKUP SHOWCASE
-   ========================================= */
-.mockup-showcase {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
-  align-items: center;
-  margin: 4rem 0;
-}
-
-/* On desktop, show them side-by-side with the iPhone taking up less space */
-@media (min-width: 900px) {
-  .mockup-showcase {
-    grid-template-columns: 1fr 2.5fr; 
-    gap: 4rem;
+@keyframes fairyDust {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(0) translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0) translateY(-25px) translateX(var(--drift)); 
   }
 }
 
-/* Pure CSS iPhone Frame */
-.iphone-frame {
-  position: relative;
-  width: 100%;
-  max-width: 240px; /* Reduced from 280px to make the phone shorter */
-  margin: 0 auto;
-  border: 12px solid #1a1a1a;
-  border-radius: 40px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-  background-color: #000;
-  aspect-ratio: 9/19.5; 
-}
-
-/* The Notch / Dynamic Island */
-.iphone-frame::before {
-  content: '';
-  position: absolute;
+/* Background Noise Texture */
+body::before {
+  content: "";
+  position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 35%;
-  height: 25px;
-  background-color: #1a1a1a;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  z-index: 10;
-}
-
-.iphone-frame video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures your screen recording fills the phone */
-  display: block;
-}
-
-/* Subtle frame for the desktop video */
-.desktop-frame {
-  width: 100%;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-  border: 1px solid var(--border);
-}
-
-.desktop-frame video {
-  width: 100%;
-  height: auto;
-  display: block;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9998; 
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }

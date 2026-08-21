@@ -18,12 +18,28 @@
           <span class="logo-text">I<span class="highlight-pink">P</span></span>
         </a>
 
-        <nav aria-label="Main navigation">
-          <ul class="nav-links">
-            <li><a href="index.html#work" class="nav-link active">Work</a></li>
-            <li><a href="about.html" class="nav-link">About</a></li>
-            <li><a href="assets/cv/Ines_CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">Resume</a></li>
-            <li><a href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn</a></li>
+        <nav aria-label="Main navigation" class="sliding-nav">
+          <ul class="nav-links nav-links-container">
+            <li>
+              <a href="#intro" class="nav-link nav-item active">
+                <span class="nav-num">01</span> Intro
+              </a>
+            </li>
+            <li>
+              <a href="#work" class="nav-link nav-item">
+                <span class="nav-num">02</span> Work
+              </a>
+            </li>
+            <li>
+              <a href="#about" class="nav-link nav-item">
+                <span class="nav-num">03</span> About
+              </a>
+            </li>
+            <li>
+              <a href="#contact" class="nav-link nav-item">
+                <span class="nav-num">04</span> Contact
+              </a>
+            </li>
             
             <!-- THEME TOGGLE -->
             <li>
@@ -31,6 +47,9 @@
                 <span id="theme-icon">☾</span>
               </button>
             </li>
+
+            <!-- THE SLIDING PROGRESS LINE -->
+            <div class="active-indicator"></div>
           </ul>
         </nav>
       </div>
@@ -38,7 +57,7 @@
 
     <main>
       <!-- ===== HERO SECTION ===== -->
-      <section class="home-hero" id="home">
+      <section class="home-hero" id="intro">
         <div class="container hero-inner fade-in-up">
           
           <div class="hero-content-minimal">
@@ -47,9 +66,9 @@
               <span class="highlight-pink">paric</span><span class="hero-year">©2026</span>
             </h1>
             
-          <p class="hero-bio">
-  A <strong>Product Designer</strong> based in Dublin. With a background in IT and a creative mindset, I blend deep user understanding with data-driven logic to build experiences that look beautiful and just <em>make sense</em>.
-</p>
+            <p class="hero-bio">
+              A <strong>Product Designer</strong> based in Dublin. With a background in IT and a creative mindset, I blend deep user understanding with data-driven logic to build experiences that look beautiful and just <em>make sense</em>.
+            </p>
 
             <div class="hero-pills">
               <a href="mailto:ines.paric1@gmail.com" class="pill">Email</a>
@@ -87,8 +106,8 @@
                   <span class="tag" style="background: #d1f4d1; color: #111;">A/B Testing</span>
                 </div>
                 <div class="meta-row desc-row">
-  <p>Created a new feature and ran A/B tests using Coframe, driving a +28.4% conversion lift and €1.3M in GMV.</p>
-</div>
+                  <p>Created a new feature and ran A/B tests using Coframe, driving a +28.4% conversion lift and €1.3M in GMV.</p>
+                </div>
               </div>
             </article>
 
@@ -131,8 +150,8 @@
                   <span class="tag" style="background: #e3267c; color: white;">Ethical UX</span>
                 </div>
                <div class="meta-row desc-row">
-  <p>A gamified web tool that helps HR teams detect bias during the hiring process and create a safe, bias-free environment.</p>
-</div>
+                  <p>A gamified web tool that helps HR teams detect bias during the hiring process and create a safe, bias-free environment.</p>
+                </div>
               </div>
             </article>
 
@@ -153,8 +172,8 @@
                   <span class="tag" style="background: #d1f4d1; color: #111;">Conversion</span>
                 </div>
                 <div class="meta-row desc-row">
-  <p>Conducted user research and testing to guide a redesign, creating a safe and intuitive interface to improve user satisfaction and increase excursion sales.</p>
-</div>
+                  <p>Conducted user research and testing to guide a redesign, creating a safe and intuitive interface to improve user satisfaction and increase excursion sales.</p>
+                </div>
               </div>
             </article>
 
@@ -162,13 +181,13 @@
         </div>
       </section>
 
-      <!-- ===== PERSONAL SECTION (Auto-Scrolling) ===== -->
-      <section class="personal-section fade-in-up">
+      <!-- ===== PERSONAL SECTION ===== -->
+      <section class="personal-section fade-in-up" id="about">
         
         <div class="personal-gallery-wrapper">
           <div class="personal-gallery-track">
             
-            <!-- ===== FIRST SET (All 20 Unique Images) ===== -->
+            <!-- ===== FIRST SET ===== -->
             <img src="assets/images/s1.jpeg" alt="Life" class="personal-photo" />
             <img src="assets/images/s2.JPG" alt="Life" class="personal-photo" />
             <img src="assets/images/s3.jpeg" alt="Life" class="personal-photo" />
@@ -190,7 +209,7 @@
             <img src="assets/images/s19.jpeg" alt="Life" class="personal-photo" />
             <img src="assets/images/s20.JPG" alt="Life" class="personal-photo" />
 
-            <!-- ===== DUPLICATED SET (For the infinite loop illusion) ===== -->
+            <!-- ===== DUPLICATED SET ===== -->
             <img src="assets/images/s1.jpeg" alt="Life" class="personal-photo" />
             <img src="assets/images/s2.JPG" alt="Life" class="personal-photo" />
             <img src="assets/images/s3.jpeg" alt="Life" class="personal-photo" />
@@ -221,12 +240,25 @@
             Currently based in Dublin. When I'm not out exploring the city, pet sitting for my favorite furry clients, or finding new adventures with friends and family, I'm probably in the kitchen making the absolute best banana bread you've ever had (seriously, no competition).
           </p>
 
-          <!-- New link button to the About page -->
           <div class="personal-action">
             <a href="about.html" class="pill" style="border: 1px solid var(--border); display: inline-flex; align-items: center; gap: 0.5rem;">
               More about my background &amp; experience →
             </a>
           </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT SECTION ===== -->
+      <section id="contact" class="container fade-in-up" style="padding: 6rem 0; text-align: center;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1rem;">Let's build something.</h2>
+        <p style="font-size: 1.15rem; color: var(--ink-muted); max-width: 600px; margin: 0 auto 3rem auto;">
+          Currently open for new opportunities. Whether you have a project in mind or just want to chat about product design over an iced matcha, feel free to reach out.
+        </p>
+        
+        <div style="display: flex; gap: 1rem; justify-content: center;">
+          <!-- Fixed text color var(--page-bg) to always invert correctly -->
+          <a href="mailto:ines.paric1@gmail.com" class="pill" style="background: var(--ink); color: var(--page-bg); border: 1px solid var(--ink);">Email Me</a>
+          <a href="https://www.linkedin.com/in/ines-pari%C4%87-2a69b4251/" target="_blank" rel="noopener noreferrer" class="pill" style="border: 1px solid var(--border);">LinkedIn</a>
         </div>
       </section>
 
@@ -236,7 +268,7 @@
           <div class="specialties-track">
             <!-- First Set -->
             <span>Product</span><span class="outline">UX Research</span><span>Conversion</span><span class="outline">A/B Testing</span><span>UI Design</span><span class="outline">E-commerce</span>
-            <!-- Duplicated Set for Infinite Loop -->
+            <!-- Duplicated Set -->
             <span>Product</span><span class="outline">UX Research</span><span>Conversion</span><span class="outline">A/B Testing</span><span>UI Design</span><span class="outline">E-commerce</span>
           </div>
         </div>
@@ -244,11 +276,10 @@
 
     </main>
 
-    <!-- ===== NEW FOOTER ===== -->
+    <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
       <div class="container footer-grid">
         
-        <!-- Left Side: Brand & Bio -->
         <div class="footer-brand">
           <a href="index.html" class="logo-link" aria-label="Go to homepage" style="margin-bottom: 1.5rem; display: block;">
             <span class="logo-text">I<span class="highlight-pink" style="font-style: italic;">P</span></span>
@@ -256,9 +287,7 @@
           <p>Made with many hours of work, a lot of self-reflection, and well-needed coffee breaks.</p>
         </div>
 
-        <!-- Right Side: Link Grid -->
         <div class="footer-links-group">
-          
           <div class="footer-column">
             <h4>Pages</h4>
             <ul>
@@ -286,7 +315,6 @@
               <li><a href="project1.html">Club Canary</a></li>
             </ul>
           </div>
-
         </div>
 
       </div>

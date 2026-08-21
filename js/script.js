@@ -8,23 +8,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const themeIcon = document.getElementById('theme-icon');
 
   if (themeToggle && themeIcon) {
-    // Check if they already have a preference saved
     const currentTheme = localStorage.getItem('theme');
     if (currentTheme) {
       document.documentElement.setAttribute('data-theme', currentTheme);
       if (currentTheme === 'dark') {
-        themeIcon.textContent = '☀'; // Sun icon for dark mode
+        themeIcon.textContent = '☀'; 
       }
     }
 
-    // Handle the click
     themeToggle.addEventListener('click', () => {
       let theme = document.documentElement.getAttribute('data-theme');
-      
       if (theme === 'dark') {
         document.documentElement.removeAttribute('data-theme');
         localStorage.setItem('theme', 'light');
-        themeIcon.textContent = '☾'; // Moon icon for light mode
+        themeIcon.textContent = '☾'; 
       } else {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
@@ -101,23 +98,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (gallerySlides.length && prevBtn && nextBtn) {
     let currentIndex = 0;
-
     const updateSlides = () => {
       gallerySlides.forEach((slide, index) => {
         slide.classList.toggle("active", index === currentIndex);
       });
     };
-
     prevBtn.addEventListener("click", () => {
       currentIndex = (currentIndex - 1 + gallerySlides.length) % gallerySlides.length;
       updateSlides();
     });
-
     nextBtn.addEventListener("click", () => {
       currentIndex = (currentIndex + 1) % gallerySlides.length;
       updateSlides();
     });
-
     updateSlides();
   }
 
@@ -127,13 +120,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (popup && closePopupBtn) {
     const hasSeen = localStorage.getItem("ines_popup_seen");
-
     if (!hasSeen) {
-      setTimeout(() => {
-        popup.style.display = "block";
-      }, 2000);
+      setTimeout(() => { popup.style.display = "block"; }, 2000);
     }
-
     closePopupBtn.addEventListener("click", () => {
       popup.style.display = "none";
       localStorage.setItem("ines_popup_seen", "true");
@@ -150,8 +139,62 @@ document.addEventListener("DOMContentLoaded", () => {
       workSection.scrollIntoView({ behavior: "smooth" });
     });
   }
-});
 
+  // --- 8. MAIN NAVIGATION SCROLL SPY (PROGRESS LINE) ---
+  const mainSections = document.querySelectorAll("main section[id]");
+  const mainNavItems = document.querySelectorAll(".sliding-nav .nav-item");
+  const activeIndicator = document.querySelector(".sliding-nav .active-indicator");
+
+  if (mainSections.length > 0 && mainNavItems.length > 0 && activeIndicator) {
+    
+    // Function to stretch the line like a progress bar
+    const updateIndicator = (targetLink) => {
+      if (!targetLink) return;
+      // Stretches the width from the left edge all the way to the end of the active link
+      activeIndicator.style.width = `${targetLink.offsetLeft + targetLink.offsetWidth}px`;
+      activeIndicator.style.left = `0px`; // Always anchors to the far left
+    };
+
+    const navObserverOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.4, 
+    };
+
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const currentId = entry.target.getAttribute("id");
+          const activeLink = document.querySelector(`.sliding-nav .nav-item[href="#${currentId}"]`);
+
+          mainNavItems.forEach((link) => link.classList.remove("active"));
+          if (activeLink) {
+            activeLink.classList.add("active");
+            updateIndicator(activeLink);
+          }
+        }
+      });
+    }, navObserverOptions);
+
+    mainSections.forEach((section) => navObserver.observe(section));
+
+    window.addEventListener("resize", () => {
+      const activeLink = document.querySelector(".sliding-nav .nav-item.active");
+      updateIndicator(activeLink);
+    });
+
+    mainNavItems.forEach((link) => {
+      link.addEventListener("click", function () {
+        updateIndicator(this);
+      });
+    });
+
+    setTimeout(() => {
+      const initialActive = document.querySelector(".sliding-nav .nav-item.active");
+      if (initialActive) updateIndicator(initialActive);
+    }, 100);
+  }
+});
 
 // ==========================================
 // FAIRY DUST MOUSE TRAIL EFFECT
@@ -160,14 +203,11 @@ let lastX = 0;
 let lastY = 0;
 
 document.addEventListener('mousemove', function(e) {
-  // Calculate distance from last particle spawned
   const deltaX = e.pageX - lastX;
   const deltaY = e.pageY - lastY;
   const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
 
-  // Spawn a new sparkle every 10 pixels moved
   if (distance > 10) {
-    // Spawn 1 or 2 sparkles for a denser dust effect
     const amount = Math.random() > 0.5 ? 2 : 1; 
     for(let i = 0; i < amount; i++) {
       createFairyDust(e.pageX, e.pageY);
@@ -181,24 +221,20 @@ function createFairyDust(x, y) {
   const particle = document.createElement('div');
   particle.className = 'mouse-particle';
   
-  // Randomize the size of each sparkle (between 2px and 6px)
   const size = Math.random() * 4 + 2;
   particle.style.width = size + 'px';
   particle.style.height = size + 'px';
 
-  // Scatter them randomly around the cursor tip
   const offsetX = (Math.random() - 0.5) * 20;
   const offsetY = (Math.random() - 0.5) * 20;
   particle.style.left = (x + offsetX) + 'px';
   particle.style.top = (y + offsetY) + 'px';
 
-  // Give each sparkle a random horizontal drift direction
   const driftX = (Math.random() - 0.5) * 40;
   particle.style.setProperty('--drift', driftX + 'px');
   
   document.body.appendChild(particle);
 
-  // Clean up after 1 second (1000ms)
   setTimeout(() => {
     particle.remove();
   }, 1000);
